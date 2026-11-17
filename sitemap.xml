@@ -45,6 +45,12 @@
     <loc>https://sebasbregni.com/fotografia-de-comida/</loc>
     <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a7916-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a8002-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a8036-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a7955-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a7942-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a7854-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-1456-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-1381-1579.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-1584-1600.webp</image:loc></image:image>
@@ -55,12 +61,6 @@
     <image:image><image:loc>https://sebasbregni.com/images/mg-1736-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-5954-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-6033-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a7916-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a8002-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a8036-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a7955-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a7942-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a7854-1600.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-motos/</loc>
@@ -78,6 +78,16 @@
     <loc>https://sebasbregni.com/fotografia-de-moda/</loc>
     <lastmod>2026-11-16</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-1123-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-1150-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-1151-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-1949-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-1947-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-9340-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-9276-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-9315-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-8464-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-8574-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a7515-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a7542-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a7549-1600.webp</image:loc></image:image>
@@ -98,21 +108,11 @@
     <image:image><image:loc>https://sebasbregni.com/images/mg-8319-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-8506-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-8239-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-1123-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-1150-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-1151-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-1949-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-1947-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-9340-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-9276-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-9315-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-8464-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/mg-8574-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a8517-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/cover-models-800.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-4143-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a8231-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-1022-1600.webp</image:loc></image:image>
-    <image:image><image:loc>https://sebasbregni.com/images/g0a8517-1600.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-mascotas/</loc>

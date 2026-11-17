@@ -57,10 +57,11 @@ window.SITE = {
       text: "Food photography from the garden to the table.",
       coverColor: "cover-food", cover: p("cover-food-bw", "Chocolate sauce poured over a layered chocolate cake"),
       projects: [
-        { title: "Lake Atitlán", works: [ p("mg-1456"), p("mg-1381"), p("mg-1584"), p("mg-0786"), p("mg-0993"), p("mg-1055"), p("mg-1788"), p("mg-1736") ] },
-        { title: "After dark", works: [ p("mg-5954"), p("mg-6033") ] },
         { title: "Wood-fired", works: [ p("g0a7916", "Margherita with basil and grated cheese, from above"), p("g0a8002", "Pizza with cured meat, capers and microgreens, from above"), p("g0a8036", "Pizza with anchovies, pickled peppers and basil, from above"),
-                                        p("g0a7955", "Pizza dough stretched between two hands over a floured counter"), p("g0a7942", "Floured hands clapping above a ball of dough"), p("g0a7854", "Hand folding pizza dough on a floured counter") ] }
+                                        p("g0a7955", "Pizza dough stretched between two hands over a floured counter"), p("g0a7942", "Floured hands clapping above a ball of dough"), p("g0a7854", "Hand folding pizza dough on a floured counter") ] },
+        { title: "Lake Atitlán", works: [ p("mg-1456"), p("mg-1381"), p("mg-1584"), p("mg-0786"), p("mg-0993"), p("mg-1055"), p("mg-1788"), p("mg-1736") ] },
+        { title: "After dark", works: [ p("mg-5954"), p("mg-6033") ] }
+
       ] },
     { id: "motion", no: "04", title: "Motion", line: "Machines in the dark", discipline: "Automotive", dark: true,
       text: "Motorcycles lit as sculpture.",
@@ -73,6 +74,10 @@ window.SITE = {
       text: "Fashion, beauty and portraiture in the studio.",
       coverColor: "cover-models2", cover: p("cover-models2-bw", "Model in a floral kimono with a fan, next to an old wooden door"),
       projects: [
+        { title: "Low key", works: [ p("mg-1123", "Black and white portrait of a man in glasses holding headphones at his neck"), p("mg-1150", "Profile portrait in headphones, low key"), p("mg-1151", "Three-quarter portrait in headphones and glasses, low key") ] },
+        { title: "Smoke", works: [ p("mg-1949", "Man in a hat and waistcoat exhaling smoke, low key"), p("mg-1947", "Man in a hat looking down at a curl of smoke") ] },
+        { title: "Black on grey", works: [ p("mg-9340", "Model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Beauty portrait, hand on the shoulder, on grey"), p("mg-9315", "Model seated on a stool in black, on grey") ] },
+        { title: "Hola, Guatemala", works: [ p("mg-8464", "Model framed by hands, wearing a Hola Guatemala cap and woven top"), p("mg-8574", "Model in a green Hola Guatemala bucket hat, selfie angle") ] },
         { title: "Kimono", works: [ p("g0a7515", "Model in a floral kimono holding a fan, by an old wooden door"), p("g0a7542", "Kimono, fan and lace slip on a red backdrop"), p("g0a7549", "Kimono and fan, one knee raised, on red") ] },
         { title: "Silver on pink", works: [ p("g0a7646", "Model in a metallic dress, arms raised, on pink"), p("g0a7662", "Metallic dress and wind in the hair, on pink"), p("g0a7655", "Close portrait in a metallic dress, on pink") ] },
         { title: "Beauty", works: [ p("g0a3507"), p("g0a3507a"), p("g0a3513b") ] },
@@ -80,11 +85,7 @@ window.SITE = {
         { title: "Rose", works: [ p("mg-6710"), p("mg-6651") ] },
         { title: "Linen and straw", works: [ p("mg-6547"), p("mg-6375") ] },
         { title: "Monochrome", works: [ p("mg-8319"), p("mg-8506"), p("mg-8239") ] },
-        { title: "Low key", works: [ p("mg-1123", "Black and white portrait of a man in glasses holding headphones at his neck"), p("mg-1150", "Profile portrait in headphones, low key"), p("mg-1151", "Three-quarter portrait in headphones and glasses, low key") ] },
-        { title: "Smoke", works: [ p("mg-1949", "Man in a hat and waistcoat exhaling smoke, low key"), p("mg-1947", "Man in a hat looking down at a curl of smoke") ] },
-        { title: "Black on grey", works: [ p("mg-9340", "Model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Beauty portrait, hand on the shoulder, on grey"), p("mg-9315", "Model seated on a stool in black, on grey") ] },
-        { title: "Hola, Guatemala", works: [ p("mg-8464", "Model framed by hands, wearing a Hola Guatemala cap and woven top"), p("mg-8574", "Model in a green Hola Guatemala bucket hat, selfie angle") ] },
-        { title: "Studio", works: [ p("cover-models"), p("mg-4143"), p("g0a8231"), p("mg-1022"), p("g0a8517", "Full-length portrait in black, hand on the hip") ] }
+        { title: "Studio", works: [ p("g0a8517", "Full-length portrait in black, hand on the hip"), p("cover-models"), p("mg-4143"), p("g0a8231"), p("mg-1022") ] }
       ] },
     { id: "animals", no: "06", title: "Pets", line: "Dogs and cats in the studio", discipline: "Pets",
       text: "Pet photography: patience, light and real expressions.",
