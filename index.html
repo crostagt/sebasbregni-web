@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Sebas Bregni Photography","founder":{"@type":"Person","name":"Sebastián Bregni","jobTitle":"Photographer and filmmaker"},"areaServed":"Guatemala","sameAs":["https://www.instagram.com/sebasbregni_photography/"]}</script>
-<script src="content.js?v=20261116f"></script>
-<script src="images/manifest.js?v=20261116f"></script>
-<script src="videos/manifest.js?v=20261116f"></script>
+<script src="content.js?v=20261116g"></script>
+<script src="images/manifest.js?v=20261116g"></script>
+<script src="videos/manifest.js?v=20261116g"></script>
 <script>
 /* Preload the hero photograph before the page paints (LCP). */
 (function () {
@@ -1738,7 +1738,7 @@ function renderRoom(r) {
     roomWalk = HWall(host, room, plates.map((it, n) => ({
       work: it.work, slot: it.slot, kicker: pad2(n + 1) + " / " + pad2(plates.length),
       title: it.work.film ? it.work.title || "" : "",
-      polaroid: !!it.project.polaroid,
+      polaroid: false,   // every photograph in the same black frame with a white mat
       plaque: it.project.title && (n === 0 || plates[n - 1].project !== it.project)      // museum wall text before each project
         ? { title: it.project.title, meta: [r.discipline, it.project.client, it.project.year].filter(Boolean), count: it.project.works.length } : null,
       tip: it.work.film ? "Play" : "View", aria: (it.work.film ? "Play " : "View ") + (it.work.title || it.slot), pick: () => openViewer(n)
