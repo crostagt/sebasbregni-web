@@ -10,6 +10,7 @@
     <image:image><image:loc>https://sebasbregni.com/images/cover-motion-bw-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/cover-models2-bw-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/cover-pets-bw-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/cover-nature-bw-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/cover-weddings-bw-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/film-cover-bw-1600.webp</image:loc></image:image>
   </url>
@@ -109,6 +110,25 @@
     <image:image><image:loc>https://sebasbregni.com/images/mg-9113-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-9084-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-9076-1600.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://sebasbregni.com/fotografia-de-naturaleza/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8774-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8813-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8815-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8817-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8820-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/img-8820-v-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-5129-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a2055-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a2060-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/mg-01384-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/insecto-palo-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a4261-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a4289-1600.webp</image:loc></image:image>
+    <image:image><image:loc>https://sebasbregni.com/images/g0a4319-1600.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-bodas/</loc>

@@ -42,6 +42,10 @@ CAT = {
    title="Fotografía de mascotas en estudio en Guatemala | Sebas Bregni Photography",
    desc="Fotografía de perros y gatos en estudio en Guatemala: paciencia, luz y expresiones reales. Sesiones de mascotas y marcas pet. Sebas Bregni Photography.",
    intro="Perros y gatos en estudio, en Guatemala. Paciencia, luz y expresiones reales, para familias y marcas de mascotas."),
+ "nature": dict(slug="fotografia-de-naturaleza", h1="Fotografía de naturaleza",
+   title="Fotografía de naturaleza y macro en Guatemala | Sebas Bregni Photography",
+   desc="Fotografía de naturaleza y macro en Guatemala: serpientes, insectos y arañas, de cerca y con su propia luz. Sebas Bregni Photography.",
+   intro="Fotografía de naturaleza y macro en Guatemala: serpientes, insectos y arañas, de cerca y con su propia luz."),
  "weddings": dict(slug="fotografia-de-bodas", h1="Fotografía de bodas",
    title="Fotografía de bodas en Guatemala | Sebas Bregni Photography",
    desc="Fotografía de bodas en Guatemala, del vestido al primer baile: preparativos, ceremonia, detalles y fiesta. Sebas Bregni Photography.",
@@ -121,6 +125,20 @@ ALT = {
  "mg-9113": "Gatito saltando tras un juguete de plumas sobre fondo blanco",
  "mg-9084": "Gatito atigrado caminando de perfil sobre fondo blanco",
  "mg-9076": "Gatito atigrado sentado mirando a la cámara sobre fondo blanco",
+ "img-8774": "Víbora enroscada entre hojas, con luz lateral",
+ "img-8813": "Víbora verde sacando la lengua sobre una hoja enroscada",
+ "img-8815": "Víbora verde extendida sobre helechos",
+ "img-8817": "Víbora verde descansando sobre un helecho",
+ "img-8820": "Ojo de una víbora verde en macro",
+ "img-8820-v": "Víbora verde, ojo y escamas de cerca",
+ "mg-5129": "Culebra bejuquilla extendida sobre fondo negro, de la cola a la cabeza",
+ "g0a2055": "Saltamontes hoja sobre una hoja seca, vista de frente",
+ "g0a2060": "Saltamontes hoja de perfil sobre una hoja seca",
+ "mg-01384": "Cabeza de un insecto palo sobre fondo negro",
+ "insecto-palo": "Insecto palo caminando sobre corteza",
+ "g0a4261": "Araña tejedora en su telaraña",
+ "g0a4289": "Araña tejedora oscura colgando de su hilo",
+ "g0a4319": "Patas y rostro de una araña tejedora en macro",
  "0g0a3694": "Novia en bata tocando su vestido colgado de un árbol",
  "0g0a3682": "Vestido de novia colgado de la rama de un árbol",
  "0g0a3548": "Novio y padrinos en el jardín antes de la ceremonia",
@@ -140,7 +158,7 @@ FILM_ALT = {
 PT = {"Cold light":"Luz fría","Colour study":"Estudio de color","Still life":"Bodegón","Bird of paradise":"Ave del paraíso",
  "Jewelry":"Joyería","Lake Atitlán":"Lago de Atitlán","After dark":"De noche","Silver on pink":"Plata sobre rosa",
  "Beauty":"Belleza","Handbags":"Carteras","Rose":"Rosa","Linen and straw":"Lino y paja","Monochrome":"Blanco y negro",
- "Studio":"Estudio","Dogs":"Perros","Kittens":"Gatitos","Wedding day":"El día de la boda"}
+ "Studio":"Estudio","Snakes":"Serpientes","Insects":"Insectos","Spiders":"Arañas","Dogs":"Perros","Kittens":"Gatitos","Wedding day":"El día de la boda"}
 esc = lambda s: html.escape(s or "", quote=True)
 
 def img_url(i, size=1600):

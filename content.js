@@ -85,13 +85,21 @@ window.SITE = {
         { title: "Dogs", works: [ p("g0a4179-2"), p("g0a4282"), p("g0a4443"), p("g0a4218"), p("g0a8317") ] },
         { title: "Kittens", works: [ p("mg-9230"), p("mg-9113"), p("mg-9084"), p("mg-9076") ] }
       ] },
-    { id: "weddings", no: "07", title: "Weddings", line: "Days that happen once", discipline: "Weddings",
+    { id: "nature", no: "07", title: "Nature", line: "Wildlife up close", discipline: "Nature / Macro", dark: true,
+      text: "Snakes, insects and spiders, close and in their own light.",
+      coverColor: "cover-nature", cover: p("cover-nature-bw", "Green viper, eye in close-up"),
+      projects: [
+        { title: "Snakes", works: [ p("img-8774", "Viper coiled among leaves"), p("img-8813", "Green viper with its tongue out over a curled leaf"), p("img-8815", "Green viper stretched across ferns"), p("img-8817", "Green viper resting on a fern"), p("img-8820", "Eye of a green viper, macro"), p("img-8820-v", "Green viper, eye and scales in close-up"), p("mg-5129", "Vine snake stretched across a black background") ] },
+        { title: "Insects", works: [ p("g0a2055", "Leaf katydid on a dry leaf, front view"), p("g0a2060", "Leaf katydid in profile on a dry leaf"), p("mg-01384", "Head of a stick insect on black"), p("insecto-palo", "Stick insect walking on bark") ] },
+        { title: "Spiders", works: [ p("g0a4261", "Orb-weaver spider on its web"), p("g0a4289", "Dark orb-weaver spider hanging from its thread"), p("g0a4319", "Legs and face of an orb-weaver spider, macro") ] }
+      ] },
+    { id: "weddings", no: "08", title: "Weddings", line: "Days that happen once", discipline: "Weddings",
       text: "A wedding from the dress to the first dance.",
       coverColor: "0g0a3682", cover: p("cover-weddings-bw", "Wedding dress hanging from a tree"),
       projects: [
         { title: "Wedding day", works: [ p("0g0a3694"), p("0g0a3682"), p("0g0a3548"), p("0g0a5123"), p("0g0a5155"), p("0g0a5171"), p("g0a5341"), p("0g0a4989"), p("0g0a5443") ] }
       ] },
-    { id: "moving-image", no: "08", title: "Films", line: "Commercials and reels", discipline: "Film", dark: true,
+    { id: "moving-image", no: "09", title: "Films", line: "Commercials and reels", discipline: "Film", dark: true,
       text: "Reels and commercial films. Select a frame to play it.",
       coverColor: "film-cover", cover: p("film-cover-bw", "Film still: a smiling girl"),
       projects: [
