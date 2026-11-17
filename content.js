@@ -75,7 +75,7 @@ window.SITE = {
       text: "Fashion, beauty and portraiture in the studio.",
       coverColor: "cover-models2", cover: p("cover-models2-bw", "Model in a floral kimono with a fan, next to an old wooden door"),
       projects: [
-        { title: "Polaroids", polaroid: true, works: [ p("mg-9340", "Polaroid: model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Polaroid: beauty portrait, hand on the shoulder"), p("mg-9315", "Polaroid: model seated on a stool in black"),
+        { title: "Polaroids", works: [ p("mg-9340", "Polaroid: model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Polaroid: beauty portrait, hand on the shoulder"), p("mg-9315", "Polaroid: model seated on a stool in black"),
                                                        p("g0a8517", "Polaroid: full-length portrait in black, hand on the hip"), p("cover-models"), p("g0a8231") ] },
         { title: "Low key", works: [ p("mg-1123", "Black and white portrait of a man in glasses holding headphones at his neck"), p("mg-1150", "Profile portrait in headphones, low key"), p("mg-1151", "Three-quarter portrait in headphones and glasses, low key") ] },
         { title: "Smoke", works: [ p("mg-1949", "Man in a hat and waistcoat exhaling smoke, low key"), p("mg-1947", "Man in a hat looking down at a curl of smoke") ] },
