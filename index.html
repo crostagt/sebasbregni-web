@@ -869,6 +869,24 @@ body.in-room .bar::before{opacity:0}
 }
 @media (max-width:520px){.brand .wm{--F:13px}.bar nav{gap:14px}}
 </style>
+<script>
+/* Phones and small tablets: lighter textures (same look, a quarter of the weight) and the opening prints first. */
+(function () {
+  var fine = matchMedia("(pointer:fine)").matches;
+  var lite = !/[?&]full\b/.test(location.search) && (!fine || innerWidth < 760 || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4);
+  window.TEXM = lite ? "-m" : "";
+  if (lite) document.querySelectorAll("style").forEach(function (s) {
+    s.textContent = s.textContent.replace(/images\/(floor-concrete|cem-cast|cem-smooth|cem-slab|wall-white|wall-plaster)\.webp/g, "images/$1-m.webp");
+  });
+  var hs = (window.SITE && SITE.heroSet) || [];
+  hs.forEach(function (h) { var m = window.IMAGES && IMAGES[h.img]; if (!m) return;
+    var f = (m.f || ["webp"])[0], l = document.createElement("link");
+    l.rel = "preload"; l.as = "image"; l.type = "image/" + f; l.setAttribute("fetchpriority", "high");
+    l.setAttribute("imagesrcset", m.sizes.map(function (s) { return "images/" + h.img + "-" + s + "." + f + " " + s + "w"; }).join(", "));
+    l.setAttribute("imagesizes", "(max-width:700px) 46vw, 24vw");
+    document.head.appendChild(l); });
+})();
+</script>
 </head>
 <body>
 
@@ -887,7 +905,7 @@ body.in-room .bar::before{opacity:0}
 <button class="sound" id="sound" type="button" aria-pressed="true" aria-label="Turn music off">
   <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Sound on</span>
 </button>
-<audio id="music" src="audio/deep-blue.mp3" preload="auto" loop></audio>
+<audio id="music" src="audio/deep-blue.mp3" preload="none" loop></audio>
 <a class="skip navtype" href="#work" data-go="work">Skip to the gallery</a>
 <main id="home">
   <section class="hero" id="top">
@@ -1030,8 +1048,13 @@ function picture(id, alt, sizes, eager) {
   const m = IMG[id], pic = el("picture"), F = fmts(id), fb = F[F.length - 1];
   F.slice(0, -1).forEach(f => { const s = el("source"); s.type = "image/" + f; s.dataset.srcset = srcset(id, f); s.sizes = sizes; pic.append(s); });
   const i = el("img"); i.alt = alt || ""; i.decoding = "async"; i.width = m.w; i.height = m.h; i.sizes = sizes;
-  i.dataset.srcset = srcset(id, fb); i.dataset.src = "images/" + id + "-" + m.sizes[m.sizes.length - 1] + "." + fb;
-  if (eager) i.setAttribute("fetchpriority", "high"); else i.loading = "lazy";
+  // LITE3D: prints inside the 3D rooms on a phone never show wider than 800 px; they wait behind the opening photographs
+  const LITE3D = window.TEXM && /px$/.test(sizes) && m.sizes.some(s => s <= 800);
+  const cap = s => LITE3D ? s.split(", ").filter(x => parseInt(x.split(" ")[1]) <= 800).join(", ") : s;
+  pic.querySelectorAll("source").forEach(s => { s.dataset.srcset = cap(s.dataset.srcset); });
+  const top = LITE3D ? Math.max(...m.sizes.filter(s => s <= 800)) : m.sizes[m.sizes.length - 1];
+  i.dataset.srcset = cap(srcset(id, fb)); i.dataset.src = "images/" + id + "-" + top + "." + fb;
+  if (LITE3D) i.setAttribute("fetchpriority", "low"); else if (eager) i.setAttribute("fetchpriority", "high"); else i.loading = "lazy";
   i.addEventListener("load", () => i.classList.add("ok"), { once: true });
   pic.append(i);
   pic.load = () => { if (pic.loaded) return; pic.loaded = true;
@@ -1310,7 +1333,7 @@ function HWall(host, scroller, items, o) {
     track.innerHTML = ""; figs = [];
     track.append(o.intro);
     const CEM = false;   // no plants inside the rooms: only the prints
-    const potted = n => { const d = el("div", "h-pot"); d.setAttribute("aria-hidden", "true"); d.innerHTML = '<i class="pl" style="background-image:url(images/plant-' + (n % 3) + '.webp)"></i><i class="pt"></i>'; track.append(d); };
+    const potted = n => { const d = el("div", "h-pot"); d.setAttribute("aria-hidden", "true"); d.innerHTML = '<i class="pl" style="background-image:url(images/plant-' + (n % 3) + (window.TEXM || '') + '.webp)"></i><i class="pt"></i>'; track.append(d); };
     if (CEM) potted(0);
     const vh = innerHeight, vw = innerWidth, small = vw < 700, maxH = vh * (small ? 0.58 : 0.66);
     items.forEach((it, i) => {
@@ -1511,7 +1534,8 @@ function Gallery(host, items, o) {
         box("f-pot", pw0, ph0, pw0, x, FY - ph0 / 2, z, ry0);
         floorMarks.push({ x, z, r: 330, c: "0,0,0", a: 0.55 });
         const ph = 640 * sc, pw = ph * 0.72;
-        [0, 60, 120].forEach(a => { const p = el("div", "g-plant"); p.style.cssText = "width:" + pw + "px;height:" + ph + "px;margin:" + (-ph) + "px 0 0 " + (-pw / 2) + "px;background-image:url(images/plant-" + ((n + a / 60) % 3) + ".webp);transform:translate3d(" + x + "px," + (FY - ph0 + 10) + "px," + z + "px) rotateY(" + a + "deg)"; world.append(p); });
+        const PK = window.TEXM ? 2 : 1;   // phones: the plant is drawn at half size and scaled up (its image is half size too)
+        [0, 60, 120].forEach(a => { const p = el("div", "g-plant"); p.style.cssText = "width:" + (pw / PK) + "px;height:" + (ph / PK) + "px;margin:" + (-ph / PK) + "px 0 0 " + (-pw / 2 / PK) + "px;transform-origin:50% 100%;background-image:url(images/plant-" + ((n + a / 60) % 3) + (window.TEXM || "") + ".webp);transform:translate3d(" + x + "px," + (FY - ph0 + 10) + "px," + z + "px) rotateY(" + a + "deg) scale(" + PK + ")"; world.append(p); });
       };
       // in the gap between the 2nd and 3rd print of each face, against the block
       [[cornerR, nR], [cornerL, nL]].forEach(([c, nn], j) => { const mx = front.x + (c.x - front.x) * 0.5, mz = front.z + (c.z - front.z) * 0.5; pot(mx + nn.x * 150, mz + nn.z * 150, j, 0.95, 200, 270, j ? -45 : 45); });
@@ -1650,6 +1674,13 @@ if (!calm) {
   const end = el("div", "", WM("") + '<a class="lnk" href="#contact" data-go="contact">Available for selected projects.</a>');
   const extras = ROOMS.slice(0, 4).map(r => { const w = (r.projects[0].works[1] || r.projects[0].works[0]); return { work: w, slot: r.id + "-wall", aria: "Enter room " + r.no + ", " + r.title, pick: b => go(r.id, b) }; });
   let gal = Gallery($("#walk"), roomItems(), { hint: "Scroll to walk. " + TAP + " a print to open it", title: t, end, right: 4 });
+  // phones: CSS brightness filters on 3D faces force extra render passes; the same darkening as an inset shade costs nothing
+  const unfilter = root => { if (!window.TEXM || !root) return; root.querySelectorAll("*").forEach(n => { const cs = getComputedStyle(n), f = cs.filter; if (!f || f === "none") return;
+    if (n.classList.contains("g-plant")) { n.style.filter = "none"; return; }               // the phone plant images carry it already
+    const m = /^brightness\(([\d.]+)\)$/.exec(f); if (!m || parseFloat(m[1]) >= 1) return;
+    const bs = cs.boxShadow, a = (1 - parseFloat(m[1])).toFixed(3);
+    n.style.filter = "none"; n.style.boxShadow = "inset 0 0 0 9999px rgba(0,0,0," + a + ")" + (bs && bs !== "none" ? "," + bs : ""); }); };
+  unfilter($("#walk")); addEventListener("resize", () => setTimeout(() => unfilter($("#walk")), 600));
   const cue = el("div", "s-cue", '<i class="m" aria-hidden="true"></i><i class="f" aria-hidden="true"></i><span>Scroll down</span>');
   const putCue = () => $("#walk .g-pin").append(cue);
   putCue();
@@ -1944,7 +1975,7 @@ if (location.hash.length > 1) route();
   document.addEventListener("play", e => { const v = e.target; if (v === au || v.tagName !== "VIDEO" || v.muted) return; if (!au.paused) { heldByFilm = true; stop(); } }, true);
   const back = e => { const v = e.target; if (v.tagName !== "VIDEO" || v.muted || !heldByFilm) return; heldByFilm = false; if (want) play(); };
   document.addEventListener("pause", back, true); document.addEventListener("ended", back, true);
-  au.preload = "auto"; try { au.load(); } catch (e) {}
+  // the song downloads only once it can actually play, so it never competes with the photographs
   if (want) { paint("ask"); arm(); play(); } else paint("off");
 })();
 
@@ -1963,12 +1994,14 @@ if (location.hash.length > 1) route();
   ROOMS.forEach(r => {
     const n = r.projects.reduce((a, p) => a + p.works.length, 0), src = thumb(r);
     const li = el("li"), a = el("a", "", '<span class="th"></span><span class="n">' + esc(r.no) + '</span><span class="t">' + esc(r.title) + '</span><span class="l">' + esc(r.line) + '</span><span class="c">' + pad2(n) + '</span>');
-    a.href = "#" + r.id; if (src) $(".th", a).style.backgroundImage = "url(" + src + ")";
+    a.href = "#" + r.id; if (src) $(".th", a).dataset.bg = "url(" + src + ")";
     a.addEventListener("click", e => { e.preventDefault(); go(r.id, a); });
     if (finePointer) { a.addEventListener("pointerenter", () => { if (src) { peek.style.backgroundImage = "url(" + src + ")"; peek.classList.add("on"); } });
       a.addEventListener("pointerleave", () => peek.classList.remove("on")); }
     li.append(a); list.append(li);
   });
+  const showThumbs = () => list.querySelectorAll(".th[data-bg]").forEach(th => { th.style.backgroundImage = th.dataset.bg; th.removeAttribute("data-bg"); });
+  if ("IntersectionObserver" in window) { const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { showThumbs(); io.disconnect(); } }, { rootMargin: "800px 0px" }); io.observe(list); } else showThumbs();
   if (finePointer) addEventListener("pointermove", e => { if (peek.classList.contains("on")) peek.style.transform = "translate3d(" + (e.clientX + 28) + "px," + (e.clientY - 120) + "px,0)"; }, { passive: true });
   // reveals: headings, text and index rows rise once as they come into view
   if (!matchMedia("(prefers-reduced-motion:reduce)").matches && "IntersectionObserver" in window) {
