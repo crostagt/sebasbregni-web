@@ -1524,10 +1524,10 @@ function Gallery(host, items, o) {
       box("f-body", 110, 110, 150, lx, FY - 840, lz, ry);
       const g = el("div", "g-f f-glass"); g.style.cssText = "width:100px;height:100px;margin:-50px 0 0 -50px;transform:translate3d(" + lx + "px," + (FY - 840) + "px," + lz + "px) rotateY(" + ry + "deg) translateZ(76px)"; world.append(g);
     };
-    tripod(-4100, -3000, 58);       // left, behind the corner
-    tripod(3700, -2900, -42);       // right, next to the studio light
-    // white plinths beyond the ends of the block, each with a small camera on top
-    [[3900, -1450, 30], [-3900, -1450, -30]].forEach(([x, z, ry]) => {
+    // camera tripods removed (left, behind the corner; right, by the studio light)
+
+    // white plinths with cameras: removed
+    if (false) [[3900, -1450, 30], [-3900, -1450, -30]].forEach(([x, z, ry]) => {
       shade(620, 620, x, z, ry); box("f-plinth", 340, 620, 340, x, FY - 310, z, ry);
       const t = FY - 620, rr = ry * Math.PI / 180;
       const q = x > 0 ? -90 : 90, qr = rr + q * Math.PI / 180;     // lens toward the visitor
