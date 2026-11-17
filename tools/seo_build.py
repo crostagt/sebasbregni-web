@@ -169,7 +169,7 @@ ALT = {
 FILM_ALT = {
  "film-citizen": "Video del reloj Citizen", "film-triumph": "Video de la Triumph Speed Twin 1200",
  "film-editorial": "Video editorial de moda", "film-environment": "Video de ambiente",
- "film-portrait": "Video de retrato", "film-handbags-1": "Video de carteras",
+ "film-portrait": "Video de retrato", "film-jungle": "Video de selva, lago y ruinas mayas", "film-handbags-1": "Video de carteras",
 }
 
 PT = {"Cold light":"Luz fría","Colour study":"Estudio de color","Still life":"Bodegón","Bird of paradise":"Ave del paraíso",

@@ -115,7 +115,7 @@ window.SITE = {
       coverColor: "film-cover", cover: p("film-cover-bw", "Film still: a smiling girl"),
       projects: [
         { works: [ f("film-environment", "Defend your environment"), f("film-portrait", "Kitchen"), f("film-handbags-1", "Handbags, Monday to Friday"),
-                   f("film-triumph", "Triumph Speed Twin 1200"), f("film-editorial", "Editorial"), f("film-citizen", "Citizen") ] }
+                   f("film-triumph", "Triumph Speed Twin 1200"), f("film-editorial", "Editorial"), f("film-citizen", "Citizen"), f("film-jungle", "Jungle and ruins") ] }
       ] }
   ];
 })();

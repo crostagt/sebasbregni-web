@@ -35,6 +35,15 @@ window.VIDEOS = {
   ],
   "w": 720
  },
+ "film-jungle": {
+  "duration": 80.9,
+  "h": 720,
+  "poster": true,
+  "sizes": [
+   720
+  ],
+  "w": 1280
+ },
  "film-portrait": {
   "duration": 82.3,
   "h": 720,
