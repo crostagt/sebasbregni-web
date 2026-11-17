@@ -9,12 +9,13 @@
    Gallery covers in black and white: python3 tools/make_bw.py <photo> --site site
 
    A work:    { img, video, film, title, alt }
-   A project: { title, client, year, works }   client and year only when confirmed
+   A project: { title, client, year, works, polaroid }   client and year only when confirmed;
+              polaroid:true hangs its works as Polaroids (white frame, wide bottom)
    A room:    { id, no, title, line, discipline, text, dark, cover, coverColor, projects }
 
    Curated 11 Nov 2026: 71 photographs and 7 films, chosen from 140.
-   Added 16 Nov 2026: 17 photographs (Models: Low key, Smoke, Black on grey,
-   Hola Guatemala, Studio; Food: Wood-fired).
+   Added 16 Nov 2026: 17 photographs (Models: Polaroids, Low key, Smoke,
+   Hola Guatemala; Food: Wood-fired).
    No client is named until Sebastián confirms it.
    ========================================================================== */
 
@@ -74,9 +75,10 @@ window.SITE = {
       text: "Fashion, beauty and portraiture in the studio.",
       coverColor: "cover-models2", cover: p("cover-models2-bw", "Model in a floral kimono with a fan, next to an old wooden door"),
       projects: [
+        { title: "Polaroids", polaroid: true, works: [ p("mg-9340", "Polaroid: model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Polaroid: beauty portrait, hand on the shoulder"), p("mg-9315", "Polaroid: model seated on a stool in black"),
+                                                       p("g0a8517", "Polaroid: full-length portrait in black, hand on the hip"), p("cover-models"), p("g0a8231") ] },
         { title: "Low key", works: [ p("mg-1123", "Black and white portrait of a man in glasses holding headphones at his neck"), p("mg-1150", "Profile portrait in headphones, low key"), p("mg-1151", "Three-quarter portrait in headphones and glasses, low key") ] },
         { title: "Smoke", works: [ p("mg-1949", "Man in a hat and waistcoat exhaling smoke, low key"), p("mg-1947", "Man in a hat looking down at a curl of smoke") ] },
-        { title: "Black on grey", works: [ p("mg-9340", "Model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Beauty portrait, hand on the shoulder, on grey"), p("mg-9315", "Model seated on a stool in black, on grey") ] },
         { title: "Hola, Guatemala", works: [ p("mg-8464", "Model framed by hands, wearing a Hola Guatemala cap and woven top"), p("mg-8574", "Model in a green Hola Guatemala bucket hat, selfie angle") ] },
         { title: "Kimono", works: [ p("g0a7515", "Model in a floral kimono holding a fan, by an old wooden door"), p("g0a7542", "Kimono, fan and lace slip on a red backdrop"), p("g0a7549", "Kimono and fan, one knee raised, on red") ] },
         { title: "Silver on pink", works: [ p("g0a7646", "Model in a metallic dress, arms raised, on pink"), p("g0a7662", "Metallic dress and wind in the hair, on pink"), p("g0a7655", "Close portrait in a metallic dress, on pink") ] },
@@ -85,7 +87,7 @@ window.SITE = {
         { title: "Rose", works: [ p("mg-6710"), p("mg-6651") ] },
         { title: "Linen and straw", works: [ p("mg-6547"), p("mg-6375") ] },
         { title: "Monochrome", works: [ p("mg-8319"), p("mg-8506"), p("mg-8239") ] },
-        { title: "Studio", works: [ p("g0a8517", "Full-length portrait in black, hand on the hip"), p("cover-models"), p("mg-4143"), p("g0a8231"), p("mg-1022") ] }
+        { title: "Studio", works: [ p("mg-4143"), p("mg-1022") ] }
       ] },
     { id: "animals", no: "06", title: "Pets", line: "Dogs and cats in the studio", discipline: "Pets",
       text: "Pet photography: patience, light and real expressions.",

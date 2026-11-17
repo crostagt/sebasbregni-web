@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Sebas Bregni Photography","founder":{"@type":"Person","name":"Sebastián Bregni","jobTitle":"Photographer and filmmaker"},"areaServed":"Guatemala","sameAs":["https://www.instagram.com/sebasbregni_photography/"]}</script>
-<script src="content.js?v=20261116c"></script>
-<script src="images/manifest.js?v=20261116c"></script>
-<script src="videos/manifest.js?v=20261116c"></script>
+<script src="content.js?v=20261116d"></script>
+<script src="images/manifest.js?v=20261116d"></script>
+<script src="videos/manifest.js?v=20261116d"></script>
 <script>
 /* Preload the hero photograph before the page paints (LCP). */
 (function () {
@@ -320,6 +320,11 @@ img,video{display:block;max-width:100%}
   background:linear-gradient(to bottom,rgba(255,250,240,.06),rgba(0,0,0,0) 35%,rgba(0,0,0,.14))}
 .h-frame{position:relative;display:block;border:6px solid var(--frame);background:var(--mat-white);padding:var(--mat);box-shadow:var(--led);transition:transform var(--mid) var(--ease)}
 .h-frame:hover,.h-frame:focus-visible{transform:translate3d(0,-6px,0);--led-c:255,244,222}
+.h-frame.polaroid,.lite .h-frame.polaroid{border:0;background:#f6f4ef linear-gradient(to bottom,#fbfaf6,#efece5);padding:var(--mat) var(--mat) var(--matb);transform:rotate(var(--tilt));
+  box-shadow:0 1px 2px rgba(0,0,0,.18),0 14px 28px -10px rgba(0,0,0,.45)}
+.h-frame.polaroid:hover,.h-frame.polaroid:focus-visible{transform:rotate(0deg) translate3d(0,-6px,0)}
+.h-frame.polaroid::after{background:linear-gradient(125deg,rgba(255,255,255,.12),rgba(255,255,255,0) 40%)}
+.h-frame.polaroid .plate{background:#1b1b1b}
 .h-cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .h-cap .t{font-family:var(--serif);font-size:20px;line-height:1.1;text-align:right}
 .h-end{flex:none;width:min(40vw,520px);display:flex;flex-direction:column;align-items:flex-start;gap:30px}
@@ -1345,8 +1350,12 @@ function HWall(host, scroller, items, o) {
         track.append(pq);
       }
       const fig = el("figure", "h-item h-c");
-      const b = el("button", "h-frame"); b.type = "button"; b.dataset.tip = it.tip; b.setAttribute("aria-label", it.aria);
+      const b = el("button", "h-frame" + (it.polaroid ? " polaroid" : "")); b.type = "button"; b.dataset.tip = it.tip; b.setAttribute("aria-label", it.aria);
       const mat = Math.round(Math.min(w, h) * 0.075);                        // white mat, like a framed print
+      if (it.polaroid) {                                                       // a Polaroid: thin white border, wide bottom, slight tilt
+        const ih = h * 0.8, m = Math.round(h * 0.045), mb = Math.round(h * 0.155); w = ih * r + 2 * m;
+        b.style.cssText = "width:" + Math.round(w) + "px;height:" + Math.round(h) + "px;--mat:" + m + "px;--matb:" + mb + "px;--tilt:" + ([-1.6, 1.2, -0.7, 1.8, -1.2, 0.8][i % 6]) + "deg";
+      } else
       b.style.cssText = "width:" + Math.round(w) + "px;height:" + Math.round(h) + "px;--mat:" + mat + "px";
       const pl = plate(it.work, it.slot, { sizes: Math.round(w * 1.3) + "px", eager: true }); b.append(pl);
       b.addEventListener("click", () => it.pick(b));
@@ -1729,6 +1738,7 @@ function renderRoom(r) {
     roomWalk = HWall(host, room, plates.map((it, n) => ({
       work: it.work, slot: it.slot, kicker: pad2(n + 1) + " / " + pad2(plates.length),
       title: it.work.film ? it.work.title || "" : "",
+      polaroid: !!it.project.polaroid,
       plaque: it.project.title && (n === 0 || plates[n - 1].project !== it.project)      // museum wall text before each project
         ? { title: it.project.title, meta: [r.discipline, it.project.client, it.project.year].filter(Boolean), count: it.project.works.length } : null,
       tip: it.work.film ? "Play" : "View", aria: (it.work.film ? "Play " : "View ") + (it.work.title || it.slot), pick: () => openViewer(n)

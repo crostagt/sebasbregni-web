@@ -176,7 +176,7 @@ PT = {"Cold light":"Luz fría","Colour study":"Estudio de color","Still life":"B
  "Jewelry":"Joyería","Lake Atitlán":"Lago de Atitlán","After dark":"De noche","Silver on pink":"Plata sobre rosa",
  "Beauty":"Belleza","Handbags":"Carteras","Rose":"Rosa","Linen and straw":"Lino y paja","Monochrome":"Blanco y negro",
  "Studio":"Estudio","Snakes":"Serpientes","Insects":"Insectos","Spiders":"Arañas","Dogs":"Perros","Kittens":"Gatitos","Wedding day":"El día de la boda",
- "Wood-fired":"Horno de leña","Low key":"Clave baja","Smoke":"Humo","Black on grey":"Negro sobre gris","Hola, Guatemala":"Hola, Guatemala"}
+ "Polaroids":"Polaroids","Wood-fired":"Horno de leña","Low key":"Clave baja","Smoke":"Humo","Black on grey":"Negro sobre gris","Hola, Guatemala":"Hola, Guatemala"}
 esc = lambda s: html.escape(s or "", quote=True)
 
 def img_url(i, size=1600):
