@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en" class="cement"><script>window.SB_THEME="cement";if(/[?&]cement\b/.test(location.search)||window.SB_THEME==="cement")document.documentElement.classList.add("cement")</script>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sebas Bregni Photography</title>
+<meta name="description" content="Sebas Bregni Photography. Commercial, fashion, product and jewelry photography and film, produced in Guatemala for brands and agencies.">
+<meta property="og:title" content="Sebas Bregni Photography">
+<meta property="og:description" content="Commercial, fashion, product and jewelry photography and film. Guatemala.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Sebas Bregni Photography","founder":{"@type":"Person","name":"Sebastián Bregni","jobTitle":"Photographer and filmmaker"},"areaServed":"Guatemala","sameAs":["https://www.instagram.com/sebasbregni_photography/"]}</script>
+<script src="content.js"></script>
+<script src="images/manifest.js"></script>
+<script src="videos/manifest.js"></script>
+<script>
+/* Preload the hero photograph before the page paints (LCP). */
+(function () {
+  var h = window.SITE && SITE.hero, m = h && h.img && window.IMAGES && IMAGES[h.img];
+  if (!m) return;
+  var l = document.createElement("link");
+  var f = (m.f || ["avif"])[0];
+  l.rel = "preload"; l.as = "image"; l.type = "image/" + f; l.setAttribute("fetchpriority", "high");
+  l.setAttribute("imagesrcset", m.sizes.map(function (s) { return "images/" + h.img + "-" + s + "." + f + " " + s + "w"; }).join(", "));
+  l.setAttribute("imagesizes", "100vw");
+  document.head.appendChild(l);
+})();
+</script>
+<style>
+/* ==========================================================================
+   GALLERY MONOCHROME — design tokens. Change values here; the whole site follows.
+   Layout idea: a gallery corridor you walk into; prints hang on piers left and
+   right; the name is cut by one hairline diagonal and painted on the walls.
+   Single theme by choice: the gallery is a dark room.
+   ========================================================================== */
+:root{
+  color-scheme: dark;
+  --obsidian:#0E0E0E;      /* floor, base architecture */
+  --galaxy:#1C1C1B;        /* walls */
+  --sage:#B5B2AB;          /* navigation, small accents */
+  --ivory:#EDEBE6;         /* primary type, the wordmark */
+  --stone:#8A8883;         /* metadata */
+  --bronze:#C9C4B8;        /* rare accent: lines, active states */
+  --frame:#050505;         /* black metal frame */
+  --plate:#151514;         /* empty print surface */
+  --stone-on-wall:#94928C; /* stone, lifted for contrast on green */
+  --serif:"Instrument Serif","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --mono:"Manrope","Helvetica Neue",Arial,sans-serif; /* metadata: Manrope 500, tabular figures. Two families in total */
+  --t-room:clamp(42px,8vw,100px);
+  --t-section:clamp(34px,4.6vw,64px);
+  --t-body:15px;
+  --t-nav:12px;
+  --t-meta:10.5px;
+  --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:40px; --s6:64px; --s7:104px; --s8:168px;
+  --gutter:clamp(18px,3.4vw,56px);
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --slow:900ms; --mid:500ms; --fast:220ms;
+  --cut:24deg;
+  --wall-tex:url(images/wall-black.webp); /* black plaster, tileable */
+  --floor-tex:url(images/floor-black.webp);
+  --floor-white:url(images/floor-white.webp); /* pale concrete floor */
+  --ceiling:#9c9a95;                 /* white ceiling, kept dim: a dark museum */
+  --mat-white:#F4F3EF;              /* the white mat around every print */
+  --led-c:255,238,205;              /* warm white LED strip behind every frame */
+  --led:0 0 0 1px rgba(var(--led-c),.4),0 0 14px 3px rgba(var(--led-c),.5),0 0 44px 12px rgba(var(--led-c),.22);
+  --led-lite:0 0 0 1px rgba(var(--led-c),.35),0 0 12px 2px rgba(var(--led-c),.42),0 0 36px 8px rgba(var(--led-c),.18);             /* angle of the wordmark diagonal */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--obsidian);-webkit-text-size-adjust:100%}
+body{background:var(--obsidian);color:var(--ivory);font-family:var(--sans);font-size:var(--t-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body.locked{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
+img,video{display:block;max-width:100%}
+:focus-visible{outline:1px solid var(--bronze);outline-offset:4px}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:.95;text-wrap:balance}
+.meta{font-family:var(--mono);font-weight:500;font-size:var(--t-meta);letter-spacing:.12em;text-transform:uppercase;color:var(--stone-on-wall);font-variant-numeric:tabular-nums}
+.navtype{font-family:var(--sans);font-weight:500;font-size:var(--t-nav);letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- WORDMARK: SEBAS / BREGNI, cut by one hairline ----------
+   --F  name size. Variants: (default) primary horizontal with PHOTOGRAPHY,
+   .compact name only, .sig photographic signature, .accent bronze diagonal.
+   The diagonal skips the PHOTOGRAPHY line so it never touches a letter. */
+.wm{--F:64px;--lw:max(1px,calc(var(--F) * .011));display:inline-flex;flex-direction:column;align-items:center;line-height:1;position:relative;color:inherit}
+.wm-name{display:flex;align-items:stretch;font-family:var(--serif);font-weight:400;font-size:var(--F);line-height:1;letter-spacing:.14em;padding-left:.14em;text-transform:uppercase;white-space:nowrap}
+.wm-cut{position:relative;flex:none;width:.66em}
+.wm-cut::before{content:"";position:absolute;left:50%;top:-1em;height:3em;width:var(--lw);margin-left:calc(var(--lw) / -2);transform:rotate(var(--cut));
+  --g1:2.34em; --g2:calc(2.5em + 1.095 * max(9px, .19em));
+  background:linear-gradient(to bottom,var(--line,currentColor) 0 var(--g1),transparent var(--g1) var(--g2),var(--line,currentColor) var(--g2))}
+.wm-sub{font-family:var(--sans);font-weight:300;font-size:max(9px,calc(var(--F) * .19));line-height:1;letter-spacing:.9em;padding-left:.9em;margin-top:calc(var(--F) * .34);text-transform:uppercase;white-space:nowrap}
+.wm.compact .wm-cut,.wm.sig .wm-cut{width:.56em}
+.wm.compact .wm-cut::before,.wm.sig .wm-cut::before{top:-.36em;height:1.72em;background:var(--line,currentColor)}
+.wm.sig .wm-name{letter-spacing:.2em;padding-left:.2em}
+.wm.accent{--line:var(--bronze)}
+.wm.vertical{writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* ---------- top bar ---------- */
+.bar{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:var(--s4) var(--gutter);pointer-events:none}
+.bar > *{pointer-events:auto}
+.brand .wm{--F:15px}
+.bar nav{display:flex;gap:clamp(16px,2.6vw,40px)}
+.bar nav a{color:var(--sage);position:relative;padding:6px 0;transition:color var(--fast)}
+.bar nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--bronze);transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.bar nav a:hover,.bar nav a[aria-current="true"]{color:var(--ivory)}
+.bar nav a:hover::after,.bar nav a[aria-current="true"]::after{transform:scaleX(1)}
+
+/* ---------- print surface: photograph, film poster or labelled placeholder ---------- */
+.plate{position:relative;display:block;width:100%;height:100%;background:var(--plate);overflow:hidden}
+.plate picture,.plate img,.plate video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.plate img{opacity:0;transition:opacity 600ms}
+.plate img.ok{opacity:1}
+.g-print .plate img,.h-frame .plate img,.c-frame .plate img{opacity:1;transition:none} /* prints are simply there */
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;padding:12px;
+  background:
+    linear-gradient(to top right,transparent calc(50% - .5px),rgba(181,178,171,.16) 50%,transparent calc(50% + .5px)),
+    linear-gradient(to bottom right,transparent calc(50% - .5px),rgba(181,178,171,.16) 50%,transparent calc(50% + .5px));
+  outline:1px solid rgba(181,178,171,.16);outline-offset:-1px}
+.ph b{font-family:var(--mono);font-weight:500;font-size:var(--t-meta);letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.ph span{font-family:var(--mono);font-size:var(--t-meta);letter-spacing:.06em;color:var(--stone-on-wall);overflow-wrap:anywhere}
+.play{position:absolute;left:50%;top:50%;width:60px;height:60px;margin:-30px 0 0 -30px;border:1px solid var(--ivory);border-radius:50%;display:grid;place-items:center;z-index:2}
+.play::after{content:"";border-left:12px solid var(--ivory);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+
+/* ---------- hero: the wordmark as architecture ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:540px;overflow:hidden;display:grid;place-items:center;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+/* studio backdrop: used while no hero photograph is set (a seamless sweep under one soft key light) */
+.hero-media.studio{background:#0b0d0c}
+.studio-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.studio-svg .lamp{animation:lampOn 1.6s var(--ease) both}
+.studio-svg .lamp.l2{animation-delay:.25s}.studio-svg .lamp.l3{animation-delay:.5s}
+.studio-svg .st-room{animation:roomOn 2.2s var(--ease) both}
+@keyframes lampOn{0%{opacity:.15}40%{opacity:1}55%{opacity:.6}100%{opacity:1}}
+@keyframes roomOn{from{opacity:.35}to{opacity:1}}
+.hero-media.studio:not(.drawn)::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 38% 52% at 50% 40%,rgba(232,229,219,.15),rgba(232,229,219,.04) 55%,transparent 75%)}
+.hero-media.studio:not(.drawn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;
+  background:radial-gradient(ellipse 46% 60% at 50% 0%,rgba(232,229,219,.09),transparent 70%),linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.35));
+  border-top:1px solid rgba(232,229,219,.025)}
+.hero:has(.drawn)::after{background:radial-gradient(ellipse 60% 34% at 50% 50%,rgba(10,10,10,.62),rgba(10,10,10,.12) 75%),linear-gradient(to top,rgba(14,14,14,.85),rgba(14,14,14,0) 30%)}
+.hero-media .ph{justify-content:center;align-items:center;text-align:center;padding-bottom:30vh}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 62% 42% at 50% 50%,rgba(10,10,10,.72),rgba(10,10,10,.25) 75%),linear-gradient(to top,rgba(14,14,14,.9),rgba(14,14,14,0) 40%);pointer-events:none}
+.hero .wm{--F:clamp(28px,7.6vw,128px);--lw:max(1px,calc(var(--F) * .009))}
+.hero .wm-name > span{display:block;animation:rise 1.4s var(--ease) both}
+.hero .wm-name > span:last-child{animation-delay:.12s}
+.hero .wm-cut::before{animation:draw 1.8s .35s var(--ease) both}
+.hero .wm-sub{animation:fade 1.2s .9s both}
+.hero.set{place-items:start center;align-content:center;gap:clamp(28px,5vh,56px);grid-template-rows:auto auto;padding:12vh var(--gutter) 15vh}
+.hero.set .wm{--F:clamp(26px,5.4vw,92px)}
+.hero.set::after{display:none}
+.hero-set{display:none;width:min(100%,1180px);grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.8vw,28px)}
+.hero.set .hero-set{display:grid;animation:fade 1.4s .5s both}
+.hero-set a{display:grid;gap:10px;color:var(--ivory)}
+.hero-set .plate{aspect-ratio:4/5;outline:1px solid rgba(255,255,255,.06)}
+.hero-set .plate img{transition:transform var(--slow) var(--ease),opacity 600ms}
+.hero-set a:hover .plate img,.hero-set a:focus-visible .plate img{transform:scale(1.03)}
+.hero-set .meta{display:flex;justify-content:space-between;color:var(--stone-on-wall)}
+.hero-set a:hover .meta{color:var(--ivory)}
+.skip{position:fixed;left:var(--gutter);top:-60px;z-index:80;background:var(--ivory);color:var(--obsidian);padding:8px 12px}
+.skip:focus{top:12px}
+@media (max-width:700px){.hero.set{padding:14vh var(--gutter) 18vh}.hero-set{grid-template-columns:repeat(2,1fr)}.hero-set a:nth-child(n+3){display:none}}
+.hero-corner{position:absolute;bottom:clamp(24px,5vh,48px);left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;align-items:end;gap:var(--s4);animation:fade 1.2s 1.1s both}
+.hero-corner .meta{color:var(--ivory)}
+.cue{display:flex;align-items:center;gap:12px;color:var(--sage)}
+.cue i{display:block;width:44px;height:1px;background:var(--bronze);transform-origin:left;animation:cue 2.6s var(--ease) infinite}
+@keyframes rise{from{opacity:0;transform:translate3d(0,.35em,0)}to{opacity:1;transform:none}}
+@keyframes draw{from{transform:rotate(var(--cut)) scaleY(0)}to{transform:rotate(var(--cut)) scaleY(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes cue{0%{transform:scaleX(0)}50%{transform:scaleX(1)}100%{transform:scaleX(1);opacity:0}}
+
+/* ---------- THE MUSEUM: a corridor you walk into (CSS 3D) ----------
+   Performance: walls, floor and ceiling are split into bays and culled by
+   distance; only transform and opacity change while walking; one shared
+   requestAnimationFrame loop drives everything. */
+.walk{position:relative;background:var(--obsidian)}
+.c-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#050505;contain:strict;--wall:#0d0d0d;--pier:#0f0f0f;--side:#090909}
+.c-pin.dark{--wall:#0b0b0b;--pier:#0c0c0c;--side:#070707}
+.c-view{position:absolute;inset:0;perspective:900px}
+.c-world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.c-plane{position:absolute;left:0;top:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.c-wall{background:var(--wall) var(--wall-tex) 0 0/512px;border-bottom:5px solid var(--frame)}
+.c-floor{background:#121212 var(--floor-tex) 0 0/512px}
+.c-ceil{background:
+  radial-gradient(circle at 22% 50%,#fff3dc 0 7px,rgba(255,240,210,.35) 9px,transparent 34px),
+  radial-gradient(circle at 50% 50%,#fff3dc 0 7px,rgba(255,240,210,.35) 9px,transparent 34px),
+  radial-gradient(circle at 78% 50%,#fff3dc 0 7px,rgba(255,240,210,.35) 9px,transparent 34px),
+  linear-gradient(to bottom,transparent 46%,#0c0c0c 46%,#0c0c0c 54%,transparent 54%),
+  radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,0,0,0),rgba(0,0,0,.35)),var(--ceiling)} /* dim white ceiling, black bar with lights */
+.c-pin::before{content:"";position:absolute;inset:0 0 auto 0;height:120px;z-index:2;pointer-events:none;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,0))} /* keeps the menu legible over the ceiling */
+.c-side{background:var(--side) var(--wall-tex) 0 0/512px}
+.c-pool{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(232,229,219,.12),transparent 70%)}
+.c-type{display:flex;align-items:center;overflow:hidden;font-family:var(--serif);font-size:420px;line-height:1;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:rgba(232,229,219,.08)}
+.c-type.r{justify-content:flex-end}
+.c-pier{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  background:radial-gradient(ellipse 52% 48% at 50% 30%,rgba(255,244,222,.2),rgba(255,244,222,.06) 55%,transparent 78%),
+    linear-gradient(to bottom,rgba(255,244,222,.08),transparent 30%),var(--pier) var(--wall-tex) 0 0/512px}
+.c-frame{display:block;border:6px solid var(--frame);background:var(--mat-white);padding:var(--mat);box-shadow:var(--led);transition:transform var(--mid) var(--ease)}
+.c-frame:hover,.c-frame:focus-visible{transform:scale(1.03)}
+.c-frame .plate{width:var(--w);height:var(--h)}
+.c-label{width:var(--lw);display:flex;flex-direction:column;gap:5px}
+.c-label h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1}
+.c-label p{font-size:12.5px;line-height:1.45;color:var(--sage);opacity:0;transition:opacity var(--mid)}
+.c-label .enter{display:inline-flex;align-items:center;gap:10px;margin-top:4px;opacity:0;transition:opacity var(--mid)}
+.c-label .enter::before{content:"";width:22px;height:1px;background:var(--bronze)}
+.c-pier:hover .c-label p,.c-pier:focus-within .c-label p,.c-pier:hover .enter,.c-pier:focus-within .enter{opacity:1}
+.c-end{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;text-align:center;padding:40px;
+  background:radial-gradient(ellipse 60% 50% at 50% 42%,rgba(232,229,219,.09),transparent 72%),var(--pier)}
+.c-end .wm{--F:64px}
+.c-end .next b{font-family:var(--serif);font-weight:400;font-size:84px;line-height:.95;display:block;margin-top:8px}
+.c-end .back,.c-end .lnk{color:var(--ivory);border-bottom:1px solid var(--bronze);padding-bottom:3px}
+.c-end .lnk{font-family:var(--serif);font-size:34px;line-height:1.1}
+.c-title{position:absolute;left:var(--gutter);right:var(--gutter);bottom:88px;z-index:3;pointer-events:none;display:flex;flex-direction:column;gap:12px;will-change:opacity}
+.c-title h2{font-size:var(--t-room)}
+.c-title h2 em{display:block;font-size:.45em;color:var(--sage);line-height:1.2;margin-top:.1em}
+.c-title p{color:var(--sage);max-width:38ch}
+.c-hud{position:absolute;left:var(--gutter);right:var(--gutter);bottom:26px;z-index:3;display:flex;align-items:center;gap:var(--s4);pointer-events:none}
+.c-hud .rail{flex:1;height:1px;background:rgba(181,178,171,.2);position:relative;overflow:hidden}
+.c-hud .rail i{position:absolute;inset:0;background:var(--bronze);transform:scaleX(0);transform-origin:left;will-change:transform}
+/* lighter museum for phones and modest hardware */
+.lite .c-frame{box-shadow:var(--led-lite)}
+.lite .c-wall,.lite .c-side{background-size:256px}
+.lite .c-floor{background-size:256px}
+.lite .c-ceil{background:linear-gradient(to bottom,transparent 46%,#0c0c0c 46%,#0c0c0c 54%,transparent 54%),var(--ceiling)}
+.lite .c-pier{background:var(--pier) var(--wall-tex) 0 0/512px}
+@media (hover:none){.c-label p,.c-label .enter{opacity:1}}
+@media (max-width:700px){.c-title p{max-width:58vw}.c-hud .hint{display:none}.c-end .next b{font-size:56px}.c-title{bottom:70px}}
+
+/* ---------- THE GALLERY (home): a dark exhibition hall with a black block in the middle, its corner toward you.
+   Prints hang on both faces. Scrolling moves a camera: the whole corner first, then the left face print by print,
+   then the right face. Every surface is visible from the start; nothing appears out of nowhere.
+   Large surfaces are drawn small and scaled up (S) so phones keep enough graphics memory. ---------- */
+.g-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#060606;contain:strict}
+.g-view{position:absolute;inset:0}
+.g-world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.g-s{position:absolute;left:0;top:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.g-floor{background:linear-gradient(rgba(10,9,8,.16),rgba(10,9,8,.16)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px)} /* polished grey cement, saw-cut slabs */
+.g-floor.gloss{background:#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px);opacity:.87} /* lets the reflections below show through */
+.g-ao{background:linear-gradient(to bottom,rgba(0,0,0,.62),rgba(0,0,0,.28) 30%,rgba(0,0,0,0))} /* contact shadow where a wall meets the floor */
+.g-mirror{pointer-events:none;opacity:.55;filter:blur(3px);-webkit-mask-image:linear-gradient(to top,#000,rgba(0,0,0,.35) 30%,transparent 62%);mask-image:linear-gradient(to top,#000,rgba(0,0,0,.35) 30%,transparent 62%)}
+.g-mirror .c-label{display:none}
+.g-ceil{background:
+  radial-gradient(circle at 2px 2px,#fff4de 0 1.4px,rgba(255,236,204,.4) 2.6px,transparent 5px) 0 0/48px 48px,
+  repeating-linear-gradient(90deg,#090909 0 3px,transparent 3px 48px),
+  repeating-linear-gradient(0deg,#090909 0 3px,transparent 3px 48px),#57524b} /* pale ceiling, black grid, spots */
+.g-wall{background:
+  linear-gradient(to top,#020202 0 1.1%,rgba(0,0,0,.6) 1.1%,rgba(0,0,0,0) 12%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0) 22%) 0 0/100% 100%,
+  #0c0c0c url(images/wall-plaster.webp) 0 0/var(--ts,90px)} /* black matte plaster, shadow gap at the floor */
+.g-block{background:
+  linear-gradient(to top,#010101 0 1%,rgba(0,0,0,.5) 1%,rgba(0,0,0,0) 10%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0) 20%) 0 0/100% 100%,
+  #101010 url(images/wall-plaster.webp) var(--tx,0px) 0/var(--ts,256px)} /* matte black plaster block */
+.g-slot{background:linear-gradient(to bottom,#030303,#060606 80%,rgba(255,238,210,.18));box-shadow:inset 6px 0 8px rgba(0,0,0,.9),inset -6px 0 8px rgba(0,0,0,.9)}
+.g-wash{background:radial-gradient(ellipse 20% 44% at 50% 0%,rgba(255,238,208,.12),rgba(255,238,208,0) 100%),radial-gradient(ellipse 44% 48% at 50% 44%,rgba(255,240,214,.2),rgba(255,240,214,.06) 55%,transparent 76%)} /* scallop from the spot above, pool on the print */
+.g-pool{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,240,215,.32),rgba(255,240,215,.1) 48%,transparent 72%)}
+.g-lamp{width:26px;height:34px;margin:-17px 0 0 -13px;border-radius:4px 4px 8px 8px;background:linear-gradient(#262626,#0d0d0d);box-shadow:0 14px 16px -4px rgba(255,240,214,.55)}
+.g-print{display:flex;flex-direction:column;align-items:center;gap:18px}
+.g-print .c-label{text-align:left}
+.g-print.mega .c-label h3{font-size:64px}
+.g-print.mega .c-label .meta{font-size:15px}
+.g-print.mega .c-label p,.g-print.mega .c-label .enter{font-size:17px;opacity:1}
+.g-vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 85% 80% at 50% 50%,transparent 58%,rgba(0,0,0,.5))}
+.g-end{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px;text-align:center;z-index:3;opacity:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 40% at 50% 50%,rgba(6,6,6,.82),rgba(6,6,6,0))}
+.g-end.on{pointer-events:auto}
+.cover-switch{position:absolute;right:var(--gutter);bottom:72px;z-index:4;color:var(--stone-on-wall);padding:8px 0}
+.cover-switch .on{color:var(--ivory);border-bottom:1px solid var(--bronze)}
+.g-end .wm{--F:clamp(30px,5vw,64px)}
+.g-end .lnk{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);color:var(--ivory);border-bottom:1px solid var(--bronze);padding-bottom:3px}
+@media (prefers-reduced-motion:reduce){.walk .g-pin{display:none}}
+
+/* ---------- ROOM WALL: inside a room, scrolling down walks the wall to the right ----------
+   Only the track's transform changes while scrolling; prints load as they approach. */
+.h-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;contain:strict;
+  background:#0b0b0b var(--wall-tex) 0 0/512px}
+.h-pin.dark{background-color:#080808}
+.h-pin::after{content:"";position:absolute;inset:auto 0 0 0;height:10vh;background:#121212 var(--floor-tex) 0 0/512px;border-top:1px solid #1d1d1d;z-index:0} /* dark floor */
+.h-track{position:absolute;left:0;top:0;bottom:10vh;display:flex;align-items:center;gap:clamp(64px,8vw,150px);padding:0 14vw 0 var(--gutter);will-change:transform;z-index:1}
+.h-plaque{flex:none;width:clamp(170px,16vw,240px);display:flex;flex-direction:column;gap:10px;align-self:center;padding-left:18px;border-left:1px solid rgba(201,196,184,.35)}
+.h-plaque h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1.02;text-wrap:balance}
+.h-intro{flex:none;width:min(40vw,560px);display:flex;flex-direction:column;gap:18px;will-change:transform,opacity}
+.h-intro h1{font-size:var(--t-room)}
+.h-intro h1 em{display:block;font-size:.45em;color:var(--sage);line-height:1.2;margin-top:.12em}
+.h-intro p{color:var(--sage);max-width:34ch}
+.h-intro .cue{margin-top:8px}
+.h-item{flex:none;position:relative;margin:0;display:flex;flex-direction:column;gap:12px}
+.h-item.h-t{align-self:flex-start;margin-top:12vh}
+.h-item.h-b{align-self:flex-end;margin-bottom:5vh}
+/* MUSEUM LIGHT: a track spot above every print. --lift = distance from the ceiling to the top of the frame (set in JS).
+   ::before = the beam falling from the lamp; ::after = the pool of light the beam leaves on the wall. */
+.h-pin::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--ceil-h);z-index:2;
+  background:linear-gradient(to bottom,transparent calc(100% - 7px),#262626 calc(100% - 7px),#262626 calc(100% - 3px),transparent calc(100% - 3px)),
+             linear-gradient(to bottom,#a9a7a2,#8e8c88);box-shadow:0 1px 0 #6f6d69} /* dim white ceiling + lighting track */
+.h-pin{--ceil-h:7vh}
+.h-item{--lift:30vh}
+.h-item::before{content:"";position:absolute;left:-28%;right:-28%;top:calc(-1 * var(--lift) + var(--ceil-h) + 14px);height:calc(var(--lift) - var(--ceil-h) + 55%);z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 38% 100% at 50% 0%,rgba(255,244,222,.13),rgba(255,244,222,.05) 55%,rgba(255,244,222,0) 80%)}
+.h-item::after{content:"";position:absolute;left:-40%;right:-40%;top:-45%;bottom:-10%;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 44% 30% at 50% 36%,rgba(255,244,222,.19),rgba(255,244,222,.07) 50%,rgba(255,244,222,0) 100%)}
+.h-lamp{position:absolute;left:50%;top:calc(-1 * var(--lift) + var(--ceil-h) - 4px);width:26px;height:16px;margin-left:-13px;pointer-events:none}
+.h-lamp::before{content:"";position:absolute;left:12px;top:0;width:2px;height:6px;background:#2a2a2a}
+.h-lamp::after{content:"";position:absolute;left:3px;top:5px;width:20px;height:11px;border-radius:3px 3px 6px 6px;background:linear-gradient(#2c2c2c,#121212);
+  box-shadow:0 7px 10px -2px rgba(255,244,222,.5)}
+.h-frame::after{content:"";position:absolute;inset:0;pointer-events:none;    /* light falls off from top to bottom across the print */
+  background:linear-gradient(to bottom,rgba(255,250,240,.06),rgba(0,0,0,0) 35%,rgba(0,0,0,.14))}
+.h-frame{position:relative;display:block;border:6px solid var(--frame);background:var(--mat-white);padding:var(--mat);box-shadow:var(--led);transition:transform var(--mid) var(--ease)}
+.h-frame:hover,.h-frame:focus-visible{transform:translate3d(0,-6px,0);--led-c:255,244,222}
+.h-cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.h-cap .t{font-family:var(--serif);font-size:20px;line-height:1.1;text-align:right}
+.h-end{flex:none;width:min(40vw,520px);display:flex;flex-direction:column;align-items:flex-start;gap:30px}
+.h-end .next b{font-family:var(--serif);font-weight:400;font-size:var(--t-room);line-height:.95;display:block;margin-top:8px}
+.h-end .back{color:var(--ivory);border-bottom:1px solid var(--bronze);padding-bottom:3px}
+.lite .h-frame{box-shadow:var(--led-lite)}
+@media (max-width:700px){.h-intro,.h-end{width:80vw}.h-item.h-t{margin-top:9vh}.h-cap .t{font-size:17px}}
+
+/* ---------- flat gallery: reduced-motion alternative ---------- */
+.flat{display:none;padding:var(--s7) var(--gutter);gap:var(--s7);flex-direction:column;background:#0b0b0b var(--wall-tex) 0 0/512px}
+.flat-item{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s4);align-items:end}
+.flat-item button{grid-column:var(--c,1 / 8);border:6px solid var(--frame);background:var(--mat-white);padding:clamp(10px,3%,28px)}
+.flat-item .plate{aspect-ratio:var(--r)}
+.flat-item .c-label{grid-column:span 4;width:auto}
+.flat-item .c-label p,.flat-item .enter{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .walk{display:none}.flat{display:flex}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media (max-width:760px){.flat-item button,.flat-item .c-label{grid-column:1 / -1}}
+
+/* ---------- about ---------- */
+.about{background:var(--obsidian);padding:var(--s8) var(--gutter);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s5) var(--s4);align-items:end;content-visibility:auto;contain-intrinsic-size:auto 700px}
+.about h2{grid-column:1 / 8;font-size:var(--t-room);font-style:italic}
+.about .txt{grid-column:9 / 13;display:flex;flex-direction:column;gap:var(--s4);max-width:40ch}
+.about .txt p{color:var(--sage)}
+.facts{display:grid;gap:10px;border-top:1px solid rgba(181,178,171,.18);padding-top:var(--s3)}
+.facts div{display:flex;justify-content:space-between;gap:var(--s3)}
+.facts dd{color:var(--ivory)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--galaxy);padding:var(--s8) var(--gutter) var(--s5);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s6) var(--s4);content-visibility:auto;contain-intrinsic-size:auto 900px}
+.contact .who{grid-column:1 / 7;display:flex;flex-direction:column;gap:var(--s5);align-items:flex-start}
+.contact .who .wm{--F:clamp(26px,4.4vw,64px)}
+.contact .who p{font-family:var(--serif);font-size:clamp(24px,2.4vw,34px);line-height:1.15}
+.contact .who p.meta{font-family:var(--mono);font-size:var(--t-meta);line-height:1.6}
+.contact .who .links{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.contact .who .links a{color:var(--ivory);border-bottom:1px solid var(--bronze);padding-bottom:3px}
+form{grid-column:8 / 13;display:grid;gap:var(--s4);align-content:start}
+.field{display:grid;gap:6px}
+.field label{color:var(--sage)}
+.field input,.field select,.field textarea{font:inherit;color:var(--ivory);background:transparent;border:0;border-bottom:1px solid rgba(181,178,171,.35);border-radius:0;padding:10px 0;width:100%;transition:border-color var(--fast)}
+.field select option{background:var(--obsidian)}
+.field textarea{min-height:96px;resize:vertical}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(181,178,171,.45)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--bronze)}
+.send{justify-self:start;display:inline-flex;align-items:center;gap:14px;padding:10px 0;color:var(--ivory)}
+.send::after{content:"";width:34px;height:1px;background:var(--bronze);transition:transform var(--mid) var(--ease);transform-origin:left}
+.send:hover::after{transform:scaleX(1.8)}
+.out{display:none;gap:var(--s3);border:1px solid rgba(181,178,171,.25);padding:var(--s4)}
+.out.on{display:grid}
+.out pre{font-family:var(--sans);font-size:13px;white-space:pre-wrap;color:var(--sage)}
+.out .row{display:flex;flex-wrap:wrap;gap:var(--s4)}
+.out .row > *{color:var(--ivory);border-bottom:1px solid var(--bronze);padding-bottom:3px}
+.out small{color:var(--stone-on-wall);font-size:12px}
+footer{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s3);border-top:1px solid rgba(181,178,171,.18);padding-top:var(--s4)}
+footer .wm{--F:13px}
+footer a:hover{color:var(--ivory)}
+
+/* ---------- rooms ---------- */
+.room{position:fixed;inset:0;z-index:30;background:#0b0b0b;overflow-y:auto;overscroll-behavior:contain;visibility:hidden;opacity:0;transition:opacity var(--mid),visibility 0s var(--mid)}
+.room.open{visibility:visible;opacity:1;transition:opacity var(--mid)}
+.room-in{padding:calc(var(--s7) + 20px) var(--gutter) var(--s7)}
+.room-in.is3d{padding:0}
+.room[data-dark]{background:#080808}
+.room-head{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s4);align-items:end;margin-bottom:var(--s7)}
+.room-head .l{grid-column:1 / 9;display:flex;flex-direction:column;gap:var(--s4)}
+.room-head h1{font-size:var(--t-room)}
+.room-head h1 em{display:block;color:var(--sage);font-size:.5em;line-height:1.2;margin-top:.15em}
+.room-head .r{grid-column:10 / 13;color:var(--sage);max-width:34ch}
+.close{position:fixed;right:var(--gutter);top:var(--s4);z-index:45;color:var(--sage);padding:6px 0;display:none}
+.close:hover{color:var(--ivory)}
+body.in-room .close{display:block}
+body.in-room .brand,body.in-room .close{color:#101010}
+body.in-room .close:hover{color:#000}
+body.in-room .bar nav{visibility:hidden}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s6) var(--s4);align-items:start}
+.item{grid-column:var(--col,1 / -1);margin-top:var(--drop,0);display:grid;gap:10px}
+.item button{display:block;width:100%;border:6px solid var(--frame);background:var(--mat-white);padding:clamp(10px,3%,28px)}
+.item .plate{aspect-ratio:var(--r)}
+.item figcaption{display:flex;justify-content:space-between;gap:var(--s3)}
+
+/* ---------- identity & system sheet ---------- */
+.sys{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s6) var(--s4)}
+.sys > section{grid-column:span 6;display:grid;gap:var(--s3);align-content:start;border-top:1px solid rgba(181,178,171,.2);padding-top:var(--s3)}
+.sys > section.wide{grid-column:1 / -1}
+.ver{display:grid;gap:var(--s3)}
+.ver header{display:flex;justify-content:space-between;gap:var(--s3);align-items:baseline}
+.ver header b{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1}
+.panel{position:relative;display:grid;place-items:center;min-height:300px;padding:90px 32px;overflow:hidden}
+.panel.galaxy{background:var(--galaxy);color:var(--ivory)}
+.panel.obsidian{background:var(--obsidian);color:var(--ivory);outline:1px solid rgba(181,178,171,.14);outline-offset:-1px}
+.panel.ivory{background:var(--ivory);color:var(--obsidian)}
+.panel.white{background:#fff;color:#000}
+.panel.black{background:#000;color:#fff}
+.panel .wm{--F:clamp(26px,4.6vw,72px)}
+.ver:not(.wide) .panel .wm{--F:clamp(20px,2.4vw,40px)}
+.pair .panel .wm{--F:clamp(14px,1.2vw,22px)}
+@media (max-width:900px){.ver:not(.wide) .panel .wm{--F:clamp(18px,6vw,40px)}.pair .panel .wm{--F:clamp(16px,5vw,30px)}}
+.panel.half{min-height:240px}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.photo{position:relative;aspect-ratio:3/2;min-height:0;padding:0;display:block}
+.photo .plate{position:absolute;inset:0}
+.photo .sig-h{position:absolute;right:22px;bottom:20px;color:var(--ivory);opacity:.78}
+.photo .sig-h .wm{--F:13px}
+.photo .sig-v{position:absolute;left:20px;bottom:22px;color:var(--ivory);opacity:.6}
+.photo .sig-v .wm{--F:11px}
+.fav{display:flex;align-items:end;gap:var(--s5);flex-wrap:wrap}
+.fav figure{display:grid;gap:8px;justify-items:start}
+.tab{display:flex;align-items:center;gap:10px;background:#202622;color:var(--ivory);padding:9px 16px 9px 12px;border-radius:9px 9px 0 0;font-size:12px}
+.sw{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s3)}
+.sw div{display:grid;gap:6px}
+.sw i{display:block;aspect-ratio:3/4;border:1px solid rgba(181,178,171,.2)}
+.sys code{font-family:var(--mono);font-size:12px;color:var(--sage);white-space:pre-wrap;overflow-wrap:anywhere}
+.sys p,.sys li{color:var(--sage);max-width:68ch}
+.sys ol,.sys ul{padding-left:18px;display:grid;gap:6px}
+.spec{display:grid;gap:var(--s3)}
+.spec > div{display:grid;grid-template-columns:150px 1fr;gap:var(--s3);align-items:baseline}
+
+/* ---------- viewer ---------- */
+.viewer{position:fixed;inset:0;z-index:60;background:var(--obsidian);display:none;grid-template-rows:1fr auto;padding:var(--s6) var(--gutter) var(--s4);gap:var(--s3)}
+.viewer.open{display:grid;animation:fade var(--mid) both}
+.stage{position:relative;min-height:0;display:grid;place-items:center}
+.stage .plate{max-height:100%;max-width:100%;width:auto;height:100%;aspect-ratio:var(--r)}
+.stage .plate img,.stage .plate video{object-fit:contain}
+.stage .plate{background:transparent!important;width:100%;height:100%;aspect-ratio:auto}   /* the photo as it is: no colour bars around it */
+.v-bar{display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap}
+.v-bar .ctl{display:flex;gap:var(--s4)}
+.v-bar button{color:var(--sage);padding:6px 0}
+.v-bar button:hover{color:var(--ivory)}
+.v-close{position:absolute;right:var(--gutter);top:var(--s4);color:var(--sage)}
+
+
+
+/* ---------- WHITE WALLS: the walls that carry the prints are white plaster, type on them is black,
+   every print is a thin black frame, a white mat, then the photograph. ---------- */
+:root{--ink:#141414;--ink-2:#47453f;--ink-3:#6e6b64;--hang:0 1px 2px rgba(0,0,0,.28),0 10px 18px -6px rgba(0,0,0,.32),0 26px 40px -18px rgba(0,0,0,.28)}
+.g-block{background:
+  linear-gradient(to top,#2a2926 0 .8%,rgba(40,38,34,.32) .8%,rgba(40,38,34,0) 9%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(30,28,25,.28),rgba(30,28,25,0) 18%) 0 0/100% 100%,
+  #d8d5cf url(images/wall-white.webp) var(--tx,0px) 0/var(--ts,256px)}
+.g-print .c-frame,.lite .g-print .c-frame,.h-frame,.lite .h-frame{border-color:#0a0a0a;box-shadow:var(--hang)}
+.g-mirror .c-frame{box-shadow:none}
+.g-print .c-label{color:var(--ink)}
+.g-print .c-label .meta{color:var(--ink-3)}
+.g-print .c-label p{color:var(--ink-2)}
+.g-print .c-label .enter{color:var(--ink)}
+.g-slot{background:linear-gradient(to bottom,#bdb9b2,#cfccc6 80%,#e6e3dd);box-shadow:inset 6px 0 8px rgba(0,0,0,.25),inset -6px 0 8px rgba(0,0,0,.25)}
+.g-wash{background:radial-gradient(ellipse 20% 44% at 50% 0%,rgba(255,250,238,.16),rgba(255,250,238,0) 100%),radial-gradient(ellipse 44% 48% at 50% 44%,rgba(255,252,244,.22),rgba(255,252,244,.06) 55%,transparent 76%)}
+.g-pin::before{content:"";position:absolute;inset:0 0 auto 0;height:110px;z-index:2;pointer-events:none;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,0))} /* keeps the menu legible over a white wall */
+.h-pin,.h-pin.dark{background:#d8d5cf url(images/wall-white.webp) 0 0/512px;color:var(--ink)}
+.h-pin::after{background:#5f5c57 url(images/floor-concrete.webp) 0 0/220px;border-top:3px solid #2a2926;box-shadow:0 -14px 22px -10px rgba(30,28,25,.35)}
+.h-pin .meta{color:var(--ink-3)}
+.h-pin p,.h-pin em,.h-intro h1 em,.h-intro p{color:var(--ink-2)}
+.h-pin a,.h-pin button:not(.h-frame),.h-end .back{color:var(--ink)}
+.h-plaque{border-left-color:rgba(20,20,20,.35)}
+.h-pin .cue,.h-pin .h-cap{color:var(--ink-2)}
+.h-pin .cue i{background:var(--ink)}
+.h-item::before{background:radial-gradient(ellipse 38% 100% at 50% 0%,rgba(255,250,236,.22),rgba(255,250,236,.08) 55%,rgba(255,250,236,0) 80%)}
+.h-item::after{background:radial-gradient(ellipse 44% 30% at 50% 36%,rgba(255,252,244,.3),rgba(255,252,244,.1) 50%,rgba(255,252,244,0) 100%)}
+.h-frame::after{background:linear-gradient(to bottom,rgba(255,250,240,.05),rgba(0,0,0,0) 35%,rgba(0,0,0,.08))}
+body.in-room .bar nav a{color:var(--ink-2)}
+body.in-room .bar nav a:hover,body.in-room .bar nav a[aria-current="true"]{color:var(--ink)}
+body.in-room .brand{color:var(--ink)}
+body.in-room .close{color:var(--ink-2)}
+body.in-room .close:hover{color:var(--ink)}
+
+
+/* ---------- furniture in the hall: boxes built from faces ---------- */
+.g-f{position:absolute;left:0;top:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.f-oak{background:repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 18px,rgba(60,38,18,.16) 18px 20px,rgba(0,0,0,0) 20px 31px,rgba(255,230,190,.07) 31px 33px),linear-gradient(90deg,#9a7550,#8a6644 40%,#a07a52 70%,#8d6846)}
+.f-oak.s{filter:brightness(.62)}
+.f-oak.e{filter:brightness(.5)}
+.f-steel{background:linear-gradient(90deg,#1b1b1b,#2b2b2b 50%,#161616)}
+.f-steel.s{background:#0f0f0f}
+.f-steel.t{background:#333}
+.f-body{background:linear-gradient(160deg,#2a2a2a,#121212)}
+.f-body.s{background:#0d0d0d}
+.f-body.t{background:linear-gradient(#3a3a3a,#1f1f1f)}
+.f-grip{background:repeating-linear-gradient(0deg,#141414 0 3px,#0a0a0a 3px 6px)}
+.f-glass{background:radial-gradient(circle at 50% 50%,#0a0d12 0 22%,#22303d 30%,#05070a 46%,#2b2b2b 50%,#111 64%,#2a2a2a 70%,#0c0c0c);border-radius:50%}
+.f-diff{background:radial-gradient(ellipse 60% 60% at 50% 50%,#fffdf8,#f4efe6 60%,#e2dbcf);box-shadow:0 0 60px 18px rgba(255,248,236,.32),0 0 160px 60px rgba(255,248,236,.12)}
+.f-soft{background:linear-gradient(#1c1c1c,#0b0b0b)}
+.f-plinth{background:#e9e6e0 url(images/wall-white.webp) 0 0/256px}
+.f-plinth.s{background:#c9c5be url(images/wall-white.webp) 0 0/256px}
+.f-plinth.t{background:#f3f1ec}
+.lite .f-diff{box-shadow:none}
+.lite .g-print .c-frame,.lite .h-frame{box-shadow:0 6px 14px -4px rgba(0,0,0,.35)}
+.g-shade{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(0,0,0,.55),rgba(0,0,0,.22) 55%,rgba(0,0,0,0) 100%)}
+.g-glow{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,248,236,.26),rgba(255,248,236,.08) 50%,rgba(255,248,236,0) 100%)}
+
+
+/* ---------- wayfinding: prints read as doors, and the way back is always in view ---------- */
+.g-print .c-label .enter{display:inline-flex;align-self:flex-start;width:auto;align-items:center;gap:12px;margin-top:14px;padding:12px 22px 12px 18px;border-radius:999px;background:var(--ink);color:#f3f1ec;font-size:13px;font-weight:600;letter-spacing:.12em;transition:background var(--fast)}
+.g-print .c-label .enter::before{content:"";width:8px;height:8px;border-radius:50%;background:#f3f1ec}
+.g-print:hover .c-label .enter,.g-print:focus-within .c-label .enter{background:#000}
+.g-print.mega .c-label .enter{font-size:14px}
+.close{display:none}
+body.in-room .close{display:inline-flex;align-items:center;gap:10px;position:fixed;left:var(--gutter);right:auto;top:calc(var(--s4) - 6px);z-index:46;height:40px;padding:0 18px 0 14px;border-radius:20px;
+  background:rgba(12,12,12,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#f3f1ec;font-size:12px;letter-spacing:.14em;box-shadow:0 6px 18px -8px rgba(0,0,0,.5)}
+body.in-room .close:hover,body.in-room .close:focus-visible{background:#000;color:#fff}
+body.in-room .close svg{width:16px;height:16px;flex:none}
+body.in-room .brand{visibility:hidden}
+.v-close{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 18px 0 14px;border:1px solid rgba(243,241,236,.45);border-radius:20px;color:#f3f1ec;font-size:12px;letter-spacing:.14em;z-index:2}
+.v-close:hover,.v-close:focus-visible{background:#f3f1ec;color:#0a0a0a}
+.v-close svg{width:14px;height:14px}
+
+
+/* ---------- DARK MUSEUM: the hall sits in shadow, light falls on the prints ---------- */
+.g-print .c-label .meta{display:flex;align-items:baseline;gap:18px;color:var(--ink-2)}
+.g-print .c-label .enter,.g-print.mega .c-label .enter{display:inline-block;margin:0;padding:0 0 2px;border-radius:0;background:none;color:var(--ink);font-size:11px;font-weight:500;letter-spacing:.16em;border-bottom:1px solid currentColor;opacity:1}
+.g-print .c-label .enter::before{content:none}
+.g-print:hover .c-label .enter,.g-print:focus-within .c-label .enter{background:none;color:#000}
+.g-ceil{background:
+  radial-gradient(circle at 2px 2px,#cdbfa6 0 1.2px,rgba(255,236,204,.16) 2.4px,transparent 4px) 0 0/48px 48px,
+  repeating-linear-gradient(90deg,#050505 0 3px,transparent 3px 48px),
+  repeating-linear-gradient(0deg,#050505 0 3px,transparent 3px 48px),#1b1a18}
+.g-block{background:
+  linear-gradient(to top,#0c0b0a 0 .6%,rgba(0,0,0,.28) .6%,rgba(0,0,0,0) 4.5%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0) 30%) 0 0/100% 100%,
+  linear-gradient(rgba(10,9,8,.56),rgba(10,9,8,.56)) 0 0/100% 100%,
+  #d8d5cf url(images/wall-white.webp) var(--tx,0px) 0/var(--ts,256px)}
+.g-wash{background:
+  radial-gradient(ellipse 16% 40% at 50% 0%,rgba(255,246,228,.22),rgba(255,246,228,0) 100%),
+  radial-gradient(ellipse 40% 58% at 50% 52%,rgba(255,250,240,.62),rgba(255,250,240,.4) 46%,rgba(255,250,240,.1) 70%,rgba(255,250,240,0) 84%)}
+.g-floor{background:linear-gradient(rgba(6,6,5,.5),rgba(6,6,5,.5)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px)}
+.g-floor.gloss{background:linear-gradient(rgba(6,6,5,.42),rgba(6,6,5,.42)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px);opacity:.9}
+.g-pool{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,240,215,.3),rgba(255,240,215,.1) 50%,transparent 74%)}
+.g-lamp{box-shadow:0 14px 18px -4px rgba(255,240,214,.7)}
+.g-vignette{background:radial-gradient(ellipse 80% 75% at 50% 50%,transparent 45%,rgba(0,0,0,.72))}
+.g-slot{background:linear-gradient(to bottom,#4a4843,#5a5852 80%,#6a675f)}
+.f-plinth{background:#e9e6e0 url(images/wall-white.webp) 0 0/256px;filter:brightness(.55)}
+.f-plinth.s{filter:brightness(.4)}
+.f-plinth.t{background:#f3f1ec;filter:brightness(.6)}
+.f-oak{filter:brightness(.7)}
+.f-oak.s{filter:brightness(.42)}
+.f-diff{box-shadow:0 0 50px 14px rgba(255,248,236,.22),0 0 120px 40px rgba(255,248,236,.08)}
+.g-glow{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,248,236,.16),rgba(255,248,236,.05) 50%,rgba(255,248,236,0) 100%)}
+.lite .f-diff{box-shadow:none}
+
+
+/* ---------- calm ceiling: soft, larger marks so nothing shimmers while the camera moves ---------- */
+.g-ceil{background:
+  radial-gradient(circle at 24px 24px,rgba(214,200,176,.42) 0,rgba(214,200,176,.16) 3px,rgba(214,200,176,0) 7px) 0 0/48px 48px,
+  repeating-linear-gradient(90deg,rgba(4,4,4,.85) 0 2px,rgba(4,4,4,.35) 3px,rgba(4,4,4,0) 4.5px 48px),
+  repeating-linear-gradient(0deg,rgba(4,4,4,.85) 0 2px,rgba(4,4,4,.35) 3px,rgba(4,4,4,0) 4.5px 48px),#1b1a18}
+.g-lamp{box-shadow:0 14px 22px -2px rgba(255,240,214,.45)}
+/* ---------- scroll guide: one quiet animated mark, gone after the first steps ---------- */
+.s-cue{position:absolute;right:var(--gutter);bottom:128px;z-index:4;width:max-content;display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(243,241,236,.82);pointer-events:none;transition:opacity .6s var(--ease)}
+.s-cue.gone{opacity:0}
+.s-cue .m{width:22px;height:34px;border:1.5px solid currentColor;border-radius:12px;position:relative}
+.s-cue .m::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:currentColor;animation:sdot 1.8s var(--ease) infinite}
+.s-cue .f{display:none;width:2px;height:34px;background:linear-gradient(currentColor,rgba(243,241,236,0));position:relative;animation:sline 1.8s var(--ease) infinite}
+.s-cue span{font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase}
+@keyframes sdot{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+@keyframes sline{0%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(.2);transform-origin:bottom}}
+@media (hover:none),(pointer:coarse){.s-cue .m{display:none}.s-cue .f{display:block}}
+@media (max-width:700px){.s-cue{bottom:auto;top:63%;right:50%;transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){.s-cue .m::after,.s-cue .f{animation:none}}
+.c-hud .hint{display:none}
+
+
+/* ---------- baked light: spots live inside the block and floor backgrounds ---------- */
+.g-block{background:var(--lit,none),
+  linear-gradient(to top,#0c0b0a 0 .6%,rgba(0,0,0,.28) .6%,rgba(0,0,0,0) 4.5%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0) 30%) 0 0/100% 100%,
+  linear-gradient(rgba(10,9,8,.56),rgba(10,9,8,.56)) 0 0/100% 100%,
+  #d8d5cf url(images/wall-white.webp) var(--tx,0px) 0/var(--ts,256px)}
+.g-floor{background:var(--lit,none),linear-gradient(rgba(6,6,5,.5),rgba(6,6,5,.5)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px)}
+.g-floor.gloss{background:var(--lit,none),linear-gradient(rgba(6,6,5,.42),rgba(6,6,5,.42)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px);opacity:.9}
+
+
+/* the same quiet scroll mark on the opening screen */
+@media (min-width:701px){.hero-corner{right:calc(var(--gutter) + 150px)}}
+.hero .s-cue.h-cue{left:50%;right:auto;top:auto;bottom:clamp(28px,6vh,56px);transform:translateX(-50%);animation:fade 1.2s 1.6s both}
+@media (max-width:700px){.hero .s-cue.h-cue{top:auto;right:auto;left:50%;bottom:150px;transform:translateX(-50%)}}
+
+
+/* =====================================================================
+   CINEMATIC: an opening in letterbox, lights that come on, film grain
+   ===================================================================== */
+.cine{position:fixed;inset:0;z-index:90;pointer-events:none}
+.cine i{position:absolute;left:0;right:0;height:50.5vh;background:#000;will-change:transform}
+.cine i:first-child{top:0;transform:translateY(0)}
+.cine i:last-child{bottom:0;transform:translateY(0)}
+.cine.open i:first-child{animation:barTop 3.6s cubic-bezier(.7,0,.2,1) forwards}
+.cine.open i:last-child{animation:barBot 3.6s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes barTop{0%{transform:translateY(0)}32%{transform:translateY(-39vh)}74%{transform:translateY(-39vh)}100%{transform:translateY(-51vh)}}
+@keyframes barBot{0%{transform:translateY(0)}32%{transform:translateY(39vh)}74%{transform:translateY(39vh)}100%{transform:translateY(51vh)}}
+.cine.done{display:none}
+/* the opening plays the hero in slow motion: wordmark first, then each print lit like a spot coming on */
+body.cine-on .hero .wm-name > span{animation:rise 2.2s 1.1s var(--ease) both}
+body.cine-on .hero .wm-name > span:last-child{animation-delay:1.25s}
+body.cine-on .hero .wm-cut::before{animation:draw 2.4s 1.5s var(--ease) both}
+body.cine-on .hero .wm-sub{animation:track 2.6s 1.9s var(--ease) both}
+@keyframes track{from{opacity:0;letter-spacing:1.6em}to{opacity:1;letter-spacing:.9em}}
+body.cine-on .hero.set .hero-set{animation:none}
+body.cine-on .hero-set a{animation:spotOn 1.6s var(--ease) both}
+body.cine-on .hero-set a:nth-child(1){animation-delay:2.3s}
+body.cine-on .hero-set a:nth-child(2){animation-delay:2.55s}
+body.cine-on .hero-set a:nth-child(3){animation-delay:2.8s}
+body.cine-on .hero-set a:nth-child(4){animation-delay:3.05s}
+@keyframes spotOn{0%{opacity:0;filter:brightness(0)}35%{opacity:1;filter:brightness(.35)}48%{filter:brightness(.2)}100%{opacity:1;filter:brightness(1)}}
+body.cine-on .hero-set .plate img{animation:drift 7s 2.3s var(--ease) both}
+@keyframes drift{from{transform:scale(1.07)}to{transform:scale(1)}}
+body.cine-on .hero-corner,body.cine-on .h-cue,body.cine-on .bar,body.cine-on .sound{animation:fade 1.4s 3.6s both}
+/* film grain over the opening screen and the hall, never over the work in the rooms */
+.grain{position:absolute;inset:-60px;z-index:3;pointer-events:none;opacity:.07;background:url(images/grain.webp) 0 0/180px;animation:grain .9s steps(5) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-28px,14px)}40%{transform:translate(18px,-22px)}60%{transform:translate(-12px,26px)}80%{transform:translate(24px,8px)}100%{transform:translate(0,0)}}
+.hero .grain{z-index:1}
+/* the hall wakes up: dark, then the spots come on */
+.g-dark{position:absolute;inset:0;z-index:2;background:#000;pointer-events:none;opacity:1}
+.g-dark.on{animation:lightsOn 2.4s .2s var(--ease) forwards}
+@keyframes lightsOn{0%{opacity:1}30%{opacity:.55}38%{opacity:.8}52%{opacity:.25}100%{opacity:0}}
+/* glass over every print: a faint diagonal sheen, as framed work under gallery light */
+.g-print .c-frame{position:relative}
+.g-print .c-frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,.09),rgba(255,255,255,.02) 34%,rgba(255,255,255,0) 52%)}
+body.cine-fast .hero *,body.cine-fast .bar,body.cine-fast .sound{animation-delay:0s!important;animation-duration:.5s!important}
+@media (prefers-reduced-motion:reduce){.cine{display:none}.grain{animation:none}.g-dark{display:none}
+  body.cine-on .hero *{animation:none!important}}
+
+
+/* =====================================================================
+   CEMENT THEME (html.cement): board-formed concrete, black steel, plants
+   ===================================================================== */
+html.cement .g-pin{background:#1a1918}
+html.cement .g-wall{background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0) 14%) 0 0/100% 100%,linear-gradient(rgba(14,13,12,.42),rgba(14,13,12,.42)) 0 0/100% 100%,#6b6863 url(images/cem-smooth.webp) 0 0/var(--ts,90px)}
+html.cement .g-ceil{background:linear-gradient(rgba(10,10,9,.35),rgba(10,10,9,.35)) 0 0/100% 100%,#3c3a37 url(images/cem-slab.webp) 0 0/90px}
+html.cement .g-block{background:var(--lit,none),
+  linear-gradient(to top,#0c0b0a 0 .6%,rgba(0,0,0,.28) .6%,rgba(0,0,0,0) 4.5%) 0 0/100% 100%,
+  linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,0) 30%) 0 0/100% 100%,
+  linear-gradient(rgba(10,9,8,.56),rgba(10,9,8,.56)) 0 0/100% 100%,
+  #d8d5cf url(images/wall-white.webp) var(--tx,0px) 0/var(--ts,256px)}   /* the wall with the prints stays white */
+html.cement .f-oak,html.cement .f-plinth,html.cement .f-pot{background:#8d8a84 url(images/cem-cast.webp) 0 0/180px;filter:brightness(.62)}
+html.cement .f-oak.s,html.cement .f-plinth.s,html.cement .f-pot.s{filter:brightness(.42)}
+html.cement .f-oak.t,html.cement .f-plinth.t,html.cement .f-pot.t{filter:brightness(.75)}
+.f-pot{background:#8d8a84 url(images/cem-cast.webp) 0 0/180px;filter:brightness(.62)}
+.f-pot.s{filter:brightness(.42)}
+.f-pot.t{background:#1d1a14!important;filter:none!important;box-shadow:inset 0 0 0 10px #77746e}
+.g-plant{position:absolute;left:0;top:0;background:no-repeat center bottom/contain;pointer-events:none;filter:brightness(.92) saturate(.9);backface-visibility:visible}
+html.cement .h-pin,html.cement .h-pin.dark{background:#86837d url(images/cem-smooth.webp) 0 0/900px;color:var(--ink)}
+html.cement .h-pin::after{background:#55524d url(images/floor-concrete.webp) 0 0/220px;border-top:3px solid #1b1a18}
+html.cement .h-pin .meta,html.cement .h-pin p,html.cement .h-intro p,html.cement .h-pin .cue,html.cement .h-pin .h-cap{color:#2a2825}
+html.cement .h-item::after{background:radial-gradient(ellipse 44% 30% at 50% 36%,rgba(255,250,240,.2),rgba(255,250,240,.06) 50%,rgba(255,250,240,0) 100%)}
+
+
+/* room scroll guide: "scroll down" with a mark moving down and an arrow moving right */
+.r-cue{position:absolute;left:50%;bottom:calc(10vh + 22px);z-index:6;transform:translateX(-50%);display:flex;align-items:center;gap:14px;padding:10px 18px;border-radius:999px;background:rgba(12,12,12,.78);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#f3f1ec;pointer-events:none;transition:opacity .5s var(--ease)}
+.r-cue.gone{opacity:0}
+.r-cue .t{white-space:nowrap;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.r-cue .m{width:18px;height:28px;border:1.4px solid currentColor;border-radius:10px;position:relative;flex:none}
+.r-cue .m b{position:absolute;left:50%;top:5px;width:3px;height:6px;margin-left:-1.5px;border-radius:2px;background:currentColor;animation:sdot 1.6s var(--ease) infinite}
+.r-cue .f{display:none;width:2px;height:26px;background:linear-gradient(currentColor,rgba(243,241,236,0));animation:sline 1.6s var(--ease) infinite}
+.r-cue .ar{width:34px;display:block;animation:goRight 1.6s var(--ease) infinite}
+.r-cue .ar svg{width:34px;height:10px;display:block}
+@keyframes goRight{0%{transform:translateX(-4px);opacity:.3}60%{transform:translateX(6px);opacity:1}100%{transform:translateX(6px);opacity:0}}
+@media (hover:none),(pointer:coarse){.r-cue .m{display:none}.r-cue .f{display:block}}
+@media (prefers-reduced-motion:reduce){.r-cue *{animation:none!important}}
+
+
+/* cement theme: wooden bench top again, plants in concrete planters inside the rooms */
+html.cement .f-oak{background:repeating-linear-gradient(90deg,rgba(0,0,0,0) 0 18px,rgba(60,38,18,.16) 18px 20px,rgba(0,0,0,0) 20px 31px,rgba(255,230,190,.07) 31px 33px),linear-gradient(90deg,#9a7550,#8a6644 40%,#a07a52 70%,#8d6846);filter:brightness(.72)}
+html.cement .f-oak.s{filter:brightness(.45)}
+html.cement .f-oak.t{filter:brightness(.85)}
+.h-pot{flex:none;align-self:flex-end;position:relative;width:clamp(150px,16vw,260px);height:clamp(300px,58vh,620px);margin-bottom:-3vh;pointer-events:none}
+.h-pot .pt{position:absolute;left:12%;right:12%;bottom:0;height:28%;background:#8d8a84 url(images/cem-cast.webp) 0 0/200px;filter:brightness(.82);box-shadow:inset -14px 0 22px rgba(0,0,0,.28),inset 0 6px 0 rgba(255,255,255,.08),0 18px 26px -10px rgba(0,0,0,.45)}
+.h-pot .pt::before{content:"";position:absolute;left:6%;right:6%;top:0;height:7px;background:#2a241b;border-radius:2px}
+.h-pot .pl{position:absolute;left:-8%;right:-8%;bottom:26%;top:0;background:no-repeat center bottom/contain}
+
+/* side chooser and print-by-print arrows in the hall */
+.g-side{position:absolute;top:50%;z-index:5;display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:999px;background:rgba(12,12,12,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#f3f1ec;opacity:0;visibility:hidden;transform:translateY(-50%);transition:opacity .45s var(--ease),visibility .45s,background var(--fast)}
+.g-side.on{opacity:1;visibility:visible}
+.g-side:hover,.g-side:focus-visible{background:#000}
+.g-side.l{left:var(--gutter);text-align:left}
+.g-side.r{right:var(--gutter);text-align:right}
+.g-side svg{width:26px;height:10px;flex:none}
+.g-side span{display:flex;flex-direction:column;gap:4px}
+.g-side b{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1;letter-spacing:0}
+.g-side i{font-style:normal;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,241,236,.7)}
+.g-nav{position:absolute;left:50%;bottom:60px;z-index:5;display:flex;gap:10px;transform:translateX(-50%);opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.g-nav.on{opacity:1;visibility:visible}
+.g-nav button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(12,12,12,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#f3f1ec}
+.g-nav button:hover,.g-nav button:focus-visible{background:#000}
+.g-nav svg{width:9px;height:15px}
+@media (max-width:700px){.g-side{top:38%;padding:11px 14px;gap:10px}.g-side b{font-size:18px}.g-side i{display:none}.g-nav{bottom:58px}}
+
+
+/* minimal side chooser: a thin arrow and one small word at each edge, no box */
+.g-side{top:52%;bottom:auto;transform:translateY(-50%);padding:6px 2px;gap:10px;border-radius:0;background:none!important;-webkit-backdrop-filter:none;backdrop-filter:none;color:rgba(243,241,236,.82);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.g-side:hover,.g-side:focus-visible{color:#fff}
+.g-side b{font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.g-side i{display:none}
+.g-side svg{width:22px;height:8px;filter:drop-shadow(0 1px 4px rgba(0,0,0,.6));transition:transform var(--fast)}
+.g-side.l:hover svg{transform:translateX(-4px)}
+.g-side.r:hover svg{transform:translateX(4px)}
+.g-nav{bottom:56px;gap:6px}
+.g-nav button{width:34px;height:34px;background:rgba(12,12,12,.45)}
+.g-nav svg{width:7px;height:12px}
+@media (max-width:700px){.g-side{top:31%;bottom:auto;padding:6px 0}.g-side b{font-size:10px}}
+
+
+/* one clear line at the top of the hall: left wall, scroll, right wall */
+.g-choose{position:absolute;left:50%;top:96px;z-index:5;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px;border:1px solid rgba(243,241,236,.22);border-radius:999px;background:rgba(10,10,10,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s;white-space:nowrap}
+.g-choose.on{opacity:1;visibility:visible}
+.g-choose .g-side{position:static;top:auto;bottom:auto;transform:none;opacity:1;visibility:inherit;padding:9px 16px;border-radius:999px;gap:10px;color:#f3f1ec;text-shadow:none}
+.g-choose .g-side:hover,.g-choose .g-side:focus-visible{background:rgba(243,241,236,.14)!important}
+.g-choose .g-side b{font-size:11px;letter-spacing:.2em}
+.g-choose .g-side svg{filter:none}
+.g-mid{display:flex;align-items:center;gap:8px;padding:0 10px;border-left:1px solid rgba(243,241,236,.2);border-right:1px solid rgba(243,241,236,.2);color:rgba(243,241,236,.6);font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.g-mid .m{width:12px;height:18px;border:1.2px solid currentColor;border-radius:7px;position:relative}
+.g-mid .m::after{content:"";position:absolute;left:50%;top:3px;width:2px;height:4px;margin-left:-1px;border-radius:1px;background:currentColor;animation:sdot 1.6s var(--ease) infinite}
+.g-mid .f{display:none;width:1.5px;height:16px;background:linear-gradient(currentColor,rgba(243,241,236,0));animation:sline 1.6s var(--ease) infinite}
+@media (hover:none),(pointer:coarse){.g-mid .m{display:none}.g-mid .f{display:block}}
+#walk .g-pin > .s-cue{display:none}
+@media (max-width:700px){.g-choose{top:78px;gap:2px;padding:4px}.g-choose .g-side{padding:8px 10px;gap:7px}.g-choose .g-side b{font-size:10px;letter-spacing:.16em}.g-mid{padding:0 7px;gap:6px;font-size:9px}.g-choose .g-side svg{width:16px}}
+@media (prefers-reduced-motion:reduce){.g-mid *{animation:none!important}}
+
+
+/* sound button waiting for the first touch: a soft pulse so it is noticed */
+.sound.ask{color:#f3f1ec;border-color:rgba(243,241,236,.7)}
+.sound.ask::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1px solid rgba(243,241,236,.6);animation:askPulse 1.8s var(--ease) infinite;pointer-events:none}
+@keyframes askPulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.25,1.45);opacity:0}}
+@media (prefers-reduced-motion:reduce){.sound.ask::after{animation:none}}
+
+
+/* language switch next to the menu */
+.bar nav{margin-left:auto}
+.lang{display:flex;align-items:center;gap:6px;margin-left:clamp(16px,2.6vw,40px);pointer-events:auto;color:var(--sage)}
+.lang button{color:inherit;padding:6px 0;transition:color var(--fast)}
+.lang button[aria-pressed="true"]{color:var(--ivory);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.lang span{opacity:.5}
+body.in-room .lang{color:var(--ink-2)}
+body.in-room .lang button[aria-pressed="true"]{color:var(--ink)}
+@media (max-width:700px){.bar nav{gap:12px}.lang{margin-left:12px;gap:4px}}
+.bar nav a,.lang{white-space:nowrap}
+@media (max-width:520px){.bar{padding-left:14px;padding-right:14px}.bar nav{gap:9px}.bar nav a,.lang{font-size:9.5px;letter-spacing:.06em}.lang{margin-left:9px;gap:3px}.brand .wm{--F:10px}}
+
+
+/* =====================================================================
+   PREMIUM PASS — viewer, rooms, about index, contact, footer, reveals
+   ===================================================================== */
+/* viewer: photos cross-fade, the dialog opens and closes softly */
+.viewer.open{animation:vOpen .5s var(--ease) both}
+.viewer.closing{animation:vClose .32s var(--ease) both}
+@keyframes vOpen{from{opacity:0}to{opacity:1}}
+@keyframes vClose{from{opacity:1}to{opacity:0}}
+.stage{isolation:isolate}
+.stage > .plate{grid-area:1 / 1}
+.stage > .plate.v-in{animation:vIn .55s var(--ease) both}
+.stage > .plate.v-out{animation:vOut .4s var(--ease) both;pointer-events:none}
+@keyframes vIn{from{opacity:0;transform:translate3d(var(--dx,0),0,0) scale(.985)}to{opacity:1;transform:none}}
+@keyframes vOut{to{opacity:0}}
+.v-cap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;color:var(--sage)}
+.v-cap .vc-room{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ivory);letter-spacing:0}
+.v-cap .vc-proj{font-family:var(--serif);font-style:italic;font-size:18px}
+.v-cap .vc-n{font-variant-numeric:tabular-nums}
+.v-bar .ctl button{position:relative}
+.v-bar .ctl button::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform var(--mid) var(--ease)}
+.v-bar .ctl button:hover::after{transform:scaleX(1)}
+/* rooms: prints develop as they arrive; a quiet lift and zoom on hover */
+.h-frame .plate{overflow:hidden}
+.h-frame .plate img{transition:transform 1.1s var(--ease),filter 1.2s var(--ease)}
+.h-frame.dev .plate img{filter:brightness(.72) saturate(.8);transform:scale(1.035)}
+.h-frame.dev.dev-on .plate img{filter:none;transform:none}
+@media (hover:hover){.h-frame:hover .plate img,.h-frame.dev.dev-on:hover .plate img{transform:scale(1.025)}}
+.h-plaque{position:relative;z-index:2;margin:0 clamp(28px,3.4vw,64px)}
+/* reveals for headings and text blocks: a short rise, once */
+.rv{opacity:0;transform:translate3d(0,18px,0);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.h-frame.dev .plate img{filter:none;transform:none}.stage > .plate.v-in,.viewer.open,.viewer.closing{animation:none}}
+
+
+/* about: an index of the rooms, each a way in; on desktop the room's cover follows the pointer */
+.about{align-items:start;row-gap:var(--s6)}
+.about h2{line-height:.98}
+.ix{grid-column:1 / -1;border-top:1px solid rgba(181,178,171,.18);padding-top:var(--s3)}
+.ix-head{display:flex;justify-content:space-between;color:var(--sage);margin-bottom:var(--s2)}
+.ix-list{list-style:none;margin:0;padding:0}
+.ix-list li{border-bottom:1px solid rgba(181,178,171,.14)}
+.ix-list a{display:grid;grid-template-columns:3.2em minmax(0,1fr) minmax(0,1fr) 4em;align-items:baseline;gap:var(--s3);padding:clamp(14px,1.6vw,22px) 0;color:var(--sage);transition:color var(--mid) var(--ease),padding var(--mid) var(--ease)}
+.ix-list .n{font-family:var(--mono);font-size:var(--t-meta);font-variant-numeric:tabular-nums;letter-spacing:.12em}
+.ix-list .t{font-family:var(--serif);font-size:clamp(30px,3.6vw,56px);line-height:1;color:var(--ivory);transition:transform var(--mid) var(--ease)}
+.ix-list .l{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.3vw,19px)}
+.ix-list .c{font-family:var(--mono);font-size:var(--t-meta);text-align:right;font-variant-numeric:tabular-nums}
+.ix-list .th{display:none}
+@media (hover:hover){.ix-list a:hover{color:var(--ivory)}.ix-list a:hover .t{transform:translateX(14px)}}
+.ix-peek{position:fixed;left:0;top:0;z-index:30;width:clamp(180px,16vw,260px);aspect-ratio:4/5;pointer-events:none;opacity:0;transform:translate3d(-999px,-999px,0) scale(.96);transition:opacity .35s var(--ease),scale .35s var(--ease);background:#111 center/cover no-repeat;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);border:5px solid #0a0a0a;outline:10px solid #ece9e3;outline-offset:-15px}
+.ix-peek.on{opacity:1;scale:1}
+@media (max-width:700px){.ix-list a{grid-template-columns:64px minmax(0,1fr) auto;gap:14px;padding:12px 0}.ix-list .n,.ix-list .l{display:none}.ix-list .th{display:block;width:64px;aspect-ratio:4/5;background:#111 center/cover no-repeat}.ix-list .t{font-size:30px}.ix-peek{display:none}}
+/* contact: one editorial headline instead of a second logo */
+.contact .who .c-h{font-size:clamp(40px,5.2vw,84px);line-height:.98;font-weight:400;letter-spacing:-.01em}
+.contact .who p:not(.meta){font-size:clamp(18px,1.6vw,24px);color:var(--sage)}
+/* footer: mark, navigation, links, base line */
+.ft{grid-column:1 / -1;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s4);align-items:end;border-top:1px solid rgba(181,178,171,.18);padding-top:var(--s5);margin-top:var(--s5)}
+.ft-mark{grid-column:1 / 6}
+.ft-mark .wm{--F:clamp(22px,2.6vw,38px)}
+.ft-nav,.ft-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.ft-nav{grid-column:7 / 9}.ft-links{grid-column:9 / 12}
+.ft a{color:var(--sage);transition:color var(--fast)}.ft a:hover{color:var(--ivory)}
+.ft-base{grid-column:12 / 13;display:flex;flex-direction:column;align-items:flex-end;gap:6px;color:var(--sage);margin:0}
+@media (max-width:860px){.ft-mark{grid-column:1 / -1}.ft-nav{grid-column:1 / 5}.ft-links{grid-column:5 / 11}.ft-base{grid-column:1 / -1;flex-direction:row;justify-content:space-between}}
+
+
+/* the menu gains a soft dark backdrop once the page moves under it (not over the gallery hall or a room) */
+.bar::before{content:"";position:absolute;inset:0 0 -28px 0;z-index:-1;background:linear-gradient(rgba(14,14,14,.94),rgba(14,14,14,.7) 60%,rgba(14,14,14,0));opacity:0;transition:opacity .4s var(--ease);pointer-events:none}
+.bar.solid::before{opacity:1}
+body.in-room .bar::before{opacity:0}
+
+/* ---------- sound: one fixed control, bottom right ---------- */
+.sound{position:fixed;right:var(--gutter);bottom:18px;z-index:55;display:flex;align-items:center;gap:10px;height:36px;padding:0 14px 0 12px;
+  border:1px solid rgba(181,178,171,.35);border-radius:18px;background:rgba(8,8,8,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  color:var(--sage);transition:color var(--fast),border-color var(--fast)}
+.sound:hover,.sound:focus-visible{color:var(--ivory);border-color:var(--ivory)}
+.sound .eq{display:flex;align-items:flex-end;gap:2px;width:14px;height:12px}
+.sound .eq i{flex:1;height:3px;background:currentColor;transition:height var(--fast)}
+.sound.on .eq i{animation:eq 1.1s ease-in-out infinite}
+.sound.on .eq i:nth-child(2){animation-delay:-.4s}
+.sound.on .eq i:nth-child(3){animation-delay:-.75s}
+@keyframes eq{0%,100%{height:3px}50%{height:12px}}
+.sound.on{color:var(--ivory)}
+.sound .lbl{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){.sound.on .eq i{animation:none;height:8px}}
+@media (max-width:700px){.sound{bottom:14px;height:34px}}
+.c-hud{right:calc(var(--gutter) + 128px)}
+
+/* ---------- curtain (transform + opacity only) and cursor label ---------- */
+.curtain{position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:50;background:var(--galaxy);pointer-events:none;visibility:hidden;transform-origin:0 0}
+.curtain.dark{background:var(--obsidian)}
+.tip{position:fixed;left:0;top:0;z-index:70;pointer-events:none;opacity:0;will-change:transform;transition:opacity var(--fast)}
+.tip span{display:block;margin:18px 0 0 18px;background:var(--ivory);color:var(--obsidian);padding:6px 10px;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.tip.on{opacity:1}
+@media (hover:none),(pointer:coarse){.tip{display:none}}
+
+@media (max-width:900px){
+  .hero-corner{flex-direction:column;align-items:flex-start}
+  .about,.contact{padding-top:var(--s7)}
+  .about h2,.about .txt,.contact .who,form{grid-column:1 / -1}
+  .room-head .l,.room-head .r{grid-column:1 / -1}
+  .grid{gap:var(--s5) var(--s3)}
+  .item{grid-column:1 / -1;margin-top:0}
+  .sys > section{grid-column:1 / -1}
+  .sw{grid-template-columns:repeat(3,1fr)}
+  .spec > div{grid-template-columns:1fr}
+  .pair{grid-template-columns:1fr}
+  .viewer{padding-top:var(--s7)}
+}
+@media (max-width:520px){.brand .wm{--F:13px}.bar nav{gap:14px}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="#top" data-go="top" aria-label="Sebas Bregni Photography, home">
+    <span class="wm compact" aria-hidden="true"><span class="wm-name"><span>Sebas</span><i class="wm-cut"></i><span>Bregni</span></span></span>
+  </a>
+  <nav class="navtype" aria-label="Main">
+    <a href="#work" data-go="work">Work</a>
+    <a href="#about" data-go="about">About</a>
+    <a href="#contact" data-go="contact">Contact</a>
+  </nav>
+</header>
+<button class="close navtype" id="close" type="button" aria-label="Back to the gallery"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Back to the gallery</button>
+
+<button class="sound" id="sound" type="button" aria-pressed="true" aria-label="Turn music off">
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Sound on</span>
+</button>
+<audio id="music" src="audio/deep-blue.mp3" preload="auto" loop></audio>
+<a class="skip navtype" href="#work" data-go="work">Skip to the gallery</a>
+<main id="home">
+  <section class="hero" id="top">
+    <div class="hero-media" id="heroMedia"></div>
+    <h1 class="wm" aria-label="Sebas Bregni Photography">
+      <span class="wm-name" aria-hidden="true"><span>Sebas</span><i class="wm-cut"></i><span>Bregni</span></span>
+      <span class="wm-sub" aria-hidden="true">Photography</span>
+    </h1>
+    <div class="hero-set" id="heroSet" aria-label="Selected work"></div>
+    <div class="s-cue h-cue" aria-hidden="true"><i class="m"></i><i class="f"></i><span>Scroll down</span></div>
+    <div class="hero-corner">
+      <p class="meta">Commercial / Fashion / Product / Film<br>Guatemala</p>
+      <a class="cue navtype" href="#work" data-go="work"><i></i>Enter the gallery</a>
+    </div>
+  </section>
+
+  <section id="work" aria-label="The gallery">
+    <div class="walk" id="walk"></div>
+    <div class="flat" id="flat"></div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="serif">Light, built<br>for brands.</h2>
+    <div class="txt">
+      <p>Sebastián Bregni is a photographer and filmmaker in Guatemala. Product, jewelry, fashion and beauty for brands and agencies, lit in the studio and carried into film.</p>
+      <dl class="facts meta">
+        <div><dt>Practice</dt><dd>Photography, film</dd></div>
+        <div><dt>Based in</dt><dd>Guatemala</dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/sebasbregni_photography/" target="_blank" rel="noopener">@sebasbregni_photography</a></dd></div>
+      </dl>
+    </div>
+    <div class="ix">
+      <p class="ix-head meta"><span>Rooms</span><span>Works</span></p>
+      <ol class="ix-list" id="ixList"></ol>
+    </div>
+    <div class="ix-peek" id="ixPeek" aria-hidden="true"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="who">
+      <h2 class="c-h serif">Tell me about<br>the next project.</h2>
+      <p>Available for selected projects.</p>
+      <p class="meta">Commercial Photography / Fashion / Film</p>
+      <div class="links navtype" id="links">
+        <a href="https://www.instagram.com/sebasbregni_photography/" target="_blank" rel="noopener">Instagram @sebasbregni_photography</a>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <div class="field"><label class="navtype" for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label class="navtype" for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label class="navtype" for="f-type">Project</label>
+        <select id="f-type" name="type">
+          <option>Commercial photography</option><option>Fashion / editorial</option><option>Product / jewelry</option><option>Food</option><option>Pets</option><option>Film</option><option>Other</option>
+        </select></div>
+      <div class="pair">
+        <div class="field"><label class="navtype" for="f-photos">Final photos needed</label><input id="f-photos" name="photos" type="number" inputmode="numeric" min="1" max="999" placeholder="e.g. 20" required></div>
+        <div class="field"><label class="navtype" for="f-items">Products or looks</label><input id="f-items" name="items" type="number" inputmode="numeric" min="0" max="999" placeholder="e.g. 8"></div>
+      </div>
+      <div class="pair">
+        <div class="field"><label class="navtype" for="f-video">Video</label>
+          <select id="f-video" name="video"><option>No video</option><option>Short reel (15–30 s)</option><option>Commercial (30–60 s)</option><option>Several videos</option><option>Not sure yet</option></select></div>
+        <div class="field"><label class="navtype" for="f-place">Where</label>
+          <select id="f-place" name="place"><option>In the studio</option><option>On location</option><option>Not sure yet</option></select></div>
+      </div>
+      <div class="field"><label class="navtype" for="f-date">Date or deadline</label><input id="f-date" name="date" placeholder="e.g. first week of December"></div>
+      <div class="field"><label class="navtype" for="f-msg">About the project</label><textarea id="f-msg" name="msg" placeholder="Brand, what the photos are for, references…" required></textarea></div>
+      <button class="send navtype" type="submit">Prepare message</button>
+      <div class="out" id="out" role="status" aria-live="polite">
+        <pre id="outText"></pre>
+        <div class="row navtype" id="outRow"></div>
+        <small id="outNote"></small>
+      </div>
+    </form>
+    <footer class="ft">
+      <div class="ft-mark"><span class="wm" role="img" aria-label="Sebas Bregni Photography"><span class="wm-name" aria-hidden="true"><span>Sebas</span><i class="wm-cut"></i><span>Bregni</span></span><span class="wm-sub" aria-hidden="true">Photography</span></span></div>
+      <nav class="ft-nav navtype" aria-label="Footer">
+        <a href="#work" data-go="work">Work</a><a href="#about" data-go="about">About</a><a href="#contact" data-go="contact">Contact</a>
+      </nav>
+      <div class="ft-links navtype"><a href="https://www.instagram.com/sebasbregni_photography/" target="_blank" rel="noopener">Instagram</a><a href="#identity" data-go="identity">Identity and design system</a></div>
+      <p class="ft-base meta"><span>Guatemala</span><span id="year"></span></p>
+    </footer>
+  </section>
+</main>
+
+<div class="room" id="room" role="dialog" aria-modal="true" aria-label="Exhibition room" tabindex="-1"><div class="room-in" id="roomIn"></div></div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Viewer">
+  <button class="v-close navtype" id="vClose" type="button" aria-label="Close the photo"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Close</button>
+  <div class="stage" id="stage"></div>
+  <div class="v-bar">
+    <span class="v-cap" id="vCap"><b class="vc-room"></b><span class="vc-proj"></span><span class="vc-n meta"></span></span>
+    <span class="ctl navtype"><button type="button" id="vFull">Full screen</button><button type="button" id="vPrev">Previous</button><button type="button" id="vNext">Next</button></span>
+  </div>
+</div>
+
+<div class="curtain" id="curtain"></div>
+<div class="tip" id="tip" aria-hidden="true"><span></span></div>
+
+<script>
+/* ==========================================================================
+   ENGINE — content lives in content.js. No content below this line.
+   ========================================================================== */
+"use strict";
+const $ = (s, r) => (r || document).querySelector(s);
+const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const pad2 = n => String(n).padStart(2, "0");
+const calm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const finePointer = matchMedia("(hover:hover) and (pointer:fine)").matches;
+/* Phones, tablets and modest hardware get a lighter museum (no floor light pools,
+   no soft shadows, shorter view distance, tighter scroll tracking). */
+const LITE = /[?&]full\b/.test(location.search) ? false : (!finePointer || innerWidth < 760 || (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4);
+if (LITE) document.documentElement.classList.add("lite");
+const IMG = window.IMAGES || {}, VID = window.VIDEOS || {};
+const ROOMS = window.ROOMS || [], SITE = window.SITE || {};
+const WM = cls => '<span class="wm ' + (cls || "") + '" role="img" aria-label="Sebas Bregni Photography"><span class="wm-name" aria-hidden="true"><span>Sebas</span><i class="wm-cut"></i><span>Bregni</span></span>' +
+  (/compact|sig/.test(cls || "") ? "" : '<span class="wm-sub" aria-hidden="true">Photography</span>') + "</span>";
+
+/* ---- one animation loop for the whole site ----
+   Subscribers return true while they still need frames; the loop sleeps otherwise. */
+const Ticker = (() => {
+  const subs = new Set(); let raf = 0, last = 0;
+  const frame = t => {
+    raf = 0; const dt = last ? Math.min(64, t - last) : 16.7; last = t; let again = false;
+    subs.forEach(f => { if (f(dt)) again = true; });
+    if (again) raf = requestAnimationFrame(frame); else last = 0;
+  };
+  return { add: f => subs.add(f), remove: f => subs.delete(f), wake: () => { if (!raf) raf = requestAnimationFrame(frame); } };
+})();
+
+/* ---- media ----
+   ratioOf: real proportion from the manifest, otherwise the slot's ratio.
+   plate:   the print surface. With opts.defer the image waits for .load(),
+            which the corridor calls when the print comes within view range. */
+const ratioOf = w => { const m = w.img && IMG[w.img], v = w.video && VID[w.video]; return m ? m.w + "/" + m.h : v ? v.w + "/" + v.h : (w.ratio || "4/5"); };
+const fmts = id => IMG[id].f || ["avif", "webp", "jpg"];
+const srcset = (id, fmt) => IMG[id].sizes.map(s => "images/" + id + "-" + s + "." + fmt + " " + s + "w").join(", ");
+function picture(id, alt, sizes, eager) {
+  const m = IMG[id], pic = el("picture"), F = fmts(id), fb = F[F.length - 1];
+  F.slice(0, -1).forEach(f => { const s = el("source"); s.type = "image/" + f; s.dataset.srcset = srcset(id, f); s.sizes = sizes; pic.append(s); });
+  const i = el("img"); i.alt = alt || ""; i.decoding = "async"; i.width = m.w; i.height = m.h; i.sizes = sizes;
+  i.dataset.srcset = srcset(id, fb); i.dataset.src = "images/" + id + "-" + m.sizes[m.sizes.length - 1] + "." + fb;
+  if (eager) i.setAttribute("fetchpriority", "high"); else i.loading = "lazy";
+  i.addEventListener("load", () => i.classList.add("ok"), { once: true });
+  pic.append(i);
+  pic.load = () => { if (pic.loaded) return; pic.loaded = true;
+    pic.querySelectorAll("source").forEach(s => { s.srcset = s.dataset.srcset; }); i.srcset = i.dataset.srcset; i.src = i.dataset.src;
+    if (i.complete && i.naturalWidth) i.classList.add("ok"); };
+  return pic;
+}
+function plate(work, slot, opts) {
+  opts = opts || {};
+  const p = el("span", "plate"), sizes = opts.sizes || "50vw";
+  const m = work.img && IMG[work.img], v = work.video && VID[work.video];
+  p.load = () => {};
+  if (m) p.style.background = m.c;
+  if (work.film && v && opts.playing) {                        // screening room: the real film
+    const vid = el("video"); vid.controls = true; vid.autoplay = true; vid.playsInline = true; vid.preload = "auto";
+    if (v.poster) vid.poster = "videos/" + work.video + "-poster.jpg";
+    vid.src = "videos/" + work.video + "-" + (innerWidth < 900 && v.sizes.includes(720) ? 720 : Math.max.apply(null, v.sizes)) + ".mp4";
+    p.append(vid); return p;
+  }
+  if (work.film && v) {                                         // poster; a muted preview loads only on hover
+    const pic = v.posterImg && IMG[v.posterImg] ? picture(v.posterImg, work.title, sizes, opts.eager) : null;
+    if (pic) { p.append(pic); p.load = pic.load; }
+    else { const i = el("img"); i.alt = work.title || ""; i.decoding = "async"; i.dataset.src = "videos/" + work.video + "-poster.jpg";
+      i.addEventListener("load", () => i.classList.add("ok"), { once: true }); p.append(i); p.load = () => { if (!i.src) i.src = i.dataset.src; }; }
+    if (finePointer) {
+      let pv = null;
+      p.addEventListener("pointerenter", () => { if (!pv) { pv = el("video"); pv.muted = true; pv.loop = true; pv.playsInline = true; pv.preload = "none";
+        pv.src = "videos/" + work.video + "-" + Math.min.apply(null, v.sizes) + ".mp4"; p.append(pv); } pv.play().catch(() => {}); });
+      p.addEventListener("pointerleave", () => pv && pv.pause());
+    }
+    p.append(el("span", "play")); if (!opts.defer) p.load(); return p;
+  }
+  if (m) { const pic = picture(work.img, work.alt || work.title || slot, sizes, opts.eager); p.append(pic); p.load = pic.load; if (!opts.defer) p.load(); return p; }
+  p.innerHTML = '<span class="ph"><b>' + (work.film ? "Film coming soon" : "Placeholder") + '</b><span>' + esc(slot) + (work.ref ? " / " + esc(work.ref) : "") + " / " + esc(ratioOf(work).replace("/", ":")) + "</span></span>" + (work.film ? '<span class="play"></span>' : "");
+  return p;
+}
+
+/* ---- hero: an original drawing of a photo studio (black and white), used while no hero photograph is set.
+   Seamless white sweep, trussed roof with skylights, an octabox, two black V-flats, a stool on its mark,
+   a beauty dish, a fresnel and a tethering cart. Pure SVG: sharp at any size, a few KB. ---- */
+const STUDIO_SVG = (() => {
+  const tri = (x, y, h, w) => `<path d="M${x} ${y}V${y + h}M${x} ${y + h}l-${w} ${w * .55}M${x} ${y + h}l${w} ${w * .55}M${x} ${y + h}v${w * .5}" />`;
+  return `<svg class="studio-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs>
+ <linearGradient id="sw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f938e"/><stop offset=".55" stop-color="#a9ada7"/><stop offset="1" stop-color="#b7bab4"/></linearGradient>
+ <linearGradient id="sl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4e524e"/><stop offset="1" stop-color="#8c908b"/></linearGradient>
+ <linearGradient id="sr" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#4a4e4a"/><stop offset="1" stop-color="#8a8e89"/></linearGradient>
+ <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b3b6b0"/><stop offset=".45" stop-color="#9a9d97"/><stop offset="1" stop-color="#5d605c"/></linearGradient>
+ <radialGradient id="pool" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="oct" cx=".45" cy=".42" r=".6"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#e6e8e3"/><stop offset="1" stop-color="#bfc2bc"/></radialGradient>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9dcd6"/><stop offset="1" stop-color="#8d918c"/></linearGradient>
+</defs>
+<g class="st-room">
+ <rect width="1600" height="900" fill="#0d0f0e"/>
+ <path d="M0 150 L380 268 L380 560 L0 712Z" fill="url(#sl)"/>
+ <path d="M1600 150 L1220 268 L1220 560 L1600 712Z" fill="url(#sr)"/>
+ <rect x="380" y="268" width="840" height="292" fill="url(#sw)"/>
+ <path d="M0 712 L380 560 L1220 560 L1600 712 L1600 900 L0 900Z" fill="url(#fl)"/>
+ <path d="M380 548 Q380 562 396 564 L1204 564 Q1220 562 1220 548" fill="none" stroke="#c4c7c1" stroke-opacity=".5" stroke-width="10"/>
+ <ellipse cx="800" cy="610" rx="420" ry="70" fill="url(#pool)"/>
+ <g fill="url(#sky)" opacity=".85">
+  <path d="M470 0 L700 0 L640 200 L520 200Z"/><path d="M930 0 L1160 0 L1090 200 L960 200Z"/>
+ </g>
+ <g fill="none" stroke="#d6d9d3" stroke-linecap="round">
+  <path stroke-width="7" d="M60 0 L380 268 M1540 0 L1220 268 M120 180 L1480 180 M300 238 L1300 238 M380 268 L1220 268"/>
+  <path stroke-width="3" d="M120 180 L230 0 M340 180 L300 0 M560 180 L500 0 M800 180 L800 0 M1040 180 L1100 0 M1260 180 L1300 0 M1480 180 L1370 0
+   M300 238 L380 180 M500 238 L460 180 M700 238 L660 180 M900 238 L940 180 M1100 238 L1140 180 M1300 238 L1220 180
+   M800 238 L800 268 M560 0 L585 200 M1045 0 L1020 200"/>
+ </g>
+ <g fill="#191c1a">
+  <path d="M598 352 L652 364 L652 552 L598 566Z"/><path d="M1002 352 L948 364 L948 552 L1002 566Z"/>
+ </g>
+ <g stroke="#202321" stroke-width="3" fill="none"><path d="M786 488 h28 M790 490 L784 548 M810 490 L816 548 M788 520 h24"/></g>
+ <g stroke="#151816" stroke-width="2.4" fill="none">
+  ${tri(470, 455, 160, 46)}
+  <path d="M470 455 L470 430"/>
+  ${tri(1050, 420, 175, 40)}
+  ${tri(1380, 330, 290, 60)}
+  ${tri(1180, 360, 220, 42)}
+  <path d="M60 640 C200 720 360 650 520 700 S860 760 1010 640 M1120 600 C1230 680 1380 640 1470 720"/>
+ </g>
+ <g transform="translate(70 520)" fill="#141715" stroke="#1d201e" stroke-width="3">
+  <rect x="0" y="0" width="170" height="104" rx="3"/><rect x="8" y="8" width="154" height="84" fill="#3a3e3b"/>
+  <path d="M-30 120 h230 M-20 120 l-10 120 M190 120 l10 120 M-30 200 h230" fill="none"/>
+  <circle cx="-30" cy="244" r="12"/><circle cx="200" cy="244" r="12"/>
+ </g>
+ <g transform="translate(1135 320) rotate(-8)">
+  <rect x="0" y="0" width="70" height="34" rx="4" fill="#171a18"/><rect x="66" y="6" width="16" height="22" fill="#d9dcd6" class="lamp l3"/>
+ </g>
+ <g transform="translate(1335 265)">
+  <rect x="0" y="0" width="92" height="64" rx="8" fill="#1b1e1c"/><circle cx="-6" cy="32" r="30" fill="#e8eae5" class="lamp l2"/><circle cx="-6" cy="32" r="30" fill="none" stroke="#111" stroke-width="5"/>
+ </g>
+ <g transform="translate(1050 410)"><circle r="38" fill="#141716"/><circle r="15" fill="#e3e5e0" class="lamp l2"/></g>
+</g>
+<g class="lamp l1" transform="translate(470 360)">
+ <polygon points="-38,-92 38,-92 92,-38 92,38 38,92 -38,92 -92,38 -92,-38" fill="url(#oct)" stroke="#202321" stroke-width="5"/>
+ <polygon points="-24,-58 24,-58 58,-24 58,24 24,58 -24,58 -58,24 -58,-24" fill="none" stroke="#c9ccc6" stroke-width="1.5"/>
+</g>
+<g class="lamp l1"><path d="M560 300 L660 250 L700 320 L600 372Z" fill="#eef0eb" stroke="#202321" stroke-width="4"/></g>
+<rect width="1600" height="900" fill="#0b0d0c" opacity=".22"/>
+</svg>`;
+})();
+
+/* ---- hero ---- */
+if (SITE.heroSet && SITE.heroSet.length) {           // opening screen: the work itself, one print per discipline
+  $(".hero").classList.add("set");
+  SITE.heroSet.forEach((h, i) => { const r = ROOMS.find(x => x.id === h.room) || {};
+    const a = el("a", "", ""); a.href = "#" + h.room; a.dataset.tip = "Open"; a.setAttribute("aria-label", h.label + ", open room " + (r.title || ""));
+    a.append(plate({ img: h.img, alt: h.alt }, h.room, { eager: true, sizes: "(max-width:700px) 46vw, 24vw" }));
+    a.append(el("span", "meta", "<span>" + pad2(i + 1) + "</span><span>" + esc(h.label) + "</span>"));
+    a.addEventListener("click", e => { e.preventDefault(); go(h.room, a); });
+    $("#heroSet").append(a); });
+}
+else if (SITE.hero && (SITE.hero.img || SITE.hero.video)) $("#heroMedia").append(plate(SITE.hero, "hero-cover", { eager: true, sizes: "100vw" }));
+else { const hm = $("#heroMedia"); hm.classList.add("studio", "drawn"); hm.innerHTML = STUDIO_SVG; }
+$("#year").textContent = "© " + new Date().getFullYear();
+
+/* ==========================================================================
+   THE CORRIDOR
+   items: [{ work, slot, kicker, title, text, enter, tip, aria, pick(btn) }]
+   scroller: window (home) or the room element. Scrolling walks the camera in.
+   ========================================================================== */
+function Corridor(host, scroller, items, o) {
+  const P = 900, GAP = 900, FIRST = 700, H = 640, K = 0.8;
+  const VD = LITE ? 2000 : 3900;                 // view distance; beyond it bays are culled
+  const win = scroller === window;
+  const pin = el("div", "c-pin" + (o.dark ? " dark" : "")), view = el("div", "c-view"), world = el("div", "c-world");
+  const hud = el("div", "c-hud", '<span class="meta no"></span><span class="rail"><i></i></span><span class="meta hint">' + esc(o.hint) + "</span>");
+  hud.setAttribute("aria-hidden", "true");
+  view.append(world); pin.append(view);
+  if (o.title) pin.append(o.title);
+  pin.append(hud); host.innerHTML = ""; host.append(pin);
+  const hudNo = $(".no", hud), hudRail = $(".rail i", hud);
+  let W, pw, L, maxZ, hostTop = 0, groups = [], piers = [], lastW = innerWidth, lastH = innerHeight;
+  let cz = 0, tz = 0, yaw = 0, tyaw = 0, cx = 0, mcx = 0, lean = 0, shownNo = -1, shownTitle = -1, dead = false;
+
+  /* LOW (phones): walls, floor and ceiling are drawn at half size and scaled x2, so each surface needs a
+     quarter of the graphics memory. iOS closes pages that use too much of it. Piers keep full size: they hold the prints. */
+  const LOW = LITE;
+  const plane = (cls, wd, ht, tf, arch) => { const n = el("div", "c-plane " + cls), k = arch && LOW ? 0.5 : 1;
+    n.style.cssText = "width:" + wd * k + "px;height:" + ht * k + "px;margin:" + (-ht * k / 2) + "px 0 0 " + (-wd * k / 2) + "px;transform:" + tf + (k < 1 ? " scale(2)" : "");
+    world.append(n); return n; };
+  /* a group is everything that sits at one depth: culled and faded together */
+  const group = (z, nodes, fade) => { const g = { z, nodes, fade, a: -1 }; groups.push(g); return g; };   // fade: "pier" | "far" | false
+
+  function build() {
+    world.innerHTML = ""; groups = []; piers = [];
+    W = clamp(innerWidth * 1.45, 560, 1150); pw = W * 0.37;   // prints sit nearer the walls: a wider aisle down the middle
+    L = FIRST + items.length * GAP; maxZ = L - 200;
+    // architecture in bays, so far bays can be dropped instead of painting one huge surface
+    const bays = Math.ceil((L + P) / GAP);
+    for (let k = 0; k < bays; k++) {
+      const zc = P - (k + 0.5) * GAP, D = GAP + 2;
+      group(zc, [
+        plane("c-floor", W, D, "translate3d(0," + (H / 2 - 20) + "px," + zc + "px) rotateX(90deg)", true),
+        plane("c-ceil", W, D, "translate3d(0," + (-H / 2 - 20) + "px," + zc + "px) rotateX(-90deg)", true),
+        plane("c-wall", D, H, "translate3d(" + (-W / 2) + "px,-20px," + zc + "px) rotateY(90deg)", true),
+        plane("c-wall", D, H, "translate3d(" + (W / 2) + "px,-20px," + zc + "px) rotateY(-90deg)", true)
+      ], "far");
+    }
+    // the name painted on the walls near the entrance
+    if (!LOW) {
+    const tl = plane("c-type", 2600, H, "translate3d(" + (-W / 2 + 1) + "px,-20px," + (P - 1000 - 1300) + "px) rotateY(90deg)");
+    tl.innerHTML = '<span style="padding-left:120px">' + esc(o.wallA) + "</span>"; tl.setAttribute("aria-hidden", "true");
+    const tr = plane("c-type r", 2600, H, "translate3d(" + (W / 2 - 1) + "px,-20px," + (P - 2200 - 1300) + "px) rotateY(-90deg)");
+    tr.innerHTML = '<span style="padding-right:120px">' + esc(o.wallB) + "</span>"; tr.setAttribute("aria-hidden", "true");
+    group(P - 1000, [tl], false); group(P - 2200, [tr], false);   // culled by their near end
+    }
+
+    items.forEach((it, i) => {
+      const side = i % 2 ? 1 : -1, z = -(FIRST + i * GAP), x = side * (W / 2 - pw / 2);
+      const nodes = [plane("c-side", 46, H, "translate3d(" + (side * (W / 2 - pw)) + "px,-20px," + (z - 23) + "px) rotateY(" + (side < 0 ? 90 : -90) + "deg)")];
+      if (!LITE) nodes.push(plane("c-pool", pw * 1.15, 620, "translate3d(" + x + "px," + (H / 2 - 21) + "px," + (z + 300) + "px) rotateX(90deg)"));
+      const pier = plane("c-pier", pw, H, "translate3d(" + x + "px,-20px," + z + "px)"); nodes.push(pier);
+      const r = ratioOf(it.work).split("/").reduce((a, b) => a / b);
+      const fh = Math.min(450, (pw * 0.8) / r), fw = fh * r, mat = Math.round(Math.min(fw, fh) * 0.07);
+      const b = el("button", "c-frame"); b.type = "button"; b.dataset.tip = it.tip; b.setAttribute("aria-label", it.aria);
+      b.style.cssText = "--w:" + (fw - 2 * mat) + "px;--h:" + (fh - 2 * mat) + "px;--mat:" + mat + "px";
+      // the print grows on screen as you approach it: request ~1.6x its CSS width
+      const pl = plate(it.work, it.slot, { defer: true, sizes: Math.round(fw * 1.6) + "px" });
+      b.append(pl);
+      const lab = el("div", "c-label", '<span class="meta">' + esc(it.kicker) + "</span>" + (it.title ? "<h3>" + esc(it.title) + "</h3>" : "") +
+        (it.text ? "<p>" + esc(it.text) + "</p>" : "") + (it.enter ? '<span class="enter navtype">' + esc(it.enter) + "</span>" : ""));
+      lab.style.setProperty("--lw", Math.max(fw + 12, 200) + "px");
+      pier.append(b, lab);
+      b.addEventListener("click", () => it.pick(b));
+      b.addEventListener("focus", () => walkTo(FIRST + i * GAP - 150));
+      const g = group(z, nodes, "pier"); g.b = b; g.load = pl.load; g.loaded = false;
+      piers.push({ z, x, g });
+    });
+    const end = plane("c-end", W, H, "translate3d(0,-20px," + (-L) + "px)"); end.append(o.end);
+    group(-L, [end], false);
+
+    const extra = Math.round(maxZ * K);
+    host.style.height = (innerHeight + extra) + "px";
+    host.style.height = "calc(100svh + " + extra + "px)";       // stable when mobile toolbars show and hide
+    measure(); read(); cz = tz; draw(true);
+  }
+  function measure() { hostTop = win ? host.getBoundingClientRect().top + scrollY : host.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop; }
+  function walkTo(z) { const off = hostTop + clamp(z, 0, maxZ) * K; if (win) scrollTo({ top: off }); else scroller.scrollTop = off; }
+  /* read(): pure arithmetic on the scroll position; never touches layout */
+  function read() {
+    const y = win ? scrollY : scroller.scrollTop;
+    tz = clamp((y - hostTop) / K, 0, maxZ);
+    let best = 0, f = innerWidth < 700 ? 0.5 : 0; lean = 0;      // walk straight; phones lean a little so the print stays on screen
+    for (const p of piers) { const d = P - (p.z + tz), wgt = clamp(1 - Math.abs(d - 900) / 800, 0, 1); if (wgt > best) { best = wgt; lean = p.x * f * wgt; } }
+  }
+  function draw(force) {
+    world.style.transform = "translateZ(" + P + "px) rotateY(" + yaw.toFixed(3) + "deg) translateZ(" + (-P) + "px) translate3d(" + (-cx).toFixed(2) + "px,0," + cz.toFixed(2) + "px)";
+    let near = 0;
+    for (const g of groups) {
+      const d = P - (g.z + cz);
+      let a = d > -GAP && d < VD + GAP / 2 ? 1 : 0;
+      if (g.fade === "pier" && a) a = Math.min(clamp((d - 260) / 320, 0, 1), clamp((VD - d) / 700, 0, 1));
+      else if (g.fade === "far" && a) a = clamp((VD + GAP / 2 - d) / 900, 0, 1);
+      a = Math.round(a * 20) / 20;                               // only write when the value really changes
+      if (a !== g.a || force) {
+        const vis = a > 0;
+        for (const n of g.nodes) { if (g.fade) n.style.opacity = a; if (vis !== (g.a > 0) || force) n.style.visibility = vis ? "visible" : "hidden"; }
+        if (g.b) g.b.tabIndex = vis ? 0 : -1;
+        g.a = a;
+      }
+      if (g.load && !g.loaded && d < VD + 600) { g.loaded = true; g.load(); }
+    }
+    piers.forEach((p, i) => { if (P - (p.z + cz) < 1500) near = i + 1; });
+    if (near !== shownNo) { hudNo.textContent = pad2(near) + " / " + pad2(items.length); shownNo = near; }
+    hudRail.style.transform = "scaleX(" + (maxZ ? cz / maxZ : 0).toFixed(4) + ")";
+    if (o.title) { const t = Math.round(clamp(1 - cz / 500, 0, 1) * 20) / 20; if (t !== shownTitle) { o.title.style.opacity = t; o.title.style.visibility = t ? "visible" : "hidden"; shownTitle = t; } }
+  }
+  /* frame-rate independent easing; phones track the finger more tightly */
+  const tick = dt => {
+    if (dead) return false;
+    const k = 1 - Math.pow(1 - (LITE ? 0.3 : 0.14), dt / 16.67), k2 = 1 - Math.pow(0.92, dt / 16.67), tcx = mcx + lean;
+    cz += (tz - cz) * k; yaw += (tyaw - yaw) * k2; cx += (tcx - cx) * k2;
+    const rest = Math.abs(tz - cz) < 0.3 && Math.abs(tyaw - yaw) < 0.01 && Math.abs(tcx - cx) < 0.1;
+    if (rest) { cz = tz; yaw = tyaw; cx = tcx; }
+    draw(false); return !rest;
+  };
+  Ticker.add(tick);
+  const onScroll = () => { read(); Ticker.wake(); };
+  const onMove = e => { const u = e.clientX / innerWidth - 0.5; tyaw = u * 2.5; mcx = u * 18; Ticker.wake(); };
+  let rt = 0;
+  const onResize = () => { clearTimeout(rt); rt = setTimeout(() => {
+    // mobile toolbars change the height only: keep the scene, just re-measure
+    if (Math.abs(innerWidth - lastW) < 2 && Math.abs(innerHeight - lastH) < 160) { measure(); read(); Ticker.wake(); return; }
+    lastW = innerWidth; lastH = innerHeight; build(); }, 180); };
+  (win ? window : scroller).addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onResize);
+  if (finePointer && !LITE) pin.addEventListener("pointermove", onMove, { passive: true });
+  build();
+  if (document.fonts) document.fonts.ready.then(() => { if (!dead) { measure(); read(); Ticker.wake(); } });
+  return { destroy() { dead = true; Ticker.remove(tick); removeEventListener("resize", onResize); (win ? window : scroller).removeEventListener("scroll", onScroll); pin.removeEventListener("pointermove", onMove); } };
+}
+
+/* ==========================================================================
+   ROOM WALL — prints hang in a row; scrolling down moves the wall to the right.
+   items as for Corridor; o: { intro, end, hint, dark }
+   ========================================================================== */
+function HWall(host, scroller, items, o) {
+  const pin = el("div", "h-pin" + (o.dark ? " dark" : "")), track = el("div", "h-track");
+  const hud = el("div", "c-hud", '<span class="meta no"></span><span class="rail"><i></i></span><span class="meta hint">' + esc(o.hint) + "</span>");
+  hud.setAttribute("aria-hidden", "true");
+  // scroll guide: down on the wheel or the screen moves the wall to the right
+  const rc = el("div", "r-cue", '<span class="m" aria-hidden="true"><b></b></span><span class="f" aria-hidden="true"></span><span class="t">Scroll down</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 40 10"><path d="M0 5h36M31 1l5 4-5 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>');
+  pin.append(track, hud, rc); host.innerHTML = ""; host.append(pin);
+  if (!matchMedia("(prefers-reduced-motion:reduce)").matches && "IntersectionObserver" in window) {   // each print "develops" as it reaches the light: never hidden, only a touch dimmer before
+    const dev = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("dev-on"); dev.unobserve(e.target); } }), { root: null, rootMargin: "0px -8% 0px -8%" });
+    track.querySelectorAll(".h-frame").forEach(f => { f.classList.add("dev"); dev.observe(f); });
+  }
+  const rcOff = () => rc.classList.toggle("gone", scroller.scrollTop > 60);
+  scroller.addEventListener("scroll", rcOff, { passive: true });
+  const hudNo = $(".no", hud), hudRail = $(".rail i", hud);
+  const HS = [0.6], YS = ["c"];   // one straight line: every print the same height, on the same centre line
+  let figs = [], dist = 0, hostTop = 0, cur = 0, tgt = 0, dead = false, shown = -1, lastW = innerWidth, lastH = innerHeight;
+  function build() {
+    track.innerHTML = ""; figs = [];
+    track.append(o.intro);
+    const CEM = false;   // no plants inside the rooms: only the prints
+    const potted = n => { const d = el("div", "h-pot"); d.setAttribute("aria-hidden", "true"); d.innerHTML = '<i class="pl" style="background-image:url(images/plant-' + (n % 3) + '.webp)"></i><i class="pt"></i>'; track.append(d); };
+    if (CEM) potted(0);
+    const vh = innerHeight, vw = innerWidth, small = vw < 700, maxH = vh * (small ? 0.58 : 0.66);
+    items.forEach((it, i) => {
+      const r = ratioOf(it.work).split("/").reduce((a, b) => a / b);
+      let h = Math.min(vh * HS[0] * (small ? 0.9 : 1), maxH), w = h * r;
+      const capW = vw * (small ? 0.84 : 0.9); if (w > capW) { w = capW; h = w / r; }
+      if (it.plaque) {
+        const pq = el("div", "h-plaque", '<span class="meta">' + esc(it.plaque.meta.join(" / ")) + "</span><h2>" + esc(it.plaque.title) + '</h2><span class="meta">' + it.plaque.count + (it.plaque.count === 1 ? " work" : " works") + "</span>");
+        track.append(pq);
+      }
+      const fig = el("figure", "h-item h-c");
+      const b = el("button", "h-frame"); b.type = "button"; b.dataset.tip = it.tip; b.setAttribute("aria-label", it.aria);
+      const mat = Math.round(Math.min(w, h) * 0.075);                        // white mat, like a framed print
+      b.style.cssText = "width:" + Math.round(w) + "px;height:" + Math.round(h) + "px;--mat:" + mat + "px";
+      const pl = plate(it.work, it.slot, { sizes: Math.round(w * 1.3) + "px", eager: true }); b.append(pl);
+      b.addEventListener("click", () => it.pick(b));
+      b.addEventListener("focus", () => walkTo(fig.offsetLeft - (innerWidth - fig.offsetWidth) / 2));
+      const cap = el("figcaption", "h-cap", '<span class="meta">' + esc(it.kicker) + "</span>" + (it.title ? '<span class="t">' + esc(it.title) + "</span>" : ""));
+      cap.style.width = Math.round(w) + "px";
+      fig.append(el("span", "h-lamp"), b, cap); track.append(fig); figs.push({ fig, load: pl.load, loaded: false, x: 0 });
+      if (CEM && i % 2 === 1 && i < items.length - 1) potted(i + 1);   // 2 prints, 1 plant
+    });
+    track.append(o.end);
+    measure();
+  }
+  function measure() {
+    figs.forEach(f => { f.x = f.fig.offsetLeft; f.fig.style.setProperty("--lift", f.fig.offsetTop + "px"); });
+    dist = Math.max(0, track.scrollWidth - innerWidth);
+    host.style.height = (innerHeight + dist) + "px";
+    host.style.height = "calc(100svh + " + dist + "px)";
+    hostTop = host.offsetTop; read(); cur = tgt; draw();
+  }
+  const walkTo = x => { scroller.scrollTop = hostTop + clamp(x, 0, dist); };
+  function read() { tgt = clamp(scroller.scrollTop - hostTop, 0, dist); }
+  function draw() {
+    track.style.transform = "translate3d(" + (-cur).toFixed(2) + "px,0,0)";
+    const k = clamp(cur / (innerWidth * 0.55), 0, 1);
+    o.intro.style.transform = "translate3d(" + (cur * 0.22).toFixed(2) + "px,0,0)";        // the title drifts slower than the wall
+    o.intro.style.opacity = (1 - k * 0.85).toFixed(3);
+    let n = 0; const mid = cur + innerWidth / 2, ahead = cur + innerWidth * 4;
+    for (const f of figs) {
+      if (f.x < mid) n++;
+      if (!f.loaded && f.x < ahead) { f.loaded = true; f.load(); }
+    }
+    if (n !== shown) { hudNo.textContent = pad2(n) + " / " + pad2(figs.length); shown = n; }
+    hudRail.style.transform = "scaleX(" + (dist ? cur / dist : 0).toFixed(4) + ")";
+  }
+  const tick = dt => {
+    if (dead) return false;
+    cur += (tgt - cur) * (1 - Math.pow(1 - (LITE ? 0.3 : 0.15), dt / 16.67));
+    const rest = Math.abs(tgt - cur) < 0.3; if (rest) cur = tgt;
+    draw(); return !rest;
+  };
+  Ticker.add(tick);
+  const onScroll = () => { read(); Ticker.wake(); };
+  // a sideways trackpad swipe walks the wall too
+  const onWheel = e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 1) { scroller.scrollTop += e.deltaX; e.preventDefault(); } };
+  let rt = 0;
+  const onResize = () => { clearTimeout(rt); rt = setTimeout(() => {
+    if (Math.abs(innerWidth - lastW) < 2 && Math.abs(innerHeight - lastH) < 160) { measure(); return; }
+    lastW = innerWidth; lastH = innerHeight; build(); }, 180); };
+  scroller.addEventListener("scroll", onScroll, { passive: true });
+  scroller.addEventListener("wheel", onWheel, { passive: false });
+  addEventListener("resize", onResize);
+  build();
+  if (document.fonts) document.fonts.ready.then(() => { if (!dead) measure(); });
+  return { destroy() { dead = true; Ticker.remove(tick); scroller.removeEventListener("scroll", onScroll); scroller.removeEventListener("wheel", onWheel); removeEventListener("resize", onResize); } };
+}
+
+/* ==========================================================================
+   THE GALLERY (home)
+   ========================================================================== */
+function Gallery(host, items, o) {
+  const pin = el("div", "g-pin"), view = el("div", "g-view"), world = el("div", "g-world"), vig = el("div", "g-vignette");
+  const hud = el("div", "c-hud", '<span class="meta no"></span><span class="rail"><i></i></span><span class="meta hint">' + esc(o.hint) + "</span>");
+  hud.setAttribute("aria-hidden", "true");
+  o.end.classList.add("g-end");
+  const dark = el("div", "g-dark"), grn = el("div", "grain");
+  // choose a side, or step print by print, instead of relying on scroll alone
+  const side = (cls, html, lab) => { const b = el("button", "g-side " + cls, html); b.type = "button"; b.setAttribute("aria-label", lab); return b; };
+  const sideL = side("l", '<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M23 5H2M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span><b>People</b><i>Models, Pets, Weddings, Films</i></span>', "Go to the left wall: Models, Pets, Weddings, Films");
+  const sideR = side("r", '<span><b>Products</b><i>Products, Jewelry, Food, Motion</i></span><svg viewBox="0 0 24 10" aria-hidden="true"><path d="M1 5h21M18 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>', "Go to the right wall: Products, Jewelry, Food, Motion");
+  const nav = el("div", "g-nav");
+  const prevB = el("button", "", '<svg viewBox="0 0 10 16" aria-hidden="true"><path d="M8 1 2 8l6 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>'), nextB = el("button", "", '<svg viewBox="0 0 10 16" aria-hidden="true"><path d="M2 1l6 7-6 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>');
+  prevB.type = nextB.type = "button"; prevB.setAttribute("aria-label", "Previous print"); nextB.setAttribute("aria-label", "Next print");
+  nav.append(prevB, nextB);
+  const chooseEl = el("div", "g-choose"), mid = el("span", "g-mid", '<i class="m" aria-hidden="true"></i><i class="f" aria-hidden="true"></i><span>Scroll</span>');
+  chooseEl.append(sideL, mid, sideR);
+  view.append(world); pin.append(view, vig, grn, dark, o.title, o.end, hud, chooseEl, nav);
+  new IntersectionObserver((en, ob) => { if (en[0].isIntersecting) { dark.classList.add("on"); ob.disconnect(); } }, { threshold: 0.35 }).observe(pin); host.innerHTML = ""; host.append(pin);
+  const hudNo = $(".no", hud), hudRail = $(".rail i", hud);
+  const SEG = 760;                                       // scroll distance for each camera move
+  const BL = 4300, HALF = BL / Math.SQRT2, CZ = -2000;   // the black block: side, half diagonal, centre
+  const FY = 430, CY = -660, WH = FY - CY;               // floor and ceiling heights (eye at 0)
+  const front = { x: 0, z: CZ + HALF }, cornerL = { x: -HALF, z: CZ }, cornerR = { x: HALF, z: CZ };
+  const nL = { x: -Math.SQRT1_2, z: Math.SQRT1_2 }, nR = { x: Math.SQRT1_2, z: Math.SQRT1_2 };
+  let loops = [], P, keys = [], N = 0, hostTop = 0, u = 0, tu = 0, sway = 0, tsway = 0, dead = false, shown = -1, endOn = -1, titleOp = -1, lastW = innerWidth, lastH = innerHeight;
+
+  // a surface: drawn at 1/S size, scaled S, centred on (x,y,z), turned ry around the vertical and rx around the horizontal
+  const surf = (cls, w, h, x, y, z, ry, rx, S, bg) => {
+    const n = el("div", "g-s " + cls);
+    n.style.cssText = "width:" + (w / S) + "px;height:" + (h / S) + "px;margin:" + (-h / S / 2) + "px 0 0 " + (-w / S / 2) + "px;transform:translate3d(" + x + "px," + y + "px," + z + "px) rotateY(" + ry + "deg) rotateX(" + rx + "deg) scale(" + S + ")" + (bg ? ";--ts:" + bg : "");
+    world.append(n); return n;
+  };
+  const at = (n, x, y, z, ry) => { n.classList.add("g-s"); n.style.transform = "translate3d(" + x + "px," + y + "px," + z + "px) rotateY(" + ry + "deg)"; world.append(n); return n; };
+
+  function build() {
+    world.innerHTML = ""; keys = []; loops = [];
+    const small = innerWidth < 760;
+    P = small ? 520 : clamp(innerWidth * 0.62, 700, 980);
+    view.style.perspective = P + "px";
+    const SB = LITE ? 3 : 2;                                           // block faces
+    // hall
+    const FS = LITE ? 16 : 4, WS = LITE ? 8 : 4;           // phones keep big surfaces small in memory           // desktop draws floor and walls sharper
+    const floorEl = surf("g-floor" + (LITE ? "" : " gloss"), 12800, 12800, 0, FY, CZ + 600, 0, 90, FS, (420 / FS) + "px");
+    // light and shadow are painted INTO the floor and the block (no thin layers floating a few units above them: those flicker)
+    const floorMarks = [], wallLights = [], slices = [];
+    surf("g-ceil", 12800, 12800, 0, CY, CZ + 600, 0, -90, 16);
+    surf("g-wall", 12800, WH, 0, (FY + CY) / 2, CZ - 4400, 0, 0, WS, (700 / WS) + "px");
+    surf("g-wall", 12800, WH, -5400, (FY + CY) / 2, CZ + 600, 90, 0, WS, (700 / WS) + "px");
+    surf("g-wall", 12800, WH, 5400, (FY + CY) / 2, CZ + 600, -90, 0, WS, (700 / WS) + "px");
+    // the block: two faces toward the visitor
+    // each face in 9 slices: a surface that passes behind the camera is drawn wrongly by browsers, a slice behind it is simply dropped
+    [[cornerL, -45], [cornerR, 45]].forEach(([c, ry]) => { const NS = 9;
+      for (let q = 0; q < NS; q++) { const t = (q + 0.5) / NS;
+        const bx = front.x + (c.x - front.x) * t, bz = front.z + (c.z - front.z) * t, nn = c === cornerR ? nR : nL;
+        { const SW = BL / NS + 2, R = c === cornerR, sc = t * BL, g0 = R ? sc - SW / 2 : -sc - SW / 2;   // slices overlap a little and share one continuous texture, so no seam shows
+          const n = surf("g-block", SW, WH - 8, bx, (FY + CY) / 2, bz, ry, 0, SB, (700 / SB) + "px"); n.style.setProperty("--tx", (-g0 / SB).toFixed(2) + "px");
+          slices.push({ n, R, sc, w: SW / SB }); } } });   // slices neither overlap nor touch floor and ceiling: overlaps confuse the browser's depth sorting
+    // prints on the back wall, seen from afar
+    (o.extras || []).forEach((ex, j) => {
+      const xs = [-4500, -3500, 3500, 4500][j]; if (xs === undefined) return;
+      const r = ratioOf(ex.work).split("/").reduce((a, b) => a / b);
+      let fh = 520, fw = fh * r; if (fw > 560) { fw = 560; fh = fw / r; }
+      const mat = Math.round(Math.min(fw, fh) * 0.08), z = CZ - 4400 + 6;
+      surf("g-wash", 1300, 1200, xs, -110, z - 4, 0, 0, 3);
+      surf("g-pool", 1100, 700, xs, FY - 1, z + 600, 0, 90, 3);
+      const b = el("button", "c-frame"); b.type = "button"; b.dataset.tip = "Open"; b.setAttribute("aria-label", ex.aria);
+      b.style.cssText = "--w:" + (fw - 2 * mat) + "px;--h:" + (fh - 2 * mat) + "px;--mat:" + mat + "px;margin:" + (-fh / 2 - 40) + "px 0 0 " + (-fw / 2) + "px";
+      b.append(plate(ex.work, ex.slot, { sizes: Math.round(fw * 1.2) + "px", eager: true }));
+      b.addEventListener("click", () => ex.pick(b));
+      at(b, xs, -40, z, 0);
+    });
+
+    // ---- furniture: benches facing the prints, a studio light and a camera in the open corners of the hall
+    const box = (cls, w, h, d, x, y, z, ry, o2, front) => {      // centre (x,y,z), turned ry; o2 = extra transform inside the object
+      const T = "translate3d(" + x + "px," + y + "px," + z + "px) rotateY(" + ry + "deg)" + (o2 || "");
+      const K = LITE ? 4 : 1;                               // phones: faces drawn small and scaled up
+      const face = (fw, fh, extra, k) => { const n = el("div", "g-f " + cls + (k ? " " + k : ""));
+        n.style.cssText = "width:" + (fw / K) + "px;height:" + (fh / K) + "px;margin:" + (-fh / K / 2) + "px 0 0 " + (-fw / K / 2) + "px;transform:" + T + extra + (K > 1 ? " scale(" + K + ")" : ""); world.append(n); return n; };
+      const fr = face(w, h, " translateZ(" + d / 2 + "px)"); if (front) fr.className = "g-f " + front;
+      face(w, h, " rotateY(180deg) translateZ(" + d / 2 + "px)", "s");
+      face(d, h, " rotateY(90deg) translateZ(" + w / 2 + "px)", "s");
+      face(d, h, " rotateY(-90deg) translateZ(" + w / 2 + "px)", "s");
+      face(w, d, " rotateX(90deg) translateZ(" + h / 2 + "px)", "t");
+    };
+    const shade = (w, d, x, z, ry) => floorMarks.push({ x, z, r: Math.max(w, d) * 0.45, c: "0,0,0", a: 0.5 });
+    const bench = (x, z, ry) => {                        // oak top on two black steel legs
+      shade(800, 480, x, z, ry);
+      const c = Math.cos(ry * Math.PI / 180), sn = Math.sin(ry * Math.PI / 180);
+      [-250, 250].forEach(o => box("f-steel", 34, 86, 250, x + o * c, FY - 43, z - o * sn, ry));
+      box("f-oak", 680, 38, 300, x, FY - 105, z, ry);
+    };
+    bench(0, front.z + 900, 0);                           // a bench facing the corner, as you walk in
+    if (false) [[cornerR, nR, 45], [cornerL, nL, -45]].forEach(([c, nn, ry]) => {   // side benches off: the camera passes too close to them   // benches between two prints; phones walk too close to them
+      const bx = front.x + (c.x - front.x) * 0.5 + nn.x * 680, bz = front.z + (c.z - front.z) * 0.5 + nn.z * 680;
+      bench(bx, bz, ry);
+    });
+    // cameras on tripods, pointed at the prints
+    const tripod = (x, z, ry) => {
+      shade(800, 800, x, z, 0);
+      [30, 150, 270].forEach(a => box("f-steel", 14, 640, 14, x, FY - 300, z, a, " translateZ(150px) rotateX(-17deg)"));
+      box("f-steel", 70, 70, 70, x, FY - 610, z, 0);
+      box("f-steel", 22, 140, 22, x, FY - 700, z, 0);
+      box("f-body", 210, 140, 110, x, FY - 840, z, ry);
+      box("f-body", 70, 60, 80, x - 40 * Math.cos(ry * Math.PI / 180), FY - 935, z + 40 * Math.sin(ry * Math.PI / 180), ry);
+      box("f-grip", 50, 150, 130, x + 120 * Math.cos(ry * Math.PI / 180), FY - 840, z - 120 * Math.sin(ry * Math.PI / 180), ry);
+      const lx = x + 120 * Math.sin(ry * Math.PI / 180), lz = z + 120 * Math.cos(ry * Math.PI / 180);
+      box("f-body", 110, 110, 150, lx, FY - 840, lz, ry);
+      const g = el("div", "g-f f-glass"); g.style.cssText = "width:100px;height:100px;margin:-50px 0 0 -50px;transform:translate3d(" + lx + "px," + (FY - 840) + "px," + lz + "px) rotateY(" + ry + "deg) translateZ(76px)"; world.append(g);
+    };
+    tripod(-4100, -3000, 58);       // left, behind the corner
+    tripod(3700, -2900, -42);       // right, next to the studio light
+    // white plinths beyond the ends of the block, each with a small camera on top
+    [[3900, -1450, 30], [-3900, -1450, -30]].forEach(([x, z, ry]) => {
+      shade(620, 620, x, z, ry); box("f-plinth", 340, 620, 340, x, FY - 310, z, ry);
+      const t = FY - 620, rr = ry * Math.PI / 180;
+      const q = x > 0 ? -90 : 90, qr = rr + q * Math.PI / 180;     // lens toward the visitor
+      box("f-body", 170, 104, 84, x, t - 52, z, ry + q);
+      box("f-body", 60, 46, 66, x, t - 127, z, ry + q);
+      box("f-grip", 40, 106, 92, x + 70 * Math.cos(qr), t - 53, z - 70 * Math.sin(qr), ry + q);
+      const lx = x + 80 * Math.sin(qr), lz = z + 80 * Math.cos(qr);
+      box("f-body", 86, 86, 100, lx, t - 52, lz, ry + q, "", "f-glass");
+    });
+    // cement theme: tropical plants in concrete planters
+    {   // tropical plants in concrete planters (both versions)
+      const pot = (x, z, n, sc, pw0 = 300, ph0 = 360, ry0 = 0) => {
+        box("f-pot", pw0, ph0, pw0, x, FY - ph0 / 2, z, ry0);
+        floorMarks.push({ x, z, r: 330, c: "0,0,0", a: 0.55 });
+        const ph = 640 * sc, pw = ph * 0.72;
+        [0, 60, 120].forEach(a => { const p = el("div", "g-plant"); p.style.cssText = "width:" + pw + "px;height:" + ph + "px;margin:" + (-ph) + "px 0 0 " + (-pw / 2) + "px;background-image:url(images/plant-" + ((n + a / 60) % 3) + ".webp);transform:translate3d(" + x + "px," + (FY - ph0 + 10) + "px," + z + "px) rotateY(" + a + "deg)"; world.append(p); });
+      };
+      // in the gap between the 2nd and 3rd print of each face, against the block
+      [[cornerR, nR], [cornerL, nL]].forEach(([c, nn], j) => { const mx = front.x + (c.x - front.x) * 0.5, mz = front.z + (c.z - front.z) * 0.5; pot(mx + nn.x * 150, mz + nn.z * 150, j, 0.95, 200, 270, j ? -45 : 45); });
+      pot(4900, 1400, 1, 1.35); pot(-4900, 1400, 2, 1.35);             // against the side walls of the hall
+    }
+    // the prints
+    const D = small ? 1150 : 1300, fhMax = 640;   // mega prints: one per room
+    const nRt = o.right || 4, nLt = items.length - nRt;   // prints on the right face, the rest on the left
+    keys.push({ x: 0, z: front.z + (small ? 4500 : 2800), a: 0 });
+    items.forEach((it, i) => {
+      const left = i >= nRt, k = (n => n === 4 ? [0.13, 0.33, 0.67, 0.87][left ? i - nRt : i] : (left ? i - nRt + 1 : i + 1) / (n + 1))(left ? nLt : nRt),   // 2 prints, a gap (plant), 2 prints
+         c = left ? cornerL : cornerR, nn = left ? nL : nR, ry = left ? -45 : 45;
+      const px = front.x + (c.x - front.x) * k, pz = front.z + (c.z - front.z) * k;
+      const r = it.keepRatio ? ratioOf(it.work).split("/").reduce((a, b) => a / b) : 0.8;   // every cover the same 4:5 print, Films keeps its own shape
+      let fh = fhMax, fw = fh * r; const capW = it.work.loop ? 820 : 600; if (fw > capW) { fw = capW; fh = fw / r; }
+      const mat = Math.round(Math.min(fw, fh) * 0.08);
+      wallLights.push({ R: !left, s: k * BL });
+      floorMarks.push({ x: px + nn.x * 560, z: pz + nn.z * 560, r: 520, c: "255,240,215", a: 0.3 });
+      at(el("div", "g-lamp"), px + nn.x * 480, CY + 22, pz + nn.z * 480, ry);
+      const g = el("div", "g-print");
+      const b = el("button", "c-frame"); b.type = "button"; b.dataset.tip = it.tip; b.setAttribute("aria-label", it.aria);
+      b.style.cssText = "--w:" + (fw - 2 * mat) + "px;--h:" + (fh - 2 * mat) + "px;--mat:" + mat + "px";
+      if (it.work.loop) {      // a moving cover: short silent loop, plays only while the print is near
+        const pl = el("span", "plate"), v = el("video");
+        v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute("playsinline", ""); v.preload = "metadata";
+        v.poster = "videos/" + it.work.loop + "-poster.jpg"; v.src = "videos/" + it.work.loop + ".mp4";
+        pl.append(v); b.append(pl); loops.push({ v, x: px, z: pz });
+      } else b.append(plate(it.work, it.slot, { sizes: Math.round(fw * 1.6) + "px", eager: true }));
+      const lab = el("div", "c-label", '<span class="meta">' + esc(it.kicker) + '<span class="enter navtype">' + esc(it.enter) + "</span></span><h3>" + esc(it.title) + "</h3>" + (it.text ? "<p>" + esc(it.text) + "</p>" : ""));
+      lab.style.setProperty("--lw", (fw + 12) + "px"); g.classList.add("mega");
+      g.append(b, lab); g.style.marginLeft = (-(fw + 12) / 2) + "px"; g.style.marginTop = (-fh / 2 - 60) + "px";
+      at(g, px + nn.x * 8, -60, pz + nn.z * 8, ry);
+      if (!LITE && !it.work.loop) {         // its reflection, below the polished floor
+        const m = el("div", "g-print mega g-mirror"); m.setAttribute("aria-hidden", "true");
+        const mf = el("span", "c-frame"); mf.style.cssText = b.style.cssText;
+        mf.append(plate(it.work, it.slot, { sizes: Math.round(fw * 1.6) + "px", eager: true })); m.append(mf);
+        m.style.marginLeft = g.style.marginLeft; m.style.marginTop = (-(fh + 12) / 2) + "px";
+        const cy = -60 - fh / 2 - 60 + (fh + 12) / 2;              // centre of the print
+        at(m, px + nn.x * 8, 2 * FY - cy, pz + nn.z * 8, ry); m.style.transform += " scaleY(-1)";
+      }
+      const ki = keys.length;
+      keys.push({ x: px + nn.x * D, z: pz + nn.z * D, a: left ? 45 : -45 });
+      if (i === nRt - 1) keys.push({ x: 0, z: front.z + (small ? 3700 : 2800), a: 0 });   // step back to the corner before the left side
+      b.addEventListener("click", () => it.pick(b));
+      b.addEventListener("focus", () => scrollTo({ top: hostTop + ki * SEG }));
+    });
+    keys.push({ x: 0, z: front.z + (small ? 4500 : 2800), a: 0 });
+    // paint the spots onto the block slices that each one reaches
+    const px2 = v => v.toFixed(1) + "px";
+    slices.forEach(sl => {
+      const g = [];
+      wallLights.forEach(L => { if (L.R !== sl.R || Math.abs(L.s - sl.sc) > 1100) return;
+        const u = (sl.R ? (L.s - sl.sc) : (sl.sc - L.s)) / SB + sl.w / 2;
+        g.push("radial-gradient(ellipse " + px2(560 / SB) + " " + px2(760 / SB) + " at " + px2(u) + " " + px2((-84 - CY) / SB) + ",rgba(255,250,240,.62),rgba(255,250,240,.4) 46%,rgba(255,250,240,.1) 70%,rgba(255,250,240,0) 84%)");
+        g.push("radial-gradient(ellipse " + px2(230 / SB) + " " + px2(520 / SB) + " at " + px2(u) + " " + px2((-760 - CY) / SB) + ",rgba(255,246,228,.22),rgba(255,246,228,0))"); });
+      // the vertical slot between the second and third print, cut into the block (painted, not a separate layer)
+      if (false) {   // the slot is gone: a plain wall between the prints
+        const sw = 60 / SB, sh = WH * 0.62 / SB, sx = (BL / 2 - sl.sc) / SB * (sl.R ? 1 : -1) + sl.w / 2 - sw / 2, sy = (-20 - CY) / SB - sh / 2;
+        const box = " " + px2(sx) + " " + px2(sy) + "/" + px2(sw) + " " + px2(sh) + " no-repeat";
+        g.unshift("linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.2) 28%,rgba(0,0,0,0) 50%,rgba(0,0,0,.2) 72%,rgba(0,0,0,.6))" + box,
+                  "linear-gradient(to bottom,#0c0b0a,#161513 70%,#2a2824)" + box,
+                  "linear-gradient(90deg,rgba(255,250,240,0),rgba(255,250,240,.35) 50%,rgba(255,250,240,0))" + " " + px2(sx - 2 / SB) + " " + px2(sy + sh) + "/" + px2(sw + 4 / SB) + " " + px2(2 / SB) + " no-repeat");
+      }
+      if (g.length) sl.n.style.setProperty("--lit", g.join(","));
+    });
+    // and the pools of light and the furniture shadows onto the floor
+    { const W = 12800 / FS, f = floorMarks.map(m => { const u = m.x / FS + W / 2, v = (m.z - (CZ + 600)) / FS + W / 2, r = m.r / FS;
+        return "radial-gradient(circle " + px2(r) + " at " + px2(u) + " " + px2(v) + ",rgba(" + m.c + "," + m.a + "),rgba(" + m.c + "," + (m.a / 3).toFixed(3) + ") 50%,rgba(" + m.c + ",0))"; });
+      if (f.length) floorEl.style.setProperty("--lit", f.join(",")); }
+    N = keys.length;
+    printKeys = keys.map((k, i) => i).filter(i => i > 0 && i < N - 1 && i !== (o.right || 4) + 1);
+    const extra = (N - 1) * SEG;
+    host.style.height = (innerHeight + extra) + "px"; host.style.height = "calc(100svh + " + extra + "px)";
+    measure(); read(); u = tu; draw();
+  }
+  let printKeys = [], chooseOn = null, walkOn = null;
+  const goKey = ki => { measure(); scrollTo({ top: hostTop + ki * SEG + 1, behavior: "auto" }); Ticker.wake(); };
+  sideR.addEventListener("click", () => goKey(1));
+  sideL.addEventListener("click", () => goKey((o.right || 4) + 2));
+  nextB.addEventListener("click", () => { const k = printKeys.find(k => k > tu + 0.3); goKey(k !== undefined ? k : N - 1); });
+  prevB.addEventListener("click", () => { const k = [...printKeys].reverse().find(k => k < tu - 0.3); goKey(k !== undefined ? k : 0); });
+  function measure() { hostTop = host.getBoundingClientRect().top + scrollY; }
+  function read() { tu = clamp((scrollY - hostTop) / SEG, 0, N - 1); }
+  const ease = f => f * f * (3 - 2 * f);
+  function draw() {
+    const i = Math.min(N - 2, Math.floor(u)), f = ease(u - i), A = keys[i], B = keys[i + 1];
+    const x = A.x + (B.x - A.x) * f, z = A.z + (B.z - A.z) * f, a = A.a + (B.a - A.a) * f + sway;
+    world.style.transform = "translateZ(" + P + "px) rotateY(" + a.toFixed(3) + "deg) translate3d(" + (-x).toFixed(1) + "px,0," + (-z).toFixed(1) + "px)";
+    for (const L of loops) { const near = Math.hypot(L.x - x, L.z - z) < 3200; if (near && L.v.paused) L.v.play().catch(() => {}); else if (!near && !L.v.paused) L.v.pause(); }
+    const r = Math.round(u), n = r >= 1 && r <= 4 ? r : r >= 6 && r <= 9 ? r - 1 : 0;
+    if (n !== shown) { hudNo.textContent = pad2(n) + " / " + pad2(items.length); shown = n; }
+    hudRail.style.transform = "scaleX(" + (u / (N - 1)).toFixed(4) + ")";
+    const choose = u < 0.45 || Math.abs(u - ((o.right || 4) + 1)) < 0.45;   // at the entrance and at the corner: offer both walls
+    if (choose !== chooseOn) { sideL.classList.toggle("on", choose); sideR.classList.toggle("on", choose); chooseEl.classList.toggle("on", choose); chooseOn = choose; }
+    const walking = u > 0.4 && u < N - 1.4;
+    if (walking !== walkOn) { nav.classList.toggle("on", walking); walkOn = walking; }
+    const to = Math.round(clamp(1 - u * 2.5, 0, 1) * 20) / 20;
+    if (to !== titleOp) { o.title.style.opacity = to; o.title.style.visibility = to ? "visible" : "hidden"; titleOp = to; }
+    const eo = Math.round(clamp((u - (N - 1.45)) / 0.4, 0, 1) * 20) / 20;
+    if (eo !== endOn) { o.end.style.opacity = eo; o.end.classList.toggle("on", eo > 0.5); endOn = eo; }
+  }
+  const tick = dt => {
+    if (dead) return false;
+    const k = 1 - Math.pow(1 - (LITE ? 0.22 : 0.12), dt / 16.67), k2 = 1 - Math.pow(0.92, dt / 16.67);
+    u += (tu - u) * k; sway += (tsway - sway) * k2;
+    const rest = Math.abs(tu - u) < 0.0005 && Math.abs(tsway - sway) < 0.01;
+    if (rest) { u = tu; sway = tsway; }
+    draw(); return !rest;
+  };
+  Ticker.add(tick);
+  const onScroll = () => { read(); Ticker.wake(); };
+  const onMove = e => { tsway = (e.clientX / innerWidth - 0.5) * 3; Ticker.wake(); };
+  let rt = 0;
+  const onResize = () => { clearTimeout(rt); rt = setTimeout(() => {
+    if (Math.abs(innerWidth - lastW) < 2 && Math.abs(innerHeight - lastH) < 160) { measure(); read(); Ticker.wake(); return; }
+    lastW = innerWidth; lastH = innerHeight; build(); }, 180); };
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("resize", onResize);
+  if (finePointer && !LITE) pin.addEventListener("pointermove", onMove, { passive: true });
+  build();
+  if (document.fonts) document.fonts.ready.then(() => { if (!dead) { measure(); read(); Ticker.wake(); } });
+  return { destroy() { dead = true; Ticker.remove(tick); removeEventListener("scroll", onScroll); removeEventListener("resize", onResize); } };
+}
+
+/* ---- home: one print per room ---- */
+let COVER_COLOR = true;   // gallery covers: true = colour, false = black and white
+const TAP = matchMedia("(hover:none),(pointer:coarse)").matches ? "Tap" : "Click";
+const countOf = r => r.projects.reduce((n, pr) => n + pr.works.length, 0);
+const enterText = r => r.id === "moving-image" ? "Watch " + countOf(r) + " films" : "See all " + countOf(r) + " photos";
+const roomItems = () => ROOMS.map(r => ({
+  work: COVER_COLOR && r.coverColor ? Object.assign({}, r.cover, { img: r.coverColor }) : (r.cover || {}), keepRatio: r.id === "moving-image", slot: r.id + "-cover", kicker: "Room " + r.no, title: r.title, text: r.text, enter: enterText(r),
+  tip: "Open", aria: "Enter room " + r.no + ", " + r.title, pick: b => go(r.id, b)
+}));
+if (!calm) {
+  const t = el("div", "c-title", '<h2 class="serif"><i>The Photographer’s Gallery</i></h2><p>' + TAP + ' a print to open it.</p>');
+  const end = el("div", "", WM("") + '<a class="lnk" href="#contact" data-go="contact">Available for selected projects.</a>');
+  const extras = ROOMS.slice(0, 4).map(r => { const w = (r.projects[0].works[1] || r.projects[0].works[0]); return { work: w, slot: r.id + "-wall", aria: "Enter room " + r.no + ", " + r.title, pick: b => go(r.id, b) }; });
+  let gal = Gallery($("#walk"), roomItems(), { hint: "Scroll to walk. " + TAP + " a print to open it", title: t, end, right: 4 });
+  const cue = el("div", "s-cue", '<i class="m" aria-hidden="true"></i><i class="f" aria-hidden="true"></i><span>Scroll down</span>');
+  const putCue = () => $("#walk .g-pin").append(cue);
+  putCue();
+  const cueCheck = () => { const w = $("#walk").getBoundingClientRect(); cue.classList.toggle("gone", -w.top > innerHeight * 0.35); };
+  addEventListener("scroll", cueCheck, { passive: true });
+  const hcue = $(".h-cue"); addEventListener("scroll", () => hcue.classList.toggle("gone", scrollY > 60), { passive: true });   // back wall left empty
+  const sw = el("button", "cover-switch navtype"); sw.type = "button";
+  const label = () => { sw.innerHTML = '<span class="' + (COVER_COLOR ? "on" : "") + '">Color</span> / <span class="' + (COVER_COLOR ? "" : "on") + '">B&amp;W</span>'; };
+  label();
+  sw.addEventListener("click", () => { COVER_COLOR = !COVER_COLOR; label(); gal.destroy(); gal = Gallery($("#walk"), roomItems(), { hint: "Scroll to walk. " + TAP + " a print to open it", title: t, end, right: 4 }); $("#walk .g-pin").append(sw); putCue(); cueCheck(); });
+  $("#walk .g-pin").append(sw);
+} else {
+  const flat = $("#flat");
+  roomItems().forEach((it, i) => {
+    const f = el("div", "flat-item"); f.style.setProperty("--c", i % 2 ? "5 / 13" : "1 / 9"); f.style.setProperty("--r", ratioOf(it.work));
+    const b = el("button"); b.type = "button"; b.setAttribute("aria-label", it.aria); b.append(plate(it.work, it.slot));
+    b.addEventListener("click", () => it.pick(b));
+    f.append(b, el("div", "c-label", '<span class="meta">' + esc(it.kicker) + "</span><h3>" + esc(it.title) + "</h3><p>" + esc(it.text) + '</p><span class="enter navtype">Enter room</span>'));
+    flat.append(f);
+  });
+}
+
+/* ==========================================================================
+   ROOMS
+   ========================================================================== */
+const room = $("#room"), roomIn = $("#roomIn"), curtain = $("#curtain");
+let current = null, plates = [], lastFocus = null, roomWalk = null;
+const meta = p => [p.title, p.client, p.year, p.credit].filter(Boolean);
+
+function collect(r) {
+  plates = [];
+  r.projects.forEach(p => p.works.forEach(w => plates.push({ work: w, slot: r.id + "-" + pad2(plates.length + 1), project: p, room: r })));
+}
+function renderRoom(r) {
+  const idx = ROOMS.indexOf(r), next = ROOMS[(idx + 1) % ROOMS.length];
+  if (roomWalk) { roomWalk.destroy(); roomWalk = null; }
+  collect(r); roomIn.innerHTML = "";
+  if (!calm) {                                   // the room is a wall: scrolling down walks it to the right
+    roomIn.className = "room-in is3d";
+    const intro = el("div", "h-intro", '<span class="meta">Room ' + r.no + " / " + pad2(ROOMS.length) + " / " + plates.length + ' works</span><h1 class="serif">' + esc(r.title) + "<em>" + esc(r.line) + "</em></h1><p>" + esc(r.text) + '</p>');
+    const end = el("div", "h-end", '<button class="next" type="button" data-tip="Explore"><span class="meta">Next room ' + next.no + "</span><b>" + esc(next.title) + '</b></button><button class="back navtype" type="button">Back to the gallery</button>');
+    $(".next", end).addEventListener("click", () => go(next.id));
+    $(".back", end).addEventListener("click", () => go("work"));
+    const host = el("div", "walk"); roomIn.append(host);
+    roomWalk = HWall(host, room, plates.map((it, n) => ({
+      work: it.work, slot: it.slot, kicker: pad2(n + 1) + " / " + pad2(plates.length),
+      title: it.work.film ? it.work.title || "" : "",
+      plaque: it.project.title && (n === 0 || plates[n - 1].project !== it.project)      // museum wall text before each project
+        ? { title: it.project.title, meta: [r.discipline, it.project.client, it.project.year].filter(Boolean), count: it.project.works.length } : null,
+      tip: it.work.film ? "Play" : "View", aria: (it.work.film ? "Play " : "View ") + (it.work.title || it.slot), pick: () => openViewer(n)
+    })), { hint: "Scroll down to move along the wall", intro, end, dark: !!r.dark });
+    return;
+  }
+  roomIn.className = "room-in";                  // reduced motion: an editorial grid instead of the corridor
+  roomIn.append(el("header", "room-head", '<div class="l"><span class="meta">Room ' + r.no + " / " + pad2(ROOMS.length) + '</span><h1 class="serif">' + esc(r.title) + "<em>" + esc(r.line) + '</em></h1></div><p class="r">' + esc(r.text) + "</p>"));
+  const g = el("div", "grid"), cols = ["1 / 8", "9 / 13", "3 / 10", "1 / 6", "7 / 13"];
+  plates.forEach((it, n) => {
+    const fig = el("figure", "item"); fig.style.cssText = "--col:" + cols[n % cols.length] + ";--r:" + ratioOf(it.work);
+    const b = el("button"); b.type = "button"; b.setAttribute("aria-label", "View " + it.slot); b.append(plate(it.work, it.slot, { sizes: "(max-width:900px) 100vw, 60vw" }));
+    b.addEventListener("click", () => openViewer(n));
+    fig.append(b, el("figcaption", "meta", "<span>" + esc(it.slot) + "</span><span>" + esc(meta(it.project).join(" / ")) + "</span>")); g.append(fig);
+  });
+  roomIn.append(g);
+}
+
+/* ---- identity and design system ---- */
+function renderIdentity() {
+  if (roomWalk) { roomWalk.destroy(); roomWalk = null; }
+  plates = []; roomIn.className = "room-in";
+  const sw = [["Charcoal","#0E0E0E","floor, base"],["Graphite","#1C1C1B","walls"],["Mist","#B5B2AB","navigation"],["Bone","#EDEBE6","type, wordmark"],["Stone","#8A8883","metadata"],["Warm Silver","#C9C4B8","lines only"]];
+  const fav = s => '<figure><img src="favicon.svg" width="' + s + '" height="' + s + '" alt=""><span class="meta">' + s + " px</span></figure>";
+  const ver = (n, name, use, body, wide) => '<section class="ver' + (wide ? " wide" : "") + '"><header><b>' + name + '</b><span class="meta">' + n + "</span></header>" + body + "<p>" + use + "</p></section>";
+  roomIn.innerHTML =
+    '<header class="room-head"><div class="l"><span class="meta">Sebas Bregni Photography</span><h1 class="serif">Identity<em>Wordmark, versions and system</em></h1></div><p class="r">A typographic wordmark. One hairline diagonal cuts the name; it skips the word Photography so every letter stays legible. No monogram, no symbol.</p></header>' +
+    '<div class="sys">' +
+    ver("01", "Primary, horizontal", "Website, presentations, quotes, end frames of films. Minimum width 180 px on screen, 40 mm in print.", '<div class="panel galaxy" style="min-height:420px">' + WM("") + "</div>", true) +
+    ver("02", "Compact", "Name only, for the navigation bar, small formats and social headers. Minimum width 96 px.", '<div class="panel obsidian">' + WM("compact") + "</div>") +
+    ver("03", "Monochrome", "One ink, no accent. Embossing, stamps, engraving, one-colour print.", '<div class="pair"><div class="panel white half">' + WM("") + '</div><div class="panel black half">' + WM("") + "</div></div>") +
+    ver("04", "On light backgrounds", "Charcoal on Bone or white paper.", '<div class="panel ivory">' + WM("") + "</div>") +
+    ver("05", "On dark backgrounds", "Bone on Charcoal. The diagonal may take Warm Silver here, and only here.", '<div class="panel obsidian">' + WM("accent") + "</div>") +
+    ver("06", "Photographic signature", "For delivered and published photographs: bottom right, 3 to 4% of the long edge, 70% opacity. The vertical version runs along the left edge.",
+      '<div class="panel photo">' + plate({ ratio: "3/2" }, "photo", {}).outerHTML + '<span class="sig-h">' + WM("sig") + '</span><span class="sig-v">' + WM("sig vertical") + "</span></div>", true) +
+    ver("07", "Favicon", "The diagonal on its own, broken where the word Photography passes. It comes from the wordmark, so it needs no initials.",
+      '<div class="panel obsidian" style="min-height:220px"><div class="fav">' + fav(16) + fav(32) + fav(64) + fav(180) + '<figure><span class="tab"><img src="favicon.svg" width="16" height="16" alt="">Sebas Bregni Photography</span><span class="meta">Browser tab</span></figure></div></div>', true) +
+    '<section class="wide"><span class="meta">Rules</span><ul>' +
+      "<li>The name is always written SEBAS BREGNI, in capitals, with Photography under it in the primary version.</li>" +
+      "<li>Clear space on every side: the height of one capital letter of the name.</li>" +
+      "<li>Wordmark type: Instrument Serif, tracking 0.14em. Photography: Manrope Light, tracking 0.9em.</li>" +
+      "<li>The diagonal is 24 degrees from vertical, a hairline (about 1% of the name size), never thicker.</li>" +
+      "<li>Do not add initials, monograms, camera or lens symbols, shadows, gradients or outlines. Do not stretch, recolour or re-space the letters.</li></ul></section>" +
+    '<section class="wide"><span class="meta">Colour</span><div class="sw">' + sw.map(s => '<div><i style="background:' + s[1] + '"></i><span class="meta" style="color:var(--ivory)">' + s[0] + '</span><span class="meta">' + s[1] + " / " + s[2] + "</span></div>").join("") + "</div></section>" +
+    '<section><span class="meta">Typography</span><div class="spec">' +
+      '<div><span class="meta">Display 42–150</span><span class="serif" style="font-size:52px">Light, built for brands</span></div>' +
+      '<div><span class="meta">Body 15 / 1.6</span><span>Manrope Regular. Short, functional sentences.</span></div>' +
+      '<div><span class="meta">Navigation 12 / .08em</span><span class="navtype">Work About Contact</span></div>' +
+      '<div><span class="meta">Metadata 10.5 / .10em</span><span class="meta">Room 03 / jewelry-02 / 4:5</span></div></div></section>' +
+    '<section><span class="meta">Space, grid, motion</span><div class="spec">' +
+      "<div><span class=\"meta\">Scale</span><code>4 · 8 · 16 · 24 · 40 · 64 · 104 · 168 px</code></div>" +
+      "<div><span class=\"meta\">Grid</span><code>12 columns, 24 px gap, gutter 18–56 px</code></div>" +
+      "<div><span class=\"meta\">Frame</span><code>black metal 6 px, ivory mat 7% of the print</code></div>" +
+      "<div><span class=\"meta\">Motion</span><code>transform and opacity only; 220 / 500 / 900 ms; off with reduced motion</code></div></div></section>" +
+    '<section class="wide"><span class="meta">Adding work</span><ol>' +
+      "<li>Put the originals in one folder and run <code>python3 tools/prepare_media.py &lt;folder&gt;</code>. It creates AVIF, WebP and JPEG at 640 to 2400 px, MP4 at 1080p and 720p, and posters. Originals are not touched.</li>" +
+      '<li>In <code>content.js</code>, set a slot’s <code>img:"name"</code> or <code>video:"name"</code>. The placeholder disappears and the real proportion is used.</li>' +
+      "<li>A new room is one more object in <code>ROOMS</code>. The corridor, numbering and navigation rebuild themselves.</li></ol></section>" +
+    "</div>" +
+    '<footer class="room-foot" style="display:flex;justify-content:flex-end;border-top:1px solid rgba(181,178,171,.2);padding-top:var(--s5);margin-top:var(--s7)"><button class="back navtype" type="button" style="border-bottom:1px solid var(--bronze);padding-bottom:3px">Back to the gallery</button></footer>';
+  $(".back", roomIn).addEventListener("click", () => go("work"));
+}
+
+/* ---- room transition: the curtain grows from the selected print (transform only) ---- */
+function wipe(from, dark, mid) {
+  if (calm) { mid(); return; }
+  curtain.classList.toggle("dark", !!dark);
+  curtain.style.visibility = "visible";
+  let kf;
+  if (from) { const b = from.getBoundingClientRect();
+    kf = [{ transform: "translate3d(" + b.left + "px," + b.top + "px,0) scale(" + (b.width / innerWidth) + "," + (b.height / innerHeight) + ")", opacity: .5 }, { transform: "none", opacity: 1 }]; }
+  else kf = [{ transform: "translate3d(0,100%,0)" }, { transform: "none" }];
+  const a = curtain.animate(kf, { duration: 680, easing: "cubic-bezier(.2,.7,.1,1)", fill: "forwards" });
+  a.onfinish = () => {
+    mid();
+    requestAnimationFrame(() => { const b2 = curtain.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 420, easing: "ease-out", fill: "forwards" });
+      b2.onfinish = () => { curtain.style.visibility = "hidden"; a.cancel(); b2.cancel(); }; });
+  };
+}
+function showRoom(id, from) {
+  const r = ROOMS.find(x => x.id === id);
+  if (!current) lastFocus = from || document.activeElement;
+  wipe(from, r ? r.dark : true, () => {
+    current = id;
+    if (r && r.dark) room.dataset.dark = ""; else delete room.dataset.dark;
+    room.classList.add("open"); document.body.classList.add("locked", "in-room");
+    room.scrollTop = 0;
+    if (r) renderRoom(r); else renderIdentity();
+    room.setAttribute("aria-label", r ? r.title : "Identity");
+    room.focus({ preventScroll: true });
+  });
+}
+function hideRoom() {
+  if (!current) return;
+  current = null; room.classList.remove("open");
+  document.body.classList.remove("locked", "in-room");
+  if (roomWalk) { roomWalk.destroy(); roomWalk = null; }
+  setTimeout(() => { if (!current) roomIn.innerHTML = ""; }, 520);   // free the room's images after the fade
+  if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+}
+
+/* ---- routing: plain #names only ---- */
+const SECTIONS = ["top", "work", "about", "contact"];
+let pendingFrom = null;
+function go(name, from) { pendingFrom = from || null; if (location.hash === "#" + name) route(); else location.hash = name; }
+function route() {
+  const name = location.hash.slice(1) || "top";
+  closeViewer();
+  if (name === "identity" || name === "system" || ROOMS.some(r => r.id === name)) { showRoom(name === "system" ? "identity" : name, pendingFrom); pendingFrom = null; return; }
+  const wasRoom = !!current; hideRoom();
+  if (wasRoom && name === "work") return;                    // back to where the visitor was standing
+  const t = document.getElementById(SECTIONS.includes(name) ? name : "top");
+  requestAnimationFrame(() => scrollTo({ top: t.getBoundingClientRect().top + scrollY, behavior: calm ? "auto" : "smooth" }));
+}
+addEventListener("hashchange", route);
+document.addEventListener("click", e => { const a = e.target.closest("[data-go]"); if (!a) return; e.preventDefault(); go(a.dataset.go); });
+$("#close").addEventListener("click", () => go("work"));
+$("#stage").addEventListener("click", e => { if (e.target.id === "stage") closeViewer(); });   // tap outside the photo to close
+
+/* nav state */
+const navLinks = [...document.querySelectorAll(".bar nav a")];
+const navIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) navLinks.forEach(a => a.setAttribute("aria-current", a.dataset.go === e.target.id)); }), { rootMargin: "-45% 0px -45% 0px" });
+["top", "work", "about", "contact"].forEach(id => navIO.observe(document.getElementById(id)));
+
+/* ==========================================================================
+   VIEWER
+   ========================================================================== */
+const viewer = $("#viewer"), stage = $("#stage");
+let vi = -1, vFocus = null, vPrevIdx = -1;
+function warm(n) {                                // fetch the neighbours' images before they are needed
+  const it = plates[(n + plates.length) % plates.length]; if (!it || !it.work.img || !IMG[it.work.img]) return;
+  const F = fmts(it.work.img); const i = new Image(); i.sizes = "100vw"; i.srcset = srcset(it.work.img, F[F.length - 1]);
+}
+function openViewer(n) {
+  if (vi < 0) vFocus = document.activeElement;
+  vi = (n + plates.length) % plates.length;
+  const it = plates[vi];
+  const dir = vPrevIdx < 0 ? 0 : (n > vPrevIdx ? 1 : -1); vPrevIdx = vi;
+  const old = [...stage.children]; old.forEach(o => { const v = $("video", o); if (v) v.pause(); o.classList.add("v-out"); setTimeout(() => o.remove(), 420); });
+  const p = plate(it.work, it.slot, { playing: true, eager: true, sizes: "100vw" });
+  stage.style.setProperty("--r", ratioOf(it.work)); p.style.setProperty("--r", ratioOf(it.work));
+  p.classList.add("v-in"); p.style.setProperty("--dx", (dir * 24) + "px");
+  stage.append(p);
+  const cap = $("#vCap"), roomT = it.room ? it.room.title : "", projT = it.work.title || (it.project && it.project.title) || "";
+  $(".vc-room", cap).textContent = roomT; $(".vc-proj", cap).textContent = projT && projT !== roomT ? projT : "";
+  $(".vc-n", cap).textContent = pad2(vi + 1) + " / " + pad2(plates.length);
+  $("#vFull").hidden = !(it.work.film && it.work.video && VID[it.work.video]);
+  viewer.classList.add("open"); $("#vClose").focus();
+  warm(vi + 1); warm(vi - 1);
+}
+function closeViewer() {
+  if (vi < 0) return; vi = -1; vPrevIdx = -1; const v = $("video", stage); if (v) v.pause();
+  viewer.classList.add("closing"); setTimeout(() => { viewer.classList.remove("open", "closing"); stage.innerHTML = ""; }, 320);
+  if (vFocus && vFocus.focus) vFocus.focus({ preventScroll: true });
+}
+$("#vClose").addEventListener("click", closeViewer);
+$("#vPrev").addEventListener("click", () => openViewer(vi - 1));
+$("#vNext").addEventListener("click", () => openViewer(vi + 1));
+$("#vFull").addEventListener("click", () => { const v = $("video", stage); if (!v) return; if (v.requestFullscreen) v.requestFullscreen().catch(() => {}); else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen(); });
+let tx = 0;
+stage.addEventListener("touchstart", e => { tx = e.touches[0].clientX; }, { passive: true });
+stage.addEventListener("touchend", e => { const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) openViewer(vi + (d < 0 ? 1 : -1)); }, { passive: true });
+addEventListener("keydown", e => {
+  if (vi >= 0) { if (e.key === "Escape") closeViewer(); if (e.key === "ArrowRight") openViewer(vi + 1); if (e.key === "ArrowLeft") openViewer(vi - 1); return; }
+  if (current && e.key === "Escape") go("work");
+});
+
+/* ---- cursor label: beside the native pointer, never replacing it.
+   The label text changes only when the hovered target changes; the position
+   is written once per frame by the shared loop. ---- */
+if (finePointer) {
+  const tip = $("#tip"), tipText = $("span", tip); let px = -200, py = -200, moved = false, on = false;
+  addEventListener("pointermove", e => { px = e.clientX; py = e.clientY; moved = true; if (on) Ticker.wake(); }, { passive: true });
+  document.addEventListener("pointerover", e => { const t = e.target.closest && e.target.closest("[data-tip]");
+    if (t) { if (tipText.textContent !== t.dataset.tip) tipText.textContent = t.dataset.tip; if (!on) { on = true; tip.classList.add("on"); moved = true; Ticker.wake(); } }
+    else if (on) { on = false; tip.classList.remove("on"); } });
+  Ticker.add(() => { if (moved && on) { tip.style.transform = "translate3d(" + px + "px," + py + "px,0)"; moved = false; } return false; });
+}
+
+/* a link straight to a room or section: route once everything above exists */
+if (location.hash.length > 1) route();
+
+/* ---- contact ---- */
+(function () {
+  const links = $("#links");
+  if (SITE.whatsapp) { const a = el("a"); a.href = "https://wa.me/" + SITE.whatsapp; a.target = "_blank"; a.rel = "noopener"; a.textContent = "WhatsApp +" + SITE.whatsapp; links.append(a); }
+  if (SITE.email) { const a = el("a"); a.href = "mailto:" + SITE.email; a.textContent = SITE.email; links.append(a); }
+  $("#form").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target, out = $("#out"), row = $("#outRow"), note = $("#outNote");
+    const miss = ["name", "email", "photos", "msg"].find(k => !f[k].value.trim() || (k === "email" && !/^\S+@\S+\.\S+$/.test(f[k].value)) || (k === "photos" && !(+f[k].value > 0)));
+    row.innerHTML = ""; out.classList.add("on");
+    const say = { email: "Enter a valid email address.", photos: "Tell me how many final photos you need.", msg: "Tell me a little about the project.", name: "Fill in your name." };
+    if (miss) { $("#outText").textContent = say[miss]; note.textContent = ""; f[miss].focus(); return; }
+    const Tt = window.T || (x => x);
+    const line = (k, v) => v ? Tt(k) + ": " + v + "\n" : "";
+    const text = Tt("Hello Sebastián,") + "\n\n" + f.msg.value.trim() + "\n\n"
+      + line("Project", f.type.value) + line("Final photos", f.photos.value) + line("Products or looks", f.items.value.trim())
+      + line("Video", f.video.value) + line("Where", f.place.value) + line("Date or deadline", f.date.value.trim())
+      + "\n" + f.name.value.trim() + "\n" + f.email.value.trim();
+    $("#outText").textContent = text;
+    const copy = el("button", "", "Copy message"); copy.type = "button";
+    copy.addEventListener("click", () => navigator.clipboard.writeText(text).then(() => { copy.textContent = "Copied"; }, () => { copy.textContent = "Select the text to copy"; }));
+    row.append(copy);
+    if (SITE.whatsapp) { const a = el("a", "", "Open WhatsApp with this message"); a.href = "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(text); a.target = "_blank"; a.rel = "noopener"; row.append(a); }
+    if (SITE.email) { const a = el("a", "", "Open in email"); a.href = "mailto:" + SITE.email + "?subject=" + encodeURIComponent("Project enquiry") + "&body=" + encodeURIComponent(text); row.append(a); }
+    note.textContent = SITE.whatsapp || SITE.email ? "Nothing is sent until you send it from WhatsApp or your mail app." : "Your message is ready. Direct delivery is not connected yet: copy it and send it by Instagram.";
+  });
+})();
+
+/* ==========================================================================
+   SOUND: Deep Blue plays as soon as the page opens. If the browser blocks
+   sound before any interaction, it starts on the visitor's first click, tap
+   or key. The button turns it off (and the choice is remembered).
+   ========================================================================== */
+(() => {
+  const btn = $("#sound"), au = $("#music"), lbl = $(".lbl", btn);
+  const KEY = "sb-sound", VOL = 0.55;
+  let want = true, fadeT = 0, heldByFilm = false, armed = false;
+  try { if (localStorage.getItem(KEY) === "off") want = false; } catch (e) {}
+  // three honest states: playing, off, or waiting for the browser to allow sound
+  const paint = st => { btn.classList.toggle("on", st === "on"); btn.classList.toggle("ask", st === "ask");
+    btn.setAttribute("aria-pressed", st === "on");
+    btn.setAttribute("aria-label", st === "on" ? "Turn music off" : "Turn music on");
+    lbl.textContent = st === "on" ? "Sound on" : st === "ask" ? "Tap for sound" : "Sound off"; };
+  const fade = (to, done) => { cancelAnimationFrame(fadeT); const from = au.volume, t0 = performance.now(), d = 1200;
+    const step = t => { const k = Math.min(1, (t - t0) / d); try { au.volume = Math.min(1, Math.max(0, from + (to - from) * k)); } catch (e) {} if (k < 1) fadeT = requestAnimationFrame(step); else if (done) done(); }; fadeT = requestAnimationFrame(step); };
+  const play = () => { try { au.volume = 0; } catch (e) {}
+    let p; try { p = au.play(); } catch (e) { blocked(); return; }
+    if (p && p.then) p.then(started).catch(blocked); else started(); };
+  const started = () => { paint("on"); fade(VOL); disarm(); };
+  const blocked = () => { if (want) { paint("ask"); arm(); } };
+  const stop = () => { paint("off"); fade(0, () => au.pause()); };
+  const save = v => { try { localStorage.setItem(KEY, v ? "on" : "off"); } catch (e) {} };
+  btn.addEventListener("click", e => { e.stopPropagation(); const playing = !au.paused && btn.classList.contains("on");
+    want = !playing; save(want); want ? play() : stop(); });
+  // browsers (iPhone, iPad, Chrome, Safari) only allow sound after the visitor touches, clicks or types:
+  // the very first one anywhere on the page starts the music
+  const EV = ["pointerdown", "pointerup", "touchstart", "touchend", "mousedown", "click", "keydown"];
+  const kick = e => { if (btn.contains(e.target)) return; if (want && au.paused && !heldByFilm) play(); };
+  const arm = () => { if (armed) return; armed = true; EV.forEach(t => addEventListener(t, kick, { capture: true, passive: true })); };
+  const disarm = () => { if (!armed) return; armed = false; EV.forEach(t => removeEventListener(t, kick, { capture: true })); };
+  document.addEventListener("visibilitychange", () => { if (!want || heldByFilm) return; if (document.hidden) au.pause(); else play(); });
+  // a film with its own sound takes over; the music returns when it stops
+  document.addEventListener("play", e => { const v = e.target; if (v === au || v.tagName !== "VIDEO" || v.muted) return; if (!au.paused) { heldByFilm = true; stop(); } }, true);
+  const back = e => { const v = e.target; if (v.tagName !== "VIDEO" || v.muted || !heldByFilm) return; heldByFilm = false; if (want) play(); };
+  document.addEventListener("pause", back, true); document.addEventListener("ended", back, true);
+  au.preload = "auto"; try { au.load(); } catch (e) {}
+  if (want) { paint("ask"); arm(); play(); } else paint("off");
+})();
+
+
+
+
+/* ---- menu backdrop over the text sections only ---- */
+(() => { const bar = $(".bar"), walk = $("#walk");
+  const upd = () => { const w = walk.getBoundingClientRect(); const overHall = w.top <= 0 && w.bottom > 80; bar.classList.toggle("solid", scrollY > 40 && !overHall && !document.body.classList.contains("in-room")); };
+  addEventListener("scroll", upd, { passive: true }); upd(); })();
+
+/* ---- about: index of rooms, a way into each; the cover follows the pointer on desktop ---- */
+(() => {
+  const list = $("#ixList"), peek = $("#ixPeek"); if (!list) return;
+  const thumb = r => { const id = r.coverColor || (r.cover && r.cover.img); const F = id && IMG[id] ? fmts(id) : null; return F ? srcset(id, F[F.length - 1]).split(",")[0].trim().split(" ")[0] : ""; };
+  ROOMS.forEach(r => {
+    const n = r.projects.reduce((a, p) => a + p.works.length, 0), src = thumb(r);
+    const li = el("li"), a = el("a", "", '<span class="th"></span><span class="n">' + esc(r.no) + '</span><span class="t">' + esc(r.title) + '</span><span class="l">' + esc(r.line) + '</span><span class="c">' + pad2(n) + '</span>');
+    a.href = "#" + r.id; if (src) $(".th", a).style.backgroundImage = "url(" + src + ")";
+    a.addEventListener("click", e => { e.preventDefault(); go(r.id, a); });
+    if (finePointer) { a.addEventListener("pointerenter", () => { if (src) { peek.style.backgroundImage = "url(" + src + ")"; peek.classList.add("on"); } });
+      a.addEventListener("pointerleave", () => peek.classList.remove("on")); }
+    li.append(a); list.append(li);
+  });
+  if (finePointer) addEventListener("pointermove", e => { if (peek.classList.contains("on")) peek.style.transform = "translate3d(" + (e.clientX + 28) + "px," + (e.clientY - 120) + "px,0)"; }, { passive: true });
+  // reveals: headings, text and index rows rise once as they come into view
+  if (!matchMedia("(prefers-reduced-motion:reduce)").matches && "IntersectionObserver" in window) {
+    const els = [...document.querySelectorAll(".about h2, .about .txt, .ix-head, .ix-list li, .contact .who > *, .contact form, .ft > *")];
+    els.forEach((e, i) => { e.classList.add("rv"); if (e.matches(".ix-list li")) e.style.setProperty("--d", (([...e.parentNode.children].indexOf(e)) * 0.05) + "s"); });
+    const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("on"); io.unobserve(x.target); } }), { rootMargin: "0px 0px -8% 0px" });
+    els.forEach(e => io.observe(e));
+  }
+})();
+
+/* ==========================================================================
+   LANGUAGE: English / Español. Every visible text is translated in place
+   (text nodes and labels), including what the gallery and rooms build later.
+   ========================================================================== */
+(() => {
+  const D = {
+    "Work": "Trabajo", "About": "Sobre mí", "Contact": "Contacto", "Skip to the gallery": "Ir a la galería",
+    "Commercial / Fashion / Product / Film": "Comercial / Moda / Producto / Film", "Enter the gallery": "Entrar a la galería",
+    "Fashion": "Moda", "Watches": "Relojería", "Product": "Producto", "Motion": "Motion",
+    "Scroll": "Desliza", "Scroll down": "Desliza hacia abajo", "Scroll down to move along the wall": "Desliza hacia abajo para recorrer la pared",
+    "The Photographer’s Gallery": "La galería del fotógrafo", "Click a print to open it.": "Haz clic en un cuadro para abrirlo.", "Tap a print to open it.": "Toca un cuadro para abrirlo.",
+    "Scroll to walk. Click a print to open it": "Desliza para caminar. Haz clic en un cuadro para abrirlo", "Scroll to walk. Tap a print to open it": "Desliza para caminar. Toca un cuadro para abrirlo",
+    "People": "Personas", "Products": "Productos", "Models, Pets, Weddings, Films": "Modelos, Mascotas, Bodas, Films", "Products, Jewelry, Food, Motion": "Productos, Joyería, Comida, Motion",
+    "Color": "Color", "Colour": "Color", "B&W": "B/N", "Sound on": "Música on", "Sound off": "Música off", "Tap for sound": "Toca para música",
+    "Back to the gallery": "Volver a la galería", "Close": "Cerrar", "Previous": "Anterior", "Next": "Siguiente", "Full screen": "Pantalla completa", "View": "Ver",
+    "ROOMS": "SALAS", "Rooms": "Salas",
+    // rooms
+    "Jewelry & Watches": "Joyería y Relojería", "Food": "Comida", "Models": "Modelos", "Pets": "Mascotas", "Weddings": "Bodas", "Films": "Films",
+    "Product and still life": "Producto y bodegón", "Detail and macro": "Detalle y macro", "Restaurants and hotels": "Restaurantes y hoteles",
+    "Machines in the dark": "Máquinas en la oscuridad", "Fashion, beauty, portrait": "Moda, belleza, retrato", "Dogs and cats in the studio": "Perros y gatos en el estudio",
+    "Days that happen once": "Días que pasan una sola vez", "Commercials and reels": "Comerciales y reels",
+    "Product photography. Light, reflection, texture and colour.": "Fotografía de producto. Luz, reflejo, textura y color.",
+    "Watches and jewelry, close.": "Relojes y joyas, de cerca.", "Food photography from the garden to the table.": "Fotografía de comida, de la huerta a la mesa.",
+    "Motorcycles lit as sculpture.": "Motos iluminadas como escultura.", "Fashion, beauty and portraiture in the studio.": "Moda, belleza y retrato en el estudio.",
+    "Pet photography: patience, light and real expressions.": "Fotografía de mascotas: paciencia, luz y expresiones reales.",
+    "A wedding from the dress to the first dance.": "Una boda, del vestido al primer baile.",
+    "Reels and commercial films. Select a frame to play it.": "Reels y comerciales. Elige un cuadro para reproducirlo.",
+    "Product / Still life": "Producto / Bodegón", "Watches / Jewelry": "Relojería / Joyería", "Food / Hospitality": "Comida / Hospitalidad", "Automotive": "Automotriz",
+    "Fashion / Beauty": "Moda / Belleza", "Film": "Film", "Wedding": "Boda",
+    "Cold light": "Luz fría", "Colour study": "Estudio de color", "Still life": "Bodegón", "Lake Atitlán": "Lago de Atitlán", "After dark": "De noche",
+    "Bird of paradise": "Ave del paraíso", "Jewelry": "Joyería", "Dogs": "Perros", "Kittens": "Gatitos", "Wedding day": "El día de la boda",
+    "Silver on pink": "Plata sobre rosa", "Beauty": "Belleza", "Handbags": "Bolsas", "Rose": "Rosa", "Linen and straw": "Lino y paja",
+    "Monochrome": "Monocromo", "Studio": "Estudio", "Kitchen": "Cocina", "Handbags, Monday to Friday": "Bolsas, de lunes a viernes",
+    // about
+    "Light, built": "Luz hecha", "for brands.": "para marcas.",
+    "Sebastián Bregni is a photographer and filmmaker in Guatemala. Product, jewelry, fashion and beauty for brands and agencies, lit in the studio and carried into film.": "Sebastián Bregni es fotógrafo y cineasta en Guatemala. Producto, joyería, moda y belleza para marcas y agencias, iluminados en el estudio y llevados al film.",
+    "Practice": "Práctica", "Photography, film": "Fotografía, film", "Based in": "Desde",
+    // contact
+    "Available for selected projects.": "Disponible para proyectos seleccionados.", "Commercial Photography / Fashion / Film": "Fotografía comercial / Moda / Film",
+    "Name": "Nombre", "Email": "Correo", "Project": "Proyecto", "Commercial photography": "Fotografía comercial", "Fashion / editorial": "Moda / editorial",
+    "Product / jewelry": "Producto / joyería", "Other": "Otro", "Final photos needed": "Fotos finales", "Products or looks": "Productos o looks",
+    "Video": "Video", "No video": "Sin video", "Short reel (15–30 s)": "Reel corto (15–30 s)", "Commercial (30–60 s)": "Comercial (30–60 s)", "Several videos": "Varios videos",
+    "Not sure yet": "Aún no sé", "Where": "Dónde", "In the studio": "En el estudio", "On location": "En locación", "Date or deadline": "Fecha o fecha límite",
+    "About the project": "Sobre el proyecto", "Prepare message": "Preparar mensaje", "Copy message": "Copiar mensaje", "Copied": "Copiado",
+    "Select the text to copy": "Selecciona el texto para copiarlo", "Open WhatsApp with this message": "Abrir WhatsApp con este mensaje", "Open in email": "Abrir en el correo",
+    "Nothing is sent until you send it from WhatsApp or your mail app.": "No se envía nada hasta que lo mandes desde WhatsApp o tu correo.",
+    "Your message is ready. Direct delivery is not connected yet: copy it and send it by Instagram.": "Tu mensaje está listo. El envío directo aún no está conectado: cópialo y mándalo por Instagram.",
+    "Enter a valid email address.": "Escribe un correo válido.", "Tell me how many final photos you need.": "Dime cuántas fotos finales necesitas.",
+    "Tell me a little about the project.": "Cuéntame un poco del proyecto.", "Fill in your name.": "Escribe tu nombre.",
+    "e.g. 20": "ej. 20", "e.g. 8": "ej. 8", "e.g. first week of December": "ej. primera semana de diciembre",
+    "Brand, what the photos are for, references…": "Marca, para qué son las fotos, referencias…",
+    "Identity and design system": "Identidad y sistema de diseño", "Identity": "Identidad",
+    // labels for screen readers
+    "Main": "Principal", "Turn music off": "Apagar la música", "Turn music on": "Encender la música", "Next print": "Siguiente cuadro", "Previous print": "Cuadro anterior",
+    "Close the photo": "Cerrar la foto", "The gallery": "La galería", "Exhibition room": "Sala de exhibición", "Selected work": "Trabajo seleccionado", "Viewer": "Visor",
+    "Go to the left wall: Models, Pets, Weddings, Films": "Ir a la pared izquierda: Modelos, Mascotas, Bodas, Films",
+    "Go to the right wall: Products, Jewelry, Food, Motion": "Ir a la pared derecha: Productos, Joyería, Comida, Motion",
+    "Hello Sebastián,": "Hola, Sebastián:", "Final photos": "Fotos finales",
+    "Tell me about": "Cuéntame sobre", "the next project.": "tu próximo proyecto.", "Works": "Obras", "Footer": "Pie de página", "Instagram": "Instagram"
+  };
+  const tr = s => D[s] !== undefined ? D[s] : null;
+  const R = [
+    [/^See all (\d+) photos$/, (m, n) => "Ver las " + n + " fotos"],
+    [/^Watch (\d+) films$/, (m, n) => "Ver los " + n + " films"],
+    [/^Room (\d+)$/, (m, n) => "Sala " + n],
+    [/^Room (\d+) \/ (\d+) \/ (\d+) works?$/, (m, a, b, c) => "Sala " + a + " / " + b + " / " + c + " obras"],
+    [/^(\d+) works?$/, (m, n) => n + " obras"],
+    [/^Next room (\d+)$/, (m, n) => "Siguiente sala " + n],
+    [/^(.*?) \/ (.*) \/ (\d+) of (\d+)$/, (m, a, b, c, d) => a + " / " + (tr(b) || b) + " / " + c + " de " + d],
+    [/^Enter room (\d+), (.+)$/, (m, n, t) => "Entrar a la sala " + n + ", " + (tr(t) || t)],
+    [/^(.+), open room (.+)$/, (m, a, t) => (tr(a) || a) + ", abrir la sala " + (tr(t) || t)],
+    [/^View (.+)$/, (m, a) => "Ver " + a], [/^Play (.+)$/, (m, a) => "Reproducir " + (tr(a) || a)]
+  ];
+  const T = s => { const k = s.trim(); if (!k) return s; let v = tr(k);
+    if (v === null) for (const [re, f] of R) { const m = k.match(re); if (m) { v = f(...m); break; } }
+    return v === null ? s : s.replace(k, v); };
+  let lang = "en";
+  const orig = new WeakMap(), origAttr = new WeakMap(), ATTR = ["aria-label", "placeholder", "title"];
+  const SKIP = n => { const p = n.parentNode; return !p || p.nodeName === "SCRIPT" || p.nodeName === "STYLE" || p.closest && p.closest("#identity,.lang,pre"); };
+  let busy = false;
+  const doText = n => { if (SKIP(n) || !/[A-Za-z]/.test(n.nodeValue) && !orig.has(n)) return;
+    if (!orig.has(n)) orig.set(n, n.nodeValue);
+    const want = lang === "es" ? T(orig.get(n)) : orig.get(n);
+    if (n.nodeValue !== want) n.nodeValue = want; };
+  const doEl = e => { if (!e.getAttribute || e.closest && e.closest("#identity")) return;
+    ATTR.forEach(a => { if (!e.hasAttribute(a)) return; let m = origAttr.get(e); if (!m) { m = {}; origAttr.set(e, m); }
+      if (!(a in m)) m[a] = e.getAttribute(a);
+      const want = lang === "es" ? T(m[a]) : m[a]; if (e.getAttribute(a) !== want) e.setAttribute(a, want); }); };
+  const walk = root => { if (root.nodeType === 3) return doText(root); if (root.nodeType !== 1) return;
+    doEl(root); root.querySelectorAll("*").forEach(doEl);
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) doText(n); };
+  const mo = new MutationObserver(list => { if (busy) return; busy = true;
+    for (const m of list) {
+      if (m.type === "characterData") { if (orig.has(m.target) && m.target.nodeValue !== (lang === "es" ? T(orig.get(m.target)) : orig.get(m.target))) { orig.set(m.target, m.target.nodeValue); doText(m.target); } }
+      else if (m.type === "attributes") { const o = origAttr.get(m.target); if (o && m.attributeName in o) { const cur = m.target.getAttribute(m.attributeName); if (cur !== (lang === "es" ? T(o[m.attributeName]) : o[m.attributeName])) { o[m.attributeName] = cur; doEl(m.target); } } else doEl(m.target); }
+      else m.addedNodes.forEach(walk);
+    }
+    mo.takeRecords(); busy = false; });
+  // the switch, next to the menu
+  const sw = el("div", "lang navtype");
+  const bEN = el("button", "", "EN"), bES = el("button", "", "ES"); bEN.type = bES.type = "button";
+  bEN.setAttribute("aria-label", "English"); bES.setAttribute("aria-label", "Español");
+  sw.append(bEN, el("span", "", "/"), bES); $(".bar nav").after(sw);
+  const set = l => { lang = l; document.documentElement.lang = l; try { localStorage.setItem("sb-lang", l); } catch (e) {}
+    bEN.setAttribute("aria-pressed", l === "en"); bES.setAttribute("aria-pressed", l === "es");
+    busy = true; walk(document.body); mo.takeRecords(); busy = false; };
+  bEN.addEventListener("click", () => set("en")); bES.addEventListener("click", () => set("es"));
+  window.T = s => lang === "es" ? T(s) : s;
+  let start = "en"; try { start = localStorage.getItem("sb-lang") || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en"); } catch (e) {}
+  mo.observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ATTR });
+  set(start);
+})();
+</script>
+</body>
+</html>
