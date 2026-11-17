@@ -1345,7 +1345,7 @@ function HWall(host, scroller, items, o) {
       const r = ratioOf(it.work).split("/").reduce((a, b) => a / b);
       let h = Math.min(vh * HS[0] * (small ? 0.9 : 1), maxH), w = h * r;
       const capW = vw * (small ? 0.84 : 0.9); if (w > capW) { w = capW; h = w / r; }
-      if (it.plaque) {
+      if (it.plaque && false) {   // project labels between the photographs: removed, the photographs speak alone
         const pq = el("div", "h-plaque", '<span class="meta">' + esc(it.plaque.meta.join(" / ")) + "</span><h2>" + esc(it.plaque.title) + '</h2><span class="meta">' + it.plaque.count + (it.plaque.count === 1 ? " work" : " works") + "</span>");
         track.append(pq);
       }
