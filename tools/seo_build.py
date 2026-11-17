@@ -85,6 +85,23 @@ ALT = {
  "mg-1736": "Manos cosechando rábanos en el huerto",
  "mg-5954": "Ceviche con chips y copa de vino blanco en la barra de un restaurante",
  "mg-6033": "Tacos dorados con guacamole y una bebida roja sobre tabla de madera",
+ "g0a7916": "Pizza margarita con albahaca y queso rallado, vista cenital",
+ "g0a8002": "Pizza con embutido, alcaparras y microbrotes, vista cenital",
+ "g0a8036": "Pizza con anchoas, chiles encurtidos y albahaca, vista cenital",
+ "g0a7955": "Masa de pizza estirada entre dos manos sobre una mesa enharinada",
+ "g0a7942": "Manos enharinadas aplaudiendo sobre un bollo de masa",
+ "g0a7854": "Mano doblando masa de pizza sobre una mesa enharinada",
+ "mg-1123": "Retrato en blanco y negro de un hombre con lentes y audífonos al cuello",
+ "mg-1150": "Retrato de perfil con audífonos en clave baja",
+ "mg-1151": "Retrato en tres cuartos con audífonos y lentes en clave baja",
+ "mg-1949": "Hombre con sombrero y chaleco exhalando humo en clave baja",
+ "mg-1947": "Hombre con sombrero mirando una voluta de humo",
+ "mg-9340": "Modelo con top negro y jeans mirando sobre el hombro",
+ "mg-9276": "Retrato de belleza con la mano en el hombro sobre fondo gris",
+ "mg-9315": "Modelo sentada en un banco vestida de negro sobre fondo gris",
+ "mg-8464": "Modelo enmarcada por manos con gorra Hola Guatemala y blusa típica",
+ "mg-8574": "Modelo con sombrero verde Hola Guatemala en ángulo selfie",
+ "g0a8517": "Retrato de cuerpo entero vestida de negro, mano en la cadera",
  "triumph-34": "Motocicleta Triumph Speed Twin 1200 en tres cuartos sobre fondo negro",
  "triumph-front": "Motocicleta Triumph Speed Twin 1200 de frente, iluminada en estudio",
  "stark-side": "Motocicleta eléctrica Stark Varg de perfil sobre fondo negro",
@@ -158,7 +175,8 @@ FILM_ALT = {
 PT = {"Cold light":"Luz fría","Colour study":"Estudio de color","Still life":"Bodegón","Bird of paradise":"Ave del paraíso",
  "Jewelry":"Joyería","Lake Atitlán":"Lago de Atitlán","After dark":"De noche","Silver on pink":"Plata sobre rosa",
  "Beauty":"Belleza","Handbags":"Carteras","Rose":"Rosa","Linen and straw":"Lino y paja","Monochrome":"Blanco y negro",
- "Studio":"Estudio","Snakes":"Serpientes","Insects":"Insectos","Spiders":"Arañas","Dogs":"Perros","Kittens":"Gatitos","Wedding day":"El día de la boda"}
+ "Studio":"Estudio","Snakes":"Serpientes","Insects":"Insectos","Spiders":"Arañas","Dogs":"Perros","Kittens":"Gatitos","Wedding day":"El día de la boda",
+ "Wood-fired":"Horno de leña","Low key":"Clave baja","Smoke":"Humo","Black on grey":"Negro sobre gris","Hola, Guatemala":"Hola, Guatemala"}
 esc = lambda s: html.escape(s or "", quote=True)
 
 def img_url(i, size=1600):

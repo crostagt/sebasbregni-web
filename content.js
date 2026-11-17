@@ -13,6 +13,8 @@
    A room:    { id, no, title, line, discipline, text, dark, cover, coverColor, projects }
 
    Curated 11 Nov 2026: 71 photographs and 7 films, chosen from 140.
+   Added 16 Nov 2026: 17 photographs (Models: Low key, Smoke, Black on grey,
+   Hola Guatemala, Studio; Food: Wood-fired).
    No client is named until Sebastián confirms it.
    ========================================================================== */
 
@@ -56,7 +58,9 @@ window.SITE = {
       coverColor: "cover-food", cover: p("cover-food-bw", "Chocolate sauce poured over a layered chocolate cake"),
       projects: [
         { title: "Lake Atitlán", works: [ p("mg-1456"), p("mg-1381"), p("mg-1584"), p("mg-0786"), p("mg-0993"), p("mg-1055"), p("mg-1788"), p("mg-1736") ] },
-        { title: "After dark", works: [ p("mg-5954"), p("mg-6033") ] }
+        { title: "After dark", works: [ p("mg-5954"), p("mg-6033") ] },
+        { title: "Wood-fired", works: [ p("g0a7916", "Margherita with basil and grated cheese, from above"), p("g0a8002", "Pizza with cured meat, capers and microgreens, from above"), p("g0a8036", "Pizza with anchovies, pickled peppers and basil, from above"),
+                                        p("g0a7955", "Pizza dough stretched between two hands over a floured counter"), p("g0a7942", "Floured hands clapping above a ball of dough"), p("g0a7854", "Hand folding pizza dough on a floured counter") ] }
       ] },
     { id: "motion", no: "04", title: "Motion", line: "Machines in the dark", discipline: "Automotive", dark: true,
       text: "Motorcycles lit as sculpture.",
@@ -76,7 +80,11 @@ window.SITE = {
         { title: "Rose", works: [ p("mg-6710"), p("mg-6651") ] },
         { title: "Linen and straw", works: [ p("mg-6547"), p("mg-6375") ] },
         { title: "Monochrome", works: [ p("mg-8319"), p("mg-8506"), p("mg-8239") ] },
-        { title: "Studio", works: [ p("cover-models"), p("mg-4143"), p("g0a8231"), p("mg-1022") ] }
+        { title: "Low key", works: [ p("mg-1123", "Black and white portrait of a man in glasses holding headphones at his neck"), p("mg-1150", "Profile portrait in headphones, low key"), p("mg-1151", "Three-quarter portrait in headphones and glasses, low key") ] },
+        { title: "Smoke", works: [ p("mg-1949", "Man in a hat and waistcoat exhaling smoke, low key"), p("mg-1947", "Man in a hat looking down at a curl of smoke") ] },
+        { title: "Black on grey", works: [ p("mg-9340", "Model in a black crop top and jeans, looking over her shoulder"), p("mg-9276", "Beauty portrait, hand on the shoulder, on grey"), p("mg-9315", "Model seated on a stool in black, on grey") ] },
+        { title: "Hola, Guatemala", works: [ p("mg-8464", "Model framed by hands, wearing a Hola Guatemala cap and woven top"), p("mg-8574", "Model in a green Hola Guatemala bucket hat, selfie angle") ] },
+        { title: "Studio", works: [ p("cover-models"), p("mg-4143"), p("g0a8231"), p("mg-1022"), p("g0a8517", "Full-length portrait in black, hand on the hip") ] }
       ] },
     { id: "animals", no: "06", title: "Pets", line: "Dogs and cats in the studio", discipline: "Pets",
       text: "Pet photography: patience, light and real expressions.",
