@@ -1675,7 +1675,7 @@ const roomItems = () => ROOMS.map(r => ({
   tip: "Open", aria: "Enter room " + r.no + ", " + r.title, pick: b => go(r.id, b)
 }));
 if (!calm) {
-  const t = el("div", "c-title", '<h2 class="serif"><i>Where Light Lives</i></h2><p>' + TAP + ' a print to open it.</p>');
+  const t = el("div", "c-title", '<h2 class="serif"><i>The Room</i></h2><p>' + TAP + ' a print to open it.</p>');
   const end = el("div", "", WM("") + '<a class="lnk" href="#contact" data-go="contact">Available for selected projects.</a>');
   const extras = ROOMS.slice(0, 4).map(r => { const w = (r.projects[0].works[1] || r.projects[0].works[0]); return { work: w, slot: r.id + "-wall", aria: "Enter room " + r.no + ", " + r.title, pick: b => go(r.id, b) }; });
   let gal = Gallery($("#walk"), roomItems(), { hint: "Scroll to walk. " + TAP + " a print to open it", title: t, end, right: 4 });
@@ -2028,7 +2028,7 @@ if (location.hash.length > 1) route();
     "Commercial / Fashion / Product / Film": "Comercial / Moda / Producto / Film", "Enter the gallery": "Entrar a la galería",
     "Fashion": "Moda", "Watches": "Relojería", "Product": "Producto", "Motion": "Motion",
     "Scroll": "Desliza", "Scroll down": "Desliza hacia abajo", "Scroll down to move along the wall": "Desliza hacia abajo para recorrer la pared",
-    "Where Light Lives": "Donde vive la luz", "Click a print to open it.": "Haz clic en un cuadro para abrirlo.", "Tap a print to open it.": "Toca un cuadro para abrirlo.",
+    "Click a print to open it.": "Haz clic en un cuadro para abrirlo.", "Tap a print to open it.": "Toca un cuadro para abrirlo.",
     "Scroll to walk. Click a print to open it": "Desliza para caminar. Haz clic en un cuadro para abrirlo", "Scroll to walk. Tap a print to open it": "Desliza para caminar. Toca un cuadro para abrirlo",
     "People": "Personas", "Products": "Productos", "Models, Pets, Weddings, Films": "Modelos, Mascotas, Bodas, Films", "Products, Jewelry, Food, Motion": "Productos, Joyería, Comida, Motion",
     "Color": "Color", "Colour": "Color", "B&W": "B/N", "Sound on": "Música on", "Sound off": "Música off", "Tap for sound": "Toca para música",
