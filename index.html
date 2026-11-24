@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="cement"><script>window.SB_THEME="cement";if(/[?&]cement\b/.test(location.search)||window.SB_THEME==="cement")document.documentElement.classList.add("cement")</script>
+<html lang="en" class="cement"><script>window.SB_THEME="cement";if(/[?&]cement\b/.test(location.search)||window.SB_THEME==="cement")document.documentElement.classList.add("cement");if(/[?&]negro\b/.test(location.search))document.documentElement.classList.add("noir")</script>
 <head>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WMLQPLCK"></script>
@@ -873,6 +873,35 @@ body.in-room .bar::before{opacity:0}
   .viewer{padding-top:var(--s7)}
 }
 @media (max-width:520px){.brand .wm{--F:13px}.bar nav{gap:14px}}
+
+/* =====================================================================
+   NOIR PREVIEW (html.noir, ?negro): the same gallery, in the black palette
+   #050505 ground, #FFFFFF type, #181818 / #262626 surfaces and lines, #A3A3A3 metadata
+   ===================================================================== */
+html.noir{--obsidian:#050505;--galaxy:#181818;--ivory:#FFFFFF;--sage:#A3A3A3;--stone:#A3A3A3;--bronze:#FFFFFF;--stone-on-wall:#A3A3A3}
+html.noir body{background:#050505;color:#fff}
+html.noir .g-pin{background:#050505}
+html.noir .g-wall{background:linear-gradient(rgba(5,5,5,.9),rgba(5,5,5,.9)) 0 0/100% 100%,#6b6863 url(images/cem-smooth.webp) 0 0/var(--ts,90px)}
+html.noir .g-ceil{background:linear-gradient(rgba(3,3,3,.94),rgba(3,3,3,.94)) 0 0/100% 100%,#3c3a37 url(images/cem-slab.webp) 0 0/90px}
+html.noir .g-block{background:var(--lit,none),
+  linear-gradient(to top,#000 0 .6%,rgba(0,0,0,.4) .6%,rgba(0,0,0,0) 4.5%) 0 0/100% 100%,
+  linear-gradient(rgba(14,14,14,.93),rgba(14,14,14,.93)) 0 0/100% 100%,
+  #d8d5cf url(images/wall-white.webp) var(--tx,0px) 0/var(--ts,256px)}
+html.noir .g-floor{background:var(--lit,none),linear-gradient(rgba(3,3,3,.9),rgba(3,3,3,.9)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px)}
+html.noir .g-floor.gloss{background:var(--lit,none),linear-gradient(rgba(3,3,3,.86),rgba(3,3,3,.86)) 0 0/100% 100%,#5f5c57 url(images/floor-concrete.webp) 0 0/var(--ts,25px);opacity:.92}
+html.noir .g-print{--ink:#FFFFFF;--ink-2:#A3A3A3;--ink-3:#A3A3A3}
+html.noir .f-pot,html.noir .f-plinth{filter:brightness(.28)}
+html.noir .f-pot.s{filter:brightness(.18)}
+html.noir .f-pot.t{background:#0a0a0a!important;box-shadow:inset 0 0 0 10px #262626}
+html.noir .f-oak{filter:brightness(.5)}html.noir .f-oak.s{filter:brightness(.3)}html.noir .f-oak.t{filter:brightness(.6)}
+html.noir .g-plant{filter:brightness(.62) saturate(.75)}
+html.noir .h-pin,html.noir .h-pin.dark{background:#050505;color:#fff}
+html.noir .h-pin::after{background:#0a0a0a;border-top:1px solid #262626}
+html.noir .h-pin .meta,html.noir .h-pin p,html.noir .h-intro p,html.noir .h-pin .cue,html.noir .h-pin .h-cap{color:#A3A3A3}
+html.noir .h-pin h2,html.noir .h-pin h1,html.noir .h-intro h2{color:#fff}
+html.noir .about,html.noir .ft{background:#050505}
+html.noir .contact{background:#0b0b0b}
+html.noir .h-pin::before{background:linear-gradient(to bottom,transparent calc(100% - 7px),#181818 calc(100% - 7px),#181818 calc(100% - 3px),transparent calc(100% - 3px)),linear-gradient(to bottom,#0a0a0a,#070707);box-shadow:0 1px 0 #181818}
 </style>
 <script>
 /* Phones and small tablets: lighter textures (same look, a quarter of the weight) and the opening prints first. */
