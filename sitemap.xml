@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sebasbregni.com/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>1.0</priority>
     <image:image><image:loc>https://sebasbregni.com/images/cover-products-bw-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/cover-jewelry-bw-1600.webp</image:loc></image:image>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-producto/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/cover-products-800.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/coke-red-1600.webp</image:loc></image:image>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-joyeria-y-relojes/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/g0a0187-1589.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a0177-1600.webp</image:loc></image:image>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-comida/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/g0a7916-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a8002-1600.webp</image:loc></image:image>
@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-motos/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/triumph-34-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/triumph-front-1600.webp</image:loc></image:image>
@@ -76,7 +76,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-moda/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/mg-9340-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/mg-9276-1600.webp</image:loc></image:image>
@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-mascotas/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/g0a4179-2-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/g0a4282-1600.webp</image:loc></image:image>
@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-naturaleza/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/img-8774-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/img-8813-1600.webp</image:loc></image:image>
@@ -149,7 +149,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/fotografia-de-bodas/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://sebasbregni.com/images/0g0a3694-1600.webp</image:loc></image:image>
     <image:image><image:loc>https://sebasbregni.com/images/0g0a3682-1600.webp</image:loc></image:image>
@@ -163,7 +163,7 @@
   </url>
   <url>
     <loc>https://sebasbregni.com/video-comercial/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
